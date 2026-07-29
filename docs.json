@@ -45,51 +45,21 @@
         ]
       },
       {
-        "group": "OTP Verification",
-        "icon": "shield-check",
+        "group": "Core Features",
+        "icon": "sparkles",
         "pages": [
-          "otp-verification/overview"
-        ]
-      },
-      {
-        "group": "COD Fees",
-        "icon": "receipt",
-        "pages": [
-          "cod-fees/overview"
-        ]
-      },
-      {
-        "group": "Partial COD",
-        "icon": "credit-card",
-        "pages": [
-          "partial-cod/overview"
-        ]
-      },
-      {
-        "group": "COD to Prepaid",
-        "icon": "arrow-right-arrow-left",
-        "pages": [
-          "cod-to-prepaid/overview"
-        ]
-      },
-      {
-        "group": "COD Rules",
-        "icon": "sliders",
-        "pages": [
+          "otp-verification/overview",
+          "cod-fees/overview",
+          "partial-cod/overview",
+          "cod-to-prepaid/overview",
           "cod-rules/overview"
         ]
       },
       {
-        "group": "Notifications",
-        "icon": "message",
+        "group": "Engagement",
+        "icon": "messages",
         "pages": [
-          "notifications/overview"
-        ]
-      },
-      {
-        "group": "Abandoned Cart Recovery",
-        "icon": "cart-shopping",
-        "pages": [
+          "notifications/overview",
           "abandoned-cart/overview"
         ]
       },
@@ -108,7 +78,7 @@
         ]
       },
       {
-        "group": "Guides & Support",
+        "group": "Help & Support",
         "icon": "life-ring",
         "pages": [
           "guides/troubleshooting",
