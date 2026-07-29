@@ -1,0 +1,140 @@
+{
+  "theme": "mint",
+  "name": "COD King Documentation",
+  "colors": {
+    "primary": "#734DFF",
+    "light": "#734DFF",
+    "dark": "#734DFF"
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/favicon.svg",
+  "navbar": {
+    "links": [
+      {
+        "href": "https://codking.tech/",
+        "label": "COD King Website"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get Support",
+      "href": "https://codking.tech/"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/mintlify",
+      "github": "https://github.com/mintlify",
+      "linkedin": "https://linkedin.com/company/mintlify"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ],
+    "display": "header"
+  },
+  "description": "Official documentation for COD King — configure and optimize Cash on Delivery workflows for your Shopify store.",
+  "appearance": {
+    "default": "system"
+  },
+  "seo": {
+    "metatags": {
+      "og:title": "COD King Documentation",
+      "og:description": "Official guides and documentation for COD King on Shopify."
+    }
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Getting Started",
+        "icon": "rocket",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "OTP Verification",
+        "icon": "shield-check",
+        "pages": [
+          "otp-verification/overview"
+        ]
+      },
+      {
+        "group": "COD Fees",
+        "icon": "receipt",
+        "pages": [
+          "cod-fees/overview"
+        ]
+      },
+      {
+        "group": "Partial COD",
+        "icon": "credit-card",
+        "pages": [
+          "partial-cod/overview"
+        ]
+      },
+      {
+        "group": "COD to Prepaid",
+        "icon": "arrow-right-arrow-left",
+        "pages": [
+          "cod-to-prepaid/overview"
+        ]
+      },
+      {
+        "group": "COD Rules",
+        "icon": "sliders",
+        "pages": [
+          "cod-rules/overview"
+        ]
+      },
+      {
+        "group": "Notifications",
+        "icon": "message",
+        "pages": [
+          "notifications/overview"
+        ]
+      },
+      {
+        "group": "Abandoned Cart Recovery",
+        "icon": "cart-shopping",
+        "pages": [
+          "abandoned-cart/overview"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "icon": "puzzle-piece",
+        "pages": [
+          "integrations/overview"
+        ]
+      },
+      {
+        "group": "Orders & Analytics",
+        "icon": "chart-line",
+        "pages": [
+          "orders-analytics/overview"
+        ]
+      },
+      {
+        "group": "Guides & Support",
+        "icon": "life-ring",
+        "pages": [
+          "guides/troubleshooting",
+          "support/faq"
+        ]
+      }
+    ]
+  }
+}
