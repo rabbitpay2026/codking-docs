@@ -52,6 +52,11 @@
         ]
       },
       {
+        "group": "OTP Verification",
+        "icon": "shield-check",
+        "pages": []
+      },
+      {
         "group": "Core Features",
         "icon": "sparkles",
         "pages": [
@@ -74,7 +79,8 @@
         "group": "Integrations",
         "icon": "puzzle-piece",
         "pages": [
-          "integrations/overview"
+          "integrations/overview",
+          "integrations/shopify"
         ]
       },
       {
@@ -91,6 +97,16 @@
           "guides/troubleshooting",
           "support/faq"
         ]
+      },
+      {
+        "group": "COD Fees",
+        "icon": "receipt",
+        "pages": []
+      },
+      {
+        "group": "Partial COD",
+        "icon": "credit-card",
+        "pages": []
       }
     ]
   },
