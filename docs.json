@@ -1,21 +1,30 @@
 {
   "theme": "mint",
   "name": "COD King Documentation",
+  "description": "Official documentation for COD King — configure and manage Cash on Delivery workflows for your Shopify store.",
+
   "colors": {
     "primary": "#734DFF",
     "light": "#734DFF",
-    "dark": "#734DFF"
+    "dark": "#3613B6"
   },
+
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/cod logo.png",
+    "dark": "/logo/logo white.png"
   },
-  "favicon": "/favicon.svg",
+
+  "favicon": "/logo/CK logo icon-1200px.png",
+
+  "appearance": {
+    "default": "system"
+  },
+
   "navbar": {
     "links": [
       {
-        "href": "https://codking.tech/",
-        "label": "COD King Website"
+        "label": "COD King Website",
+        "href": "https://codking.tech/"
       }
     ],
     "primary": {
@@ -24,16 +33,14 @@
       "href": "https://codking.tech/"
     }
   },
-  "description": "Official documentation for COD King — configure and manage Cash on Delivery workflows for your Shopify store.",
-  "appearance": {
-    "default": "system"
-  },
+
   "seo": {
     "metatags": {
       "og:title": "COD King Documentation",
       "og:description": "Official guides and documentation for COD King on Shopify."
     }
   },
+
   "navigation": {
     "groups": [
       {
