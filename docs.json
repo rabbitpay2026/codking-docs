@@ -69,7 +69,14 @@
           "cod-fees/overview",
           "partial-cod/overview",
           "cod-to-prepaid/overview",
-          "cod-rules/overview"
+          {
+            "group": "COD Rules",
+            "pages": [
+              "untitled-page-2",
+              "untitled-page-4",
+              "untitled-page-3"
+            ]
+          }
         ]
       },
       {
@@ -91,9 +98,7 @@
       {
         "group": "Orders & Analytics",
         "icon": "chart-line",
-        "pages": [
-          "orders-analytics/overview"
-        ]
+        "pages": []
       },
       {
         "group": "Help & Support",
@@ -122,9 +127,9 @@
     "options": [
       "copy",
       "view",
-      "assistant",
       "chatgpt",
-      "claude"
+      "claude",
+      "assistant"
     ],
     "display": "header"
   },
