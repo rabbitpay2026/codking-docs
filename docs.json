@@ -127,7 +127,8 @@
       "copy",
       "view",
       "chatgpt",
-      "claude"
+      "claude",
+      "assistant"
     ],
     "display": "header"
   },
