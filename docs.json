@@ -30,7 +30,7 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Get Support",
+      "label": "Dashboard",
       "href": "https://codking.tech/"
     }
   },
