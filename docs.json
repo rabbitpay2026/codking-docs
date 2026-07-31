@@ -10,8 +10,8 @@
   },
 
   "logo": {
-    "light": "/logo/cod logo.png",
-    "dark": "/logo/logo white.png"
+    "light": "/images/withbglogo2.png",
+    "dark": "/images/withbglogo2.png"
   },
 
   "favicon": "/logo/CK logo icon-1200px.png",
