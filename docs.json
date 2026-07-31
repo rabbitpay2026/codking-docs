@@ -130,8 +130,7 @@
       "chatgpt",
       "claude",
       "assistant"
-    ],
-    "display": "header"
+    ]
   },
   "search": {
     "prompt": "Search Codking docs..."
