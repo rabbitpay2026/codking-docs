@@ -23,6 +23,22 @@
   "navbar": {
     "links": [
       {
+        "href": "https://docs.flexype.io/getting-started/introduction",
+        "label": "Documentation"
+      },
+      {
+        "href": "https://docs.flexype.io/handbook/intro",
+        "label": "Dashboard Handbook"
+      },
+      {
+        "href": "https://docs.flexype.io/api-reference/introduction",
+        "label": "API Reference"
+      },
+      {
+        "href": "https://docs.flexype.io/changelog/changelog",
+        "label": "Changelog"
+      },
+      {
         "label": "COD King Website",
         "href": "https://codking.tech/"
       }
