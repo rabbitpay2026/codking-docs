@@ -17,7 +17,8 @@
   "favicon": "/logo/CK logo icon-1200px.png",
 
   "appearance": {
-    "default": "system"
+    "default": "light",
+    "strict": true
   },
 
   "navbar": {
@@ -115,11 +116,7 @@
     ]
   },
   "background": {
-    "decoration": "gradient",
-    "color": {
-      "light": "#FFFFFF",
-      "dark": "#0D0918"
-    }
+    "decoration": "gradient"
   },
   "contextual": {
     "options": [
