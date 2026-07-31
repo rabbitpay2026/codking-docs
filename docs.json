@@ -126,6 +126,7 @@
     "options": [
       "copy",
       "view",
+      "assistant",
       "chatgpt",
       "claude",
       "assistant"
