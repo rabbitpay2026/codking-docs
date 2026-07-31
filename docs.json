@@ -54,7 +54,9 @@
       {
         "group": "OTP Verification",
         "icon": "shield-check",
-        "pages": []
+        "pages": [
+          "new-dummy-page"
+        ]
       },
       {
         "group": "Core Features",
