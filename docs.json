@@ -23,8 +23,8 @@
   "navbar": {
     "links": [
       {
-        "label": "COD King Website",
-        "href": "https://codking.tech/"
+        "href": "mailto:support@notifiktech.com",
+        "label": "Support"
       }
     ],
     "primary": {
@@ -37,7 +37,8 @@
   "seo": {
     "metatags": {
       "og:title": "COD King Documentation",
-      "og:description": "Official guides and documentation for COD King on Shopify."
+      "og:description": "Official guides and documentation for COD King on Shopify.",
+      "og:site_name": "Codking Docs"
     }
   },
 
@@ -55,6 +56,7 @@
         "group": "OTP Verification",
         "icon": "shield-check",
         "pages": [
+          "untitled-page",
           "new-dummy-page"
         ]
       },
@@ -118,5 +120,17 @@
       "light": "#FCFBFF",
       "dark": "#0D0918"
     }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude"
+    ],
+    "display": "header"
+  },
+  "search": {
+    "prompt": "Search Codking docs..."
   }
 }
