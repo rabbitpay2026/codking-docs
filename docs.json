@@ -47,7 +47,6 @@
     "groups": [
       {
         "group": "Getting Started",
-        "icon": "rocket",
         "pages": [
           "index",
           "quickstart"
