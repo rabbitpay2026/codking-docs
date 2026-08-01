@@ -44,78 +44,121 @@
   },
 
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      },
-      {
-        "group": "OTP Verification",
-        "icon": "shield-check",
-        "pages": [
-          "untitled-page",
-          "new-dummy-page",
-          "partial-payment/overview"
-        ]
-      },
-      {
-        "group": "Core Features",
-        "icon": "sparkles",
-        "pages": [
-          "cod-fees/overview",
-          "partial-cod/overview",
-          "cod-to-prepaid/overview",
+        "tab": "Documentation",
+        "groups": [
           {
-            "group": "COD Rules",
+            "group": "Getting Started",
             "pages": [
-              "untitled-page-2",
-              "untitled-page-4",
-              "untitled-page-3"
+              "index",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "icon": "puzzle-piece",
+            "pages": [
+              "integrations/overview",
+              "integrations/shopify"
+            ]
+          },
+          {
+            "group": "OTP Verification",
+            "icon": "shield-check",
+            "pages": [
+              "untitled-page",
+              "new-dummy-page",
+              "partial-payment/overview"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "icon": "sparkles",
+            "pages": [
+              "cod-fees/overview",
+              "partial-cod/overview",
+              "cod-to-prepaid/overview",
+              {
+                "group": "COD Rules",
+                "pages": [
+                  "untitled-page-2",
+                  "untitled-page-4",
+                  "untitled-page-3"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Engagement",
+            "icon": "messages",
+            "pages": [
+              "notifications/overview",
+              "abandoned-cart/overview"
+            ]
+          },
+          {
+            "group": "Orders & Analytics",
+            "icon": "chart-line",
+            "pages": []
+          },
+          {
+            "group": "Help & Support",
+            "icon": "life-ring",
+            "pages": [
+              "guides/troubleshooting",
+              "support/faq"
+            ]
+          },
+          {
+            "group": "COD Fees",
+            "icon": "receipt",
+            "pages": []
+          },
+          {
+            "group": "Partial COD",
+            "icon": "credit-card",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Dashboard Handbook",
+        "groups": [
+          {
+            "group": "Dashboard Handbook",
+            "icon": "gauge",
+            "pages": [
+              "dashboard-handbook/overview"
             ]
           }
         ]
       },
       {
-        "group": "Engagement",
-        "icon": "messages",
-        "pages": [
-          "notifications/overview",
-          "abandoned-cart/overview"
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "API",
+            "icon": "code",
+            "pages": [
+              "api-reference/authentication",
+              "api-reference/overview",
+              "api-reference/webhooks"
+            ]
+          }
         ]
       },
       {
-        "group": "Integrations",
-        "icon": "puzzle-piece",
-        "pages": [
-          "integrations/overview",
-          "integrations/shopify"
+        "tab": "Changelog",
+        "groups": [
+          {
+            "group": "Changelog",
+            "icon": "clock-rotate-left",
+            "pages": [
+              "support/changelog"
+            ]
+          }
         ]
-      },
-      {
-        "group": "Orders & Analytics",
-        "icon": "chart-line",
-        "pages": []
-      },
-      {
-        "group": "Help & Support",
-        "icon": "life-ring",
-        "pages": [
-          "guides/troubleshooting",
-          "support/faq"
-        ]
-      },
-      {
-        "group": "COD Fees",
-        "icon": "receipt",
-        "pages": []
-      },
-      {
-        "group": "Partial COD",
-        "icon": "credit-card",
-        "pages": []
       }
     ]
   },
