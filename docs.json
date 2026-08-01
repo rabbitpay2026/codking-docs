@@ -65,7 +65,6 @@
         "group": "Core Features",
         "icon": "sparkles",
         "pages": [
-          "otp-verification/overview",
           "cod-fees/overview",
           "partial-cod/overview",
           "cod-to-prepaid/overview",
