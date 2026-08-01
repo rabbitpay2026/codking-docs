@@ -57,7 +57,8 @@
         "icon": "shield-check",
         "pages": [
           "untitled-page",
-          "new-dummy-page"
+          "new-dummy-page",
+          "partial-payment/overview"
         ]
       },
       {
