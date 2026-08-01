@@ -109,47 +109,69 @@ icon: "shop"
   </Step>
 </Steps>
 
-## Complete the Initial Setup
+## Complete Pre-Integration Setup
 
 <Steps>
-  <Step title="Configure your COD workflows" id="initial-setup">
-    Select the modules you want to enable for your store. Here's what each one covers:
+  <Step title="Complete payment gateway setup" id="initial-setup">
+    Configure the payment gateways you intend to use before continuing with your COD King setup. Select the gateways you want to enable for each **Payment Method**. If you already have **active accounts** with any of the gateways below, here's what each one needs:
 
     <AccordionGroup>
-      <Accordion title="OTP Verification" icon="shield-check">
-        Confirm a customer's phone number with a one-time password before the COD order is accepted.
+      <Accordion title="Razorpay" icon="credit-card">
+        Requires account authorization from your Razorpay dashboard. **No webhook setup is needed.** [View setup →](/integrations/payment-gateways/razorpay)
       </Accordion>
 
-      <Accordion title="COD Rules" icon="filter">
-        Decide which carts and customers are allowed to use Cash on Delivery.
+      <Accordion title="Cashfree" icon="credit-card">
+        Credentials are available in your Cashfree dashboard. **Webhook configuration is required.** [View setup →](/integrations/payment-gateways/cashfree)
       </Accordion>
 
-      <Accordion title="Partial COD" icon="credit-card">
-        Collect an advance payment on COD orders to reduce RTO and minimise fake orders.
+      <Accordion title="PayU" icon="credit-card">
+        Credentials are available in your PayU dashboard. **Webhook configuration is required.** [View setup →](/integrations/payment-gateways/payu)
       </Accordion>
 
-      <Accordion title="COD Fees" icon="receipt">
-        Apply a fee to COD orders and steer customers toward prepaid checkout.
+      <Accordion title="PhonePe" icon="credit-card">
+        Share your merchant ID with the COD King team. Mapping is handled manually by our team. [View setup →](/integrations/payment-gateways/phonepe)
       </Accordion>
 
-      <Accordion title="Notifications" icon="message">
-        Set up the customer messages sent across the COD order lifecycle.
+      <Accordion title="Easebuzz" icon="credit-card">
+        Credentials are shared by the Easebuzz team. **Webhook configuration is required.** [View setup →](/integrations/payment-gateways/easebuzz)
       </Accordion>
 
-      <Accordion title="Integrations" icon="puzzle-piece">
-        Connect the other tools and providers COD King works with.
+      <Accordion title="Paytm" icon="credit-card">
+        Credentials are available in your Paytm merchant dashboard. **Webhook configuration is required.** [View setup →](/integrations/payment-gateways/paytm)
+      </Accordion>
+
+      <Accordion title="XPay" icon="credit-card">
+        Credentials are available in your XPay dashboard. **Webhook configuration is required.** [View setup →](/integrations/payment-gateways/xpay)
       </Accordion>
     </AccordionGroup>
 
-    <Info>
-      If you didn't configure these right after installing the app, you can still set them up later from your COD King dashboard.
-    </Info>
+    <Note>
+      If you don't configure payment gateways during the initial setup, you can configure them later from the COD King dashboard.
+    </Note>
 
-    {/* IMAGE PLACEHOLDER — upload the COD King settings screenshot here */}
+    {/* IMAGE PLACEHOLDER — upload the Payment Settings screenshot here, wrapped in a Frame */}
   </Step>
-  <Step title="Explore app features and settings" id="explore-settings">
-    - Review the key features available within the app.
-    - Adjust settings to tailor the app to your business requirements.
+  <Step title="Connect marketing and analytics tools" id="marketing-tools">
+    {/* IMAGE PLACEHOLDER — upload the Marketing and Analytics Settings screenshot here, wrapped in a Frame */}
+
+    Connect the marketing platforms you intend to use with your Shopify store. Examples include:
+
+    - Meta Pixel
+    - Google Analytics
+    - Google Ads
+
+    For detailed setup instructions, refer to the [Analytics documentation](/integrations/overview).
+  </Step>
+  <Step title="Explore COD King features and settings" id="explore-settings">
+    - Review the available COD King features.
+    - Configure settings according to your business requirements.
+    - Familiarize yourself with available configuration options.
+  </Step>
+  <Step title="Select your Shopify theme for integration" id="select-theme">
+    {/* IMAGE PLACEHOLDER — upload the Shopify Themes screenshot here, wrapped in a Frame */}
+
+    - Tell the COD King team which Shopify theme should be integrated.
+    - If no theme is specified, your primary published theme will be used for the integration.
   </Step>
 </Steps>
 
