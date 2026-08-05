@@ -64,32 +64,6 @@
             ]
           },
           {
-            "group": "OTP Verification",
-            "icon": "shield-check",
-            "pages": [
-              "untitled-page",
-              "new-dummy-page",
-              "partial-payment/overview"
-            ]
-          },
-          {
-            "group": "Core Features",
-            "icon": "sparkles",
-            "pages": [
-              "cod-fees/overview",
-              "partial-cod/overview",
-              "cod-to-prepaid/overview",
-              {
-                "group": "COD Rules",
-                "pages": [
-                  "untitled-page-2",
-                  "untitled-page-4",
-                  "untitled-page-3"
-                ]
-              }
-            ]
-          },
-          {
             "group": "Engagement",
             "icon": "messages",
             "pages": [
@@ -116,9 +90,11 @@
             "pages": []
           },
           {
-            "group": "Partial COD",
-            "icon": "credit-card",
-            "pages": []
+            "group": "Core Features",
+            "pages": [
+              "partial-payment/overview",
+              "new-dummy-page"
+            ]
           }
         ]
       },

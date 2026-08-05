@@ -1,0 +1,126 @@
+## Overview
+
+OTP Verification enables merchants to validate customer intent before processing Cash on Delivery (COD) orders. By sending a one-time password (OTP) via SMS or WhatsApp, only verified orders are allowed to proceed further in the fulfillment process.
+
+This feature plays a critical role in minimizing fake orders, reducing Return to Origin (RTO), and improving overall operational efficiency.
+
+---
+
+## Business Context
+
+COD orders often introduce challenges such as:
+
+- Fraudulent or non-serious buyers
+- High RTO rates
+- Increased logistics and operational costs
+
+OTP Verification introduces a verification layer at checkout, ensuring that only genuine customers confirm their orders.
+
+---
+
+<Frame>
+  ![OTP](/images/OTP.png "OTP")
+</Frame>
+
+## How It Works
+
+1. A customer places a COD order on the Shopify store
+2. An OTP is automatically sent via SMS or WhatsApp
+3. The customer enters the OTP to confirm the order
+4. The system validates the OTP in real time
+5. The order is marked as "Verified" and proceeds to fulfillment
+
+---
+
+## Key Features
+
+### Multi-Channel OTP Delivery
+
+Supports OTP delivery through:
+
+- SMS
+- WhatsApp<br />This improves delivery success rates and ensures broader reach.
+
+### Real-Time Verification
+
+- Instant OTP validation
+- No delay in order confirmation
+
+### Fraud Prevention
+
+- Filters out fake, bot, or invalid orders
+- Ensures only genuine transactions are processed
+
+### Retry and Resend Mechanism
+
+- Allows customers to request OTP again if not received
+- Reduces drop-offs caused by delivery issues
+
+### Conditional Triggering
+
+OTP verification can be applied selectively based on:
+
+- Order value thresholds
+- Geographic locations
+- COD-specific orders
+
+---
+
+## Benefits
+
+- Reduction in Return to Origin (RTO) rates
+- Lower logistics and operational costs
+- Improved order success rate
+- Enhanced customer trust and reliability
+- More controlled and secure COD operations
+
+---
+
+## Use Cases
+
+### High COD Volume Stores
+
+Verify all COD orders to ensure authenticity and reduce losses.
+
+### High-Risk Regions
+
+Enable OTP verification selectively for locations with higher RTO rates.
+
+### High-Value Orders
+
+Apply verification for expensive products to reduce financial risk.
+
+---
+
+## Configuration Guide
+
+<iframe src="https://www.youtube.com/embed/yCPBjrO2tFA" title="YouTube video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+### Step 1: Enable OTP Verification
+
+- Navigate to the COD King dashboard
+- Open the "OTP Verification" section
+- Enable the OTP feature
+
+### Step 2: Select Delivery Channels
+
+- Choose SMS, WhatsApp, or both
+
+### Step 3: Define Rules (Optional)
+
+- Configure conditions based on:
+  - Order value
+  - Customer location
+  - Product category
+
+### Step 4: Customize Message Template
+
+- Add brand identity
+- Modify OTP message content
+
+### Step 5: Save and Activate
+
+- Save configuration changes
+- OTP verification becomes active for applicable orders
+
+---
