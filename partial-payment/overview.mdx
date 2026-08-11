@@ -4,383 +4,324 @@ icon: "split"
 description: "Collect an advance payment for Cash on Delivery (COD) orders to reduce RTO, improve cash flow, and minimize fake orders"
 ---
 
+## 1. What is Partial COD?
+
+**Partial Cash on Delivery (Partial COD)**—also referred to as **Upfront Payment, Deposit Payment, or Part Payment**—is a hybrid checkout solution designed for e-commerce stores.
+
+Instead of forcing buyers to choose between 100% prepaid or 100% cash on delivery, partial COD splits the order total into two parts:
+
+- **Upfront Deposit (Paid Online):** A small fixed fee (e.g., ₹99, \$5) or a percentage (e.g., 10%–20%) collected online at checkout via UPI, cards, net banking, or digital wallets.
+- **Remaining Balance (Paid on Delivery):** The remaining balance collected in cash or digitally by the delivery agent upon package arrival.
+
+---
+
+## 2. Why Partial COD is Needed
+
+Traditional 100% cash on delivery is a major driver of losses for e-commerce businesses in emerging markets. Below are the primary structural challenges resolved by partial payment:
+
+- **High Return to Origin (RTO) Rates:** Up to 20%–40% of 100% COD orders are rejected at the doorstep due to buyer impulse, changed minds, or unavailability, resulting in heavy reverse logistics fees.
+- **Lack of Customer Intent:** Zero upfront financial commitment encourages casual ordering. Requiring even a nominal deposit filters out non-serious buyers.
+- **Sunk Shipping Costs:** When a COD order is returned, merchants bear forward shipping, return shipping, and inventory lock-up costs. Upfront deposits guarantee shipping cost coverage.
+- **Dead Inventory Lockup:** Rejected COD packages spend days or weeks in transit and return logistics, preventing merchants from selling items to real buyers.
+
+<Tip>
+  **The Psychology of the Upfront Deposit:** When a customer pays as little as \$2 or ₹99 upfront, their cognitive commitment shifts from _“I’ll decide when it arrives”_ to _“I have already invested in this purchase.”_ Doorstep refusal drops exponentially.
+</Tip>
+
+---
+
+## 3. Countries Where Partial Payment is Needed
+
+Partial COD is especially impactful in high-COD emerging e-commerce economies across Asia, MENA, and Eastern Europe:
+
+| Country / Region | Local Market Conditions | Ideal Partial COD Strategy |
+| :-- | :-- | :-- |
+| **India (IN)**<br /> | High COD usage in Tier 2/3 cities; seamless UPI ecosystem (GPay, PhonePe). | Charge a small flat deposit (e.g., ₹99 or ₹149) to cover reverse logistics without raising conversion friction. |
+| **Saudi Arabia (SA) & UAE**<br /> | High Average Order Value (AOV); COD heavily favored alongside BNPL. | Use a percentage-based deposit (15%–20%) to mitigate high international or cross-border shipping risks. |
+| **Philippines (PH)** | Cash-driven market supported by GCash and PayMaya. | Set tier-based rules requiring a 20% deposit on high-ticket goods and a flat PHP 100 on lower carts. |
+| **Pakistan (PK)**<br /> | Over 80% COD market share; high courier non-delivery and refusal rates. | A mandatory upfront fee covering 100% of the courier shipping cost prior to dispatch. |
+| **Egypt (EG)** | Cash-heavy e-commerce market; doorstep rejections strain merchant margins. | Upfront token deposit (EGP 50–100) via local digital wallets (Fawry, Vodafone Cash). |
+| **Ukraine (UA)** | The postal service (Nova Poshta) cash payment model is widely adopted. | Set partial prepayment rules equal to round-trip shipping costs. |
+
+---
+
+## 4. Partial Payment Rules
+
+The rules engine allows merchants to define precise conditions under which Partial COD is offered.
+
+## Payment Rules
+
+### Rule 1: Rule Configuration
+
+- **Rule Name:** The label you give this payment option (e.g., _"Full Payment"_ or _"10% Deposit"_).
+- **Amount Type:** How much money the customer pays upfront:
+  - **Full Payment:** Customer pays 100% of the cost upfront.
+  - **Percentage: The** customer pays a percentage upfront (e.g., 20%), and the rest on delivery.
+  - **Fixed:** The customer pays a set dollar/rupee amount upfront (e.g., ₹200 deposit), and the rest on delivery.
+  - **Cash on Delivery (COD):** Customer pays nothing upfront and pays the full amount upon delivery (with optional extra delivery fees)
+
 <Frame>
-  ![Partial Payment Dashboard](/partial-payement-dashboard.png "Partial Payment Dashboard")
+  ![Screenshot 08 10, 07 10 55 PM 2](/images/screenshot-08_10,-07_10_55-PM-2.jpg "Screenshot 08 10, 07 10 55 PM 2")
 </Frame>
 
-# Partial Payment
+### Rule 2: Cart Range (Advanced)
 
-Partial Payment allows you to collect a fixed amount or percentage from customers before confirming a Cash on Delivery (COD) order. The remaining amount is collected by your courier partner at the time of delivery.
+- **Min & Max Cart Range:** Set price limits for when this payment option appears. For example, if you set Min to 500 and Max to 5,000, this option will only show up if the customer's cart total is between ₹500 and ₹5,000. Leave both at `0.0` to make it apply to all cart totals.
 
-This helps merchants reduce Return to Origin (RTO), eliminate fake COD orders, improve cash flow, and increase order commitment without completely removing the COD payment option.
+<Frame>
+  ![Screenshot 08 10, 07 42 21 PM](/images/screenshot-08_10,-07_42_21-PM.jpg "Screenshot 08 10, 07 42 21 PM")
+</Frame>
 
-<iframe src="https://www.youtube.com/embed/BtB4CVRqwZM" title="Partial Payment Setup" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+### Rule 3: Discount Settings (Advanced)
+
+- **Discount Code:** An optional code name (e.g., earth10) applied to reward customers who select this payment option.
+- **Discount Type & Value:** Choose whether to give a percentage off (e.g., 10% off) or a flat amount off (e.g., ₹100 off) when this rule is chosen.
+
+<Frame>
+  ![Screenshot 08 10, 07 43 24 PM](/images/screenshot-08_10,-07_43_24-PM.jpg "Screenshot 08 10, 07 43 24 PM")
+</Frame>
+
+### Rule 4: Product Filter
+
+Determines which products in your store trigger this payment rule:
+
+- **All products:** The payment option is available for every single product in your store.
+- **Selected products only:** The payment option appears **only if all items** in the customer's cart are on your selected list.
+  - _Example:_ If your list has Product A and Product C:
+    - Cart with **A \+ B**—**Hidden** (because B is not on the list).
+    - Cart with **A—Shown** (because A is on the list).
+- **Exclude selected products:** The payment option is hidden if the cart contains **any** product from your exclusion list.
+  - _Example:_ If you exclude Product A:
+    - Cart with **B \+ C**—**shown** (contains no excluded items).
+    - Cart with **A \+ B**—**Hidden** (contains excluded product A).
+
+<Frame>
+  ![Screenshot 08 10, 07 43 44 PM](/images/screenshot-08_10,-07_43_44-PM.jpg "Screenshot 08 10, 07 43 44 PM")
+</Frame>
+
+### **Rule 5: Variant Filter (Advanced)**
+
+Filters payment options by specific product variations, such as **size**, **color**, or **material**:
+
+- Works together with the Product Filter. A cart must satisfy **both** the product requirements and the variant requirements for the rule to show up.
+- Example: You can allow partial payments for "Large T-Shirts," but hide them for "Small T-Shirts."
+
+<Frame>
+  ![Screenshot 08 10, 07 49 08 PM](/images/screenshot-08_10,-07_49_08-PM.jpg "Screenshot 08 10, 07 49 08 PM")
+</Frame>
+
+### **Rule 6: Collection Filter (Advanced)**
+
+Filters payment options by Shopify product categories/collections (e.g., "Winter Collection" or "Clearance Items"):
+
+- The rule only applies if the items in the customer's cart belong to your specified collections.
+
+<Frame>
+  ![Screenshot 08 10, 07 44 26 PM](/images/screenshot-08_10,-07_44_26-PM.jpg "Screenshot 08 10, 07 44 26 PM")
+</Frame>
+
+### Rule 7: Match Any Product in Cart
+
+This changes how strictly the app checks multi-item carts against your Product, Variant, or Collection filters:
+
+- **Disabled / Unchecked (Default):** **Every single product** in the customer's cart must meet your rules. If even one item doesn't qualify, the payment option is hidden.
+- **Enabled / Checked:** **At least one product** in the cart must meet your rules for the payment option to appear for the whole cart.
+
+<Frame>
+  ![Screenshot 08 10, 07 44 42 PM](/images/screenshot-08_10,-07_44_42-PM.jpg "Screenshot 08 10, 07 44 42 PM")
+</Frame>
+
+### Rule 8: Zipcode Restrictions & Zipcode Includes
+
+Controls payment options based on the customer's delivery pincode/zip code:
+
+- **Zipcode Restrictions:** Hides this payment option for specific zip codes (useful for turning off Cash on Delivery in areas with high return rates or delivery issues).
+- **Zipcode Includes:** Shows this payment option **only** to customers in specific zip codes and hides it for everyone else.
+
+<Frame>
+  ![Screenshot 08 10, 07 45 17 PM](/images/screenshot-08_10,-07_45_17-PM.jpg "Screenshot 08 10, 07 45 17 PM")
+</Frame>
+
+### Rule 9: Display Settings (Advanced)
+
+Controls how the payment option appears to shoppers at checkout:
+
+- **Amount to show:** Overrides the automatically calculated upfront payment amount. Use this if you want to set a fixed upfront fee or add an extra fixed charge (like a ₹50 processing/shipping fee) without changing the base product price. Leaving it blank lets the app calculate the deposit automatically.
+
+<Frame>
+  ![Screenshot 08 10, 07 45 47 PM](/images/screenshot-08_10,-07_45_47-PM.jpg "Screenshot 08 10, 07 45 47 PM")
+</Frame>
+
+## Advanced settings
+
+The partial payment allows for a few advanced settings, such as the following:
+
+### **Setting 1: Tax & Calculations**
+
+<br />**Include tax in product calculations:** Checked = deposit includes tax; unchecked = tax is paid on delivery.
+
+Partial **Tax Text:** A custom message (e.g., "Taxes due on delivery") explaining remaining taxes.
+
+<Frame>
+  <img
+    src="/images/screenshot-08_10,-07_59_50-PM.jpg"
+    alt="Screenshot 08 10, 07 59 50 PM"
+    title="Screenshot 08 10, 07 59 50 PM"
+    className="mx-auto"
+  />
+</Frame>
+
+### **Setting 2: Shipping Configuration**
+
+<br />**Shipping Rate Keyword:** Words like "partial" or "installment" that trigger deposit options when selected at checkout.
+
+<Frame>
+  ![Screenshot 08 10, 08 06 28 PM 1](/images/screenshot-08_10,-08_06_28-PM-1.jpg "Screenshot 08 10, 08 06 28 PM 1")
+</Frame>
+
+### **Setting 3: Payment Flow**
+
+<br />**Same Order (Recommended):** Updates the original order with the balance due on delivery. Best for manual fulfillment.
+
+**New Order**: Cancels the original order and creates a new one for the remaining balance. Best for automated/3PL fulfillment.
+
+<Frame>
+  ![Screenshot 08 10, 08 02 39 PM](/images/screenshot-08_10,-08_02_39-PM.jpg "Screenshot 08 10, 08 02 39 PM")
+</Frame>
+
+### **Setting 4: Meta (Facebook) Pixel**
+
+<br />**What it does:** Sends deposit and purchase data to Facebook Ads to track conversions and optimize ad targeting.
+
+Setup: Requires your Pixel ID and Access Token.
+
+<Frame>
+  ![Screenshot 08 10, 08 02 39 PM (1)](/images/screenshot-08_10,-08_02_39-PM-\(1\).jpg "Screenshot 08 10, 08 02 39 PM (1)")
+</Frame>
+
+### **Setting 5: Google Ads Conversion**
+
+<br />**What it does:** Tracks partial payment sales in Google Ads to measure ad performance and ROI.
+
+Setup: Requires your Conversion ID and Conversion Label.
+
+<Frame>
+  <img
+    src="/images/screenshot-08_10,-08_00_50-PM.jpg"
+    alt="Screenshot 08 10, 08 00 50 PM"
+    title="Screenshot 08 10, 08 00 50 PM"
+    className="mx-auto"
+  />
+</Frame>
+
+## UI Costumization
+
+### Store Branding & Identity
+
+- **Brand Logo URL:** Link to your logo to show it at the top of the payment pop-up.
+- **Store Name:** Displays your store's name on the pop-up so customers know they are paying the right store.
+
+### Primary Buttons & Fallback Messages
+
+- **Proceed to Payment Button Label:** Customizes the text on the main checkout button (e.g., "Pay Deposit Now").
+- **Message when no payment rule qualifies:** The message shown if a cart doesn't qualify for deposit/COD options (e.g., "Partial payment not available for this cart value").
+
+### Promotional Banners
+
+- **Show Promo Banner:** Toggle to display an announcement banner at the top of the payment window.
+- **Promo Banner Text:** Custom message shown in the banner (e.g., "Get 50% OFF on Your 2nd Order").
+- **Banner Background Color:** Customizes the color behind the banner text.
+- **Banner Text Color:** Customizes the color of the banner text.
+
+<Frame>
+  ![Screenshot 08 10, 08 19 01 PM](/images/screenshot-08_10,-08_19_01-PM.jpg "Screenshot 08 10, 08 19 01 PM")
+</Frame>
 
 ---
 
-## How It Works
+## 5. Setting Up Partial Payment
 
-1. Customer adds products to the cart.
-2. Customer proceeds to checkout.
-3. RabbitPay evaluates all configured Partial Payment rules.
-4. If the order matches a rule, the customer is asked to pay the configured advance amount.
-5. The advance payment is collected securely.
-6. The remaining amount is automatically marked as Cash on Delivery.
-7. The order is placed successfully.
+Follow this step-by-step guide to configure and launch Partial COD on your store.
 
----
+### Step 1: Install and Activate the App
 
-## Why Use Partial Payment?
+Navigate to the Shopify App Store directory, search for the **Codking** app, and click **Install**. Authorize app permissions to link your store catalog.
 
-Partial Payment is designed to improve order quality while maintaining the convenience of Cash on Delivery.
+### Step 2: Configure Online Payment Gateways
 
-### Benefits
+Connect your preferred online payment gateway to process upfront deposits:
 
-- ✅ Reduce fake COD orders
-- ✅ Lower Return to Origin (RTO)
-- ✅ Improve customer commitment
-- ✅ Increase prepaid revenue
-- ✅ Improve cash flow
-- ✅ Reduce logistics losses
-- ✅ Continue offering COD to genuine customers
-- ✅ Build customer trust with secure advance payments
-
----
-
-## Dashboard Overview
-
-The Partial Payment dashboard allows you to configure exactly when advance payment should be collected.
-
-You can configure:
-
-- Collections
-- Product Rules
-- Customer Rules
-- Pincode Rules
-- Minimum & Maximum Cart Value
-- Fixed Advance Amount
-- Percentage Advance Amount
-- Remaining COD Amount
-- Rule Priority
-- Enable / Disable Rules
-
----
-
-## Features
-
-### Collection Based Rules
-
-Enable Partial Payment only for selected collections.
-
-Example:
-
-- Electronics
-- Luxury Products
-- Furniture
-- High RTO Products
-
----
-
-### Product Based Rules
-
-Apply Partial Payment only for selected products.
-
-Perfect for:
-
-- Expensive items
-- Customized products
-- Limited edition products
-- High-risk SKUs
-
----
-
-### Pincode Based Rules
-
-Control Partial Payment using delivery pin codes.
-
-Examples:
-
-- High RTO locations
-- Remote areas
-- Blacklisted locations
-- State-wise configuration
-
----
-
-### Customer Based Rules
-
-Create rules based on customer information.
-
-Examples:
-
-- New Customers
-- Returning Customers
-- VIP Customers
-- Tagged Customers
-
----
-
-### Cart Value Rules
-
-Configure Partial Payment based on order value.
-
-Examples
-
-| Cart Value | Advance |
-| --- | --- |
-| ₹0 - ₹999 | No Partial Payment |
-| ₹1000 - ₹4999 | ₹200 |
-| ₹5000\+ | 20% Advance |
-
----
-
-### Fixed Amount
-
-Collect a fixed advance amount.
-
-Example:
-
-Order Value
-
-₹4,500
-
-Advance
-
-₹500
-
-Remaining COD
-
-₹4,000
-
----
-
-### Percentage Based Payment
-
-Collect a percentage of the order value.
-
-Example
-
-Order Value
-
-₹5,000
-
-Advance
-
-20%
-
-Customer Pays
-
-₹1,000
-
-Remaining COD
-
-₹4,000
-
----
-
-### Multiple Rules
-
-Create multiple Partial Payment rules for different scenarios.
-
-Example
-
-- Rule 1 → Luxury Products → 20%
-- Rule 2 → Electronics → ₹500
-- Rule 3 → Delhi → 10%
-- Rule 4 → New Customers → ₹300
-
-RabbitPay automatically applies the matching rule.
-
----
-
-### Enable / Disable Rules
-
-Each rule can be enabled or disabled instantly without deleting it.
-
-This makes testing and seasonal campaigns easier.
-
----
-
-### Rule Priority
-
-If multiple rules match the same order, RabbitPay evaluates them according to their configured priority.
-
-This ensures predictable behavior for every checkout.
-
----
-
-## Example Use Cases
-
-### High Value Orders
-
-Order above ₹10,000
-
-Advance
-
-20%
-
----
-
-### Electronics Collection
-
-Advance
-
-₹500
-
----
-
-### Luxury Collection
-
-Advance
-
-30%
-
----
-
-### High Risk Pin Codes
-
-Advance
-
-₹300
-
----
-
-### New Customers
-
-Advance
-
-₹200
-
----
-
-### Festival Season
-
-Collect
-
-10%
-
-Advance
-
-for every COD order.
-
----
-
-## Best Practices
-
-- Use percentage-based payment for expensive products.
-- Use fixed amounts for low-value orders.
-- Configure pincode rules for high-RTO regions.
-- Test every rule before making it live.
-- Avoid collecting unnecessarily high advance payments.
-- Review analytics regularly and optimize your rules.
-- Keep your rules simple and easy to manage.
-
----
-
-## Frequently Asked Questions
-
-### Can I collect a fixed amount?
-
-Yes.
-
-You can collect any fixed amount before allowing Cash on Delivery.
-
----
-
-### Can I collect a percentage instead?
-
-Yes.
-
-You can collect any percentage of the order value.
-
----
-
-### Can I create multiple rules?
-
-Yes.
-
-There is no restriction on creating multiple Partial Payment rules.
-
----
-
-### What happens if multiple rules match?
-
-RabbitPay applies the rule according to the configured priority.
-
----
-
-### Can I disable a rule without deleting it?
-
-Yes.
-
-Every rule can be enabled or disabled instantly.
-
----
-
-### Does Partial Payment work with COD?
-
-Yes.
-
-Customers pay only the advance amount online, while the remaining balance is collected by the courier during delivery.
-
----
-
-### Can I use Partial Payment with COD Rules?
-
-Absolutely.
-
-Partial Payment works seamlessly with COD Rules, COD Fees, OTP Verification, and other RabbitPay checkout features.
-
----
-
-## Tips
-
-<Info>
-  Start with a small advance payment (10–20%) and gradually optimize your rules based on RTO performance and customer behavior.
-</Info>
+1. Go to **Dashboard \> Settings \> Payment Gateways**.
+2. Select your gateway (e.g., Razorpay, Stripe, PayU, GCash, Tabby).
+3. Enter API keys (key ID & secret key) and save settings.
 
 <Warning>
-  Always test your Partial Payment configuration before enabling it for all customers to ensure the checkout behaves as expected.
+  **Important:** Ensure your payment gateway is set to **Auto-Capture** so upfront deposits are immediately authorized and captured at checkout.
 </Warning>
 
----
+### Step 3: Locate the partial payment feature
 
-## Related Guides
+Click on "Manage."
 
-<CardGroup cols={2}>
-  <Card title="COD Rules" icon="shield-check" href="/cod-rules">
-    Learn how to control Cash on Delivery availability.
-  </Card>
+<Frame>
+  ![Screenshot 08 10, 03 27 49 PM](/images/screenshot-08_10,-03_27_49-PM.jpg "Screenshot 08 10, 03 27 49 PM")
+</Frame>
 
-  <Card title="COD Fees" icon="wallet" href="/cod-fees">
-    Charge additional fees for Cash on Delivery orders.
-  </Card>
+### Step 4: Locating the theme editor
 
-  <Card title="Prepaid Discount" icon="badge-percent" href="/prepaid-discount">
-    Encourage prepaid orders using automatic discounts.
-  </Card>
+You will see an option of features right under the COD King on the APPS section on the left sidebar
 
-  <Card title="OTP Verification" icon="shield" href="/otp-verification">
-    Secure checkout using OTP verification.
-  </Card>
-</CardGroup>
+An interface as below appears; click on the "open theme editor."
 
----
-
-# Need Help?
-
-If you need help configuring Partial Payment, our support team is ready to assist.
-
-<CardGroup cols={2}>
-  <Card title="Contact Support" icon="message-circle" href="https://codking.tech/contact">
-    Get help from our support team.
-  </Card>
-
-  <Card title="Explore Documentation" icon="book-open" href="/">
-    Browse all RabbitPay guides and tutorials.
-  </Card>
-</CardGroup>
+<Frame>
+  ![Screenshot 08 10, 08 20 37 PM](/images/screenshot-08_10,-08_20_37-PM.jpg "Screenshot 08 10, 08 20 37 PM")
+</Frame>
 
 <Info>
-  💡 **Pro Tip:** Merchants using Partial Payment together with COD Rules and OTP Verification typically see a significant reduction in fake COD orders and Return to Origin (RTO).
+  Clicking on the theme editor will take you to your Shopify stores interface.<br />Select the range of theme as per requirement.
 </Info>
+
+### Step 5: Select the payment rules.
+
+Go back to the Shopify tab and scroll down to find an interface for payment rule selection.
+
+1. Full payment: select a fixed amount from the total amount for upfront payment
+2. Percentage-based: select the percentage from the total amount that is desired for upfront payment.
+
+<Info>
+  Select the most suitable rule according to the needs
+</Info>
+
+<Frame>
+  ![Screenshot 08 10, 08 22 31 PM](/images/screenshot-08_10,-08_22_31-PM.jpg "Screenshot 08 10, 08 22 31 PM")
+</Frame>
+
+### Step 6: Activate the partial payment
+
+Scroll back to the top and locate the "activate partial payment" option.
+
+Tick off the box.
+
+<Frame>
+  ![Screenshot 08 10, 08 23 41 PM](/images/screenshot-08_10,-08_23_41-PM.jpg "Screenshot 08 10, 08 23 41 PM")
+</Frame>
+
+### Step 7: Review
+
+Check whether the partial payment shows up on the checkout pop-up.
+
+<Frame>
+  ![Screenshot 08 10, 03 52 19 PM](/images/screenshot-08_10,-03_52_19-PM.jpg "Screenshot 08 10, 03 52 19 PM")
+</Frame>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Need Help?" icon="headset" href="mailto:support@codking.com">
+    Contact our support team for setup assistance or customized payment flow rules.
+  </Card>
+
+  <Card title="Integrations" icon="plug" href="/integrations">
+    Learn how to sync Partial COD with your ERP, 3PL fulfillment, and custom gateways.
+  </Card>
+</CardGroup>
