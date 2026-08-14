@@ -87,13 +87,16 @@
           {
             "group": "COD Fees",
             "icon": "receipt",
-            "pages": []
+            "pages": [
+              "untitled-page-5"
+            ]
           },
           {
             "group": "Core Features",
             "pages": [
               "partial-payment/overview",
-              "new-dummy-page-3"
+              "new-dummy-page-3",
+              "new-dummy-page-3-2"
             ]
           }
         ]
