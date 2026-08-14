@@ -95,7 +95,7 @@
             "group": "Core Features",
             "pages": [
               "partial-payment/overview",
-              "new-dummy-page-3",
+              "setting-otp-verification-on-shopify",
               "new-dummy-page-3-2"
             ]
           }
