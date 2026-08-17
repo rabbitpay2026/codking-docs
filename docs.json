@@ -87,15 +87,14 @@
           {
             "group": "COD Fees",
             "icon": "receipt",
-            "pages": [
-              "untitled-page-5"
-            ]
+            "pages": []
           },
           {
             "group": "Core Features",
             "pages": [
               "partial-payment/overview",
               "setting-otp-verification-on-shopify",
+              "untitled-page-5",
               "new-dummy-page-3-2"
             ]
           }
