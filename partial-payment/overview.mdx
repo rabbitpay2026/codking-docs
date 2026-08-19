@@ -55,17 +55,17 @@ Head to the Shopify App Store, search for **Codking**, and hit Install. You'll b
   ![Screenshot 08 11, 07 07 33 PM](/images/screenshot-08_11,-07_07_33-PM.jpg "Screenshot 08 11, 07 07 33 PM")
 </Frame>
 
-### Step 2: Connect a Payment Gateway
-
-Before deposits can be collected, you'll need a gateway wired up:
-
-1. Go to **Dashboard \> Settings \> Payment Gateways**.
-2. Pick your gateway—Razorpay, Stripe, PayU, GCash, Tabby, or whatever fits your region.
-3. Drop in your API key and secret key, then save.
-
 <Warning>
-  Double-check that your gateway is set to **Auto-Capture**. If it isn't, upfront deposits will be authorized but not actually collected at checkout.
+  Make sure your Shopify store is connected to the desired payment gateway. Double-check that your gateway is set to **Auto-Capture**. If it isn't, upfront deposits will be authorized but not actually collected at checkout.
 </Warning>
+
+### Step 8: Turn It On
+
+Scroll back up to the top and check the **Activate Partial Payment** box.
+
+<Frame>
+  ![Screenshot 08 10, 08 23 41 PM](/images/screenshot-08_10,-08_23_41-PM.jpg "Screenshot 08 10, 08 23 41 PM")
+</Frame>
 
 ### Step 3: Open the Partial Payment Feature
 
@@ -178,7 +178,7 @@ You can also gate a rule by delivery pincode—handy if certain areas have a his
 
 **5i. Display Settings (Advanced)**
 
-If you'd rather not let the app auto-calculate the deposit, use this field to override it—set a fixed upfront fee or tack on an extra charge (say, a ₹50 processing fee) without touching the base product price. Leave it blank, and the app handles the math for you.
+If you'd rather not let the app auto-calculate the deposit, use this field to override it—set a fixed upfront fee or add an extra charge (say, a ₹50 processing fee) without changing the base product price. Leave it blank, and the app handles the math for you.
 
 <Frame>
   ![Screenshot 08 13, 05 49 35 PM](/images/screenshot-08_13,-05_49_35-PM.jpg "Screenshot 08 13, 05 49 35 PM")
@@ -251,15 +251,7 @@ If you want to run a promo inside the pop-up itself, toggle the banner on, write
   ![Screenshot 08 10, 08 19 01 PM](/images/screenshot-08_10,-08_19_01-PM.jpg "Screenshot 08 10, 08 19 01 PM")
 </Frame>
 
-### Step 8: Turn It On
-
-Scroll back up to the top and check the **Activate Partial Payment** box.
-
-<Frame>
-  ![Screenshot 08 10, 08 23 41 PM](/images/screenshot-08_10,-08_23_41-PM.jpg "Screenshot 08 10, 08 23 41 PM")
-</Frame>
-
-### Step 9: Check Your Work
+### Step 8: Check Your Work
 
 Head to checkout and confirm the partial payment option actually shows up the way you configured it.
 
