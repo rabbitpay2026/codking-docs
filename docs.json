@@ -94,8 +94,12 @@
             "pages": [
               "partial-payment/overview",
               "setting-otp-verification-on-shopify",
+              "COD_fees",
               "untitled-page-5",
-              "new-dummy-page-3-2"
+              "new-dummy-page-3-2",
+              "Abandoned_cart",
+              "untitled-page-6",
+              "untitled-page-7"
             ]
           }
         ]
