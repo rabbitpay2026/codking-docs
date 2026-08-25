@@ -51,8 +51,7 @@
           {
             "group": "Getting Started",
             "pages": [
-              "index",
-              "quickstart"
+              "index"
             ]
           },
           {
@@ -64,16 +63,14 @@
           {
             "group": "Engagement",
             "icon": "messages",
-            "pages": [
-              "notifications/overview",
-              "abandoned-cart/overview"
-            ],
+            "pages": [],
             "hidden": true
           },
           {
             "group": "Orders & Analytics",
             "icon": "chart-line",
-            "pages": []
+            "pages": [],
+            "hidden": true
           },
           {
             "group": "Help & Support",
