@@ -51,22 +51,7 @@
           {
             "group": "Getting Started",
             "pages": [
-              "index",
-              {
-                "group": "Core Features",
-                "pages": [
-                  "partial-payment/overview",
-                  "setting-otp-verification-on-shopify",
-                  "setting-cod-fees-in-shopify",
-                  "setting-sms-and-whatsapp-in-shopify",
-                  "setting-prepaid-discount-in-shopify",
-                  "setting-abandoned-cart-recovery-reminders-in-shopify",
-                  "configure-rules-for-cod-in-shopify",
-                  "setting-cod-to-prepaid-conversion-in-shopify",
-                  "untitled-page-8",
-                  "untitled-page-8"
-                ]
-              }
+              "index"
             ]
           },
           {
@@ -99,6 +84,21 @@
             "group": "COD Fees",
             "icon": "receipt",
             "pages": []
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "partial-payment/overview",
+              "setting-otp-verification-on-shopify",
+              "setting-cod-fees-in-shopify",
+              "setting-sms-and-whatsapp-in-shopify",
+              "setting-prepaid-discount-in-shopify",
+              "setting-abandoned-cart-recovery-reminders-in-shopify",
+              "configure-rules-for-cod-in-shopify",
+              "setting-cod-to-prepaid-conversion-in-shopify",
+              "untitled-page-8",
+              "untitled-page-8"
+            ]
           }
         ]
       },
