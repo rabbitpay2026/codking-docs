@@ -108,11 +108,7 @@
           {
             "group": "API",
             "icon": "code",
-            "pages": [
-              "api-reference/authentication",
-              "api-reference/overview",
-              "api-reference/webhooks"
-            ]
+            "pages": []
           }
         ]
       },
