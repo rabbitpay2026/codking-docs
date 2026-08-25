@@ -58,10 +58,7 @@
           {
             "group": "Integrations",
             "icon": "puzzle-piece",
-            "pages": [
-              "integrations/overview",
-              "integrations/shopify"
-            ],
+            "pages": [],
             "hidden": true
           },
           {
