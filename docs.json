@@ -94,12 +94,12 @@
             "pages": [
               "partial-payment/overview",
               "setting-otp-verification-on-shopify",
-              "COD_fees",
-              "untitled-page-5",
-              "new-dummy-page-3-2",
-              "Abandoned_cart",
-              "untitled-page-6",
-              "untitled-page-7",
+              "setting-cod-fees-in-shopify",
+              "setting-sms-and-whatsapp-in-shopify",
+              "setting-prepaid-discount-in-shopify",
+              "setting-abandoned-cart-recovery-reminders-in-shopify",
+              "configure-rules-for-cod-in-shopify",
+              "setting-cod-to-prepaid-conversion-in-shopify",
               "untitled-page-8",
               "untitled-page-8"
             ]
