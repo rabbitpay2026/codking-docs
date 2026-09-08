@@ -81,7 +81,13 @@
               "setting-sms-and-whatsapp-in-shopify",
               "setting-prepaid-discount-in-shopify",
               "setting-cod-to-prepaid-conversion-in-shopify",
-              "connect-twilio-account-to-shopify"
+              {
+                "group": "local sms Gateway",
+                "pages": [
+                  "local-sms-gateway/connect-twilio-account-to-shopify",
+                  "local-sms-gateway/connect-wavecell"
+                ]
+              }
             ]
           },
           {
