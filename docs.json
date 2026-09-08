@@ -85,7 +85,8 @@
                 "group": "local sms Gateway",
                 "pages": [
                   "local-sms-gateway/connect-twilio-account-to-shopify",
-                  "local-sms-gateway/connect-wavecell"
+                  "local-sms-gateway/connect-wavecell",
+                  "local-sms-gateway/connect-movider"
                 ]
               }
             ]

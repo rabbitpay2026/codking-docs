@@ -1,0 +1,265 @@
+---
+title: "Connect Movider (Philippines) to COD King"
+description: "Learn how to configure Movider as a Local SMS Operator in COD King."
+icon: "message"
+---
+
+Movider can be connected to COD King to send SMS notifications to your customers.
+
+This guide explains how to create your Movider account, generate the required API credentials, register a Sender Name, and connect Movider with COD King.
+
+## What You Need
+
+Before starting, make sure you have:
+
+- A Movider account
+- Access to the Movider dashboard
+- Your business information for Sender Name verification
+- Access to your COD King admin panel
+
+---
+
+## Step 1: Create a Movider Account
+
+Open the Movider registration page and create an account.
+
+Enter your required information and complete the registration process.
+
+After successful registration, you will be redirected to the Movider dashboard.
+
+> <Frame>
+>   ![Screenshot 2026 09 08 180637](/images/Screenshot-2026-09-08-180637.png "Screenshot 2026 09 08 180637")
+> </Frame>
+
+---
+
+## Step 2: Open the API Settings
+
+After logging in, open the Movider dashboard.
+
+From the left-side menu, go to:
+
+**SMS → API**
+
+This will open the **Developer Settings** page.
+
+<Frame>
+  ![Screenshot 2026 09 08 180637 1](/images/Screenshot-2026-09-08-180637-1.png "Screenshot 2026 09 08 180637 1")
+</Frame>
+
+---
+
+## Step 3: Generate an API Key
+
+On the API page, click:
+
+**Add New API Key**
+
+<Frame>
+  ![Untitled 1](/images/Untitled-1.png "Untitled 1")
+</Frame>
+
+A popup will appear asking for the API key details.
+
+<Frame>
+  ![Screenshot 2026 09 08 180711](/images/Screenshot-2026-09-08-180711.png "Screenshot 2026 09 08 180711")
+</Frame>
+
+For **App Name**, enter:
+
+`COD King SMS Integration`
+
+For **Webhook URL**, leave the field empty unless you specifically need webhook functionality.
+
+Keep **API Type** as:
+
+**SMS**
+
+Then click:
+
+**Add New API Key**
+
+> <Frame>
+>   ![Screenshot 2026 09 08 180759](/images/Screenshot-2026-09-08-180759.png "Screenshot 2026 09 08 180759")
+> </Frame>
+
+Movider will generate the API credentials for your integration.
+
+Save the generated credentials securely.
+
+**Important:** Do not share your API credentials publicly.
+
+---
+
+## Step 4: Request a Sender Name
+
+The Sender Name is the name that will be used as the sender of your SMS messages.
+
+From the Movider dashboard, go to:
+
+**SMS → Sender Name**
+
+Click:
+
+**Sender Name Request**
+
+> <Frame>
+>   ![Screenshot 2026 09 08 180951](/images/Screenshot-2026-09-08-180951.png "Screenshot 2026 09 08 180951")
+> </Frame>
+
+---
+
+## Step 5: Select the Registration Country
+
+In the Sender Name Request window, select:
+
+**Philippines**
+
+> <Frame>
+>   ![Screenshot 2026 09 08 180956](/images/Screenshot-2026-09-08-180956.png "Screenshot 2026 09 08 180956")
+> </Frame>
+
+Next, select the Sender Type that matches your business.
+
+For example:
+
+- **Sole Proprietorship**
+- **Corporate**
+
+Choose the option that matches your actual business registration.
+
+---
+
+## Step 6: Enter Sender Details
+
+Enter the Sender Name you want to use for your SMS messages.
+
+For example:
+
+`CODKING`
+
+Make sure the Sender Name follows the requirements shown by Movider.
+
+Then enter a sample SMS message.
+
+For example:
+
+`Your COD King verification code is 123456.`
+
+> <Frame>
+>   ![Screenshot 2026 09 08 181226](/images/Screenshot-2026-09-08-181226.png "Screenshot 2026 09 08 181226")
+> </Frame>
+
+Continue to the next step.
+
+---
+
+## Step 7: Complete Business Information
+
+Movider will ask for additional information about the business and the person requesting the Sender Name.
+
+Fill in the required information, such as:
+
+- First Name
+- Last Name
+- Job Title
+- Company Name
+- Other required business details
+
+Make sure the information matches your actual business details.
+
+---
+
+## Step 8: Complete Verification
+
+Movider may require business documents to verify the Sender Name.
+
+Provide the required documents shown on the registration page.
+
+> **Screenshot:** Add verification documents screenshot here.
+
+Submit the Sender Name request after completing the required information and verification.
+
+The Sender Name may need to be reviewed and approved before it can be used.
+
+---
+
+## Step 9: Get the Approved Sender ID
+
+After Movider approves the Sender Name request, the approved Sender Name becomes your **Sender ID**.
+
+For example:
+
+`CODKING`
+
+You will use this Sender ID when configuring Movider in COD King.
+
+---
+
+## Step 10: Open COD King
+
+Log in to your Shopify admin panel and open:
+
+**COD King → Local SMS Operators**
+
+Under **Network Provider**, select:
+
+**Movider (Philippines)**
+
+> <Frame>
+>   ![Untitled1](/images/Untitled1.png "Untitled1")
+> </Frame>
+
+---
+
+## Step 11: Enter Movider Credentials
+
+The Movider configuration in COD King requires three values:
+
+| COD King Field | Enter |
+| --- | --- |
+| **API Key** | Your Movider API Key |
+| **API Token** | Your Movider API Token |
+| **Sender ID** | Your approved Movider Sender Name |
+
+Enter the values you obtained from Movider.
+
+> **Screenshot:** Add completed Movider configuration screenshot here.
+
+Make sure the API credentials and Sender ID are entered correctly.
+
+---
+
+## Step 12: Save the Configuration
+
+After entering all three values, click **Save**.
+
+COD King will save the Movider configuration for your store.
+
+---
+
+## Step 13: Test SMS
+
+After saving the configuration, trigger an SMS notification from your Shopify store.
+
+For example, place a test order and check whether the SMS is delivered.
+
+You can also open:
+
+**Movider → SMS → Logs**
+
+to check the SMS activity.
+
+---
+
+## Movider Configuration Summary
+
+You need these three values to connect Movider with COD King:
+
+| Required Value | Where to Get It |
+| --- | --- |
+| **API Key** | Movider → SMS → API |
+| **API Token** | Generated with your Movider API credentials |
+| **Sender ID** | Approved Sender Name |
+
+Once the configuration is saved and the test SMS is successful, **Movider is ready to be used with COD King**.
