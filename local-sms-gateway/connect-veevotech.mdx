@@ -1,0 +1,177 @@
+---
+title: "Connect VeevoTech SMS to COD King"
+icon: "message-dots"
+---
+
+VeevoTech provides SMS services in Pakistan through its SPEXT platform. You can connect your VeevoTech account with COD King to send SMS notifications to your customers.
+
+This guide explains how to get your VeevoTech API Key, request a Sender ID, connect your credentials to COD King, and test the integration.
+
+> **Note:** SMS/WhatsApp charges are billed directly by VeevoTech according to their pricing. Your COD King subscription is separate.
+
+## Requirements
+
+Before you begin, make sure you have:
+
+- An active VeevoTech/SPEXT account
+- Access to the SPEXT dashboard
+- An active SMS account
+- An approved Sender ID
+- Your VeevoTech API Key/Hash
+- Access to **Local SMS Operators** in COD King
+
+> **Screenshot:** Add screenshot here.
+
+## Step 1: Log in to SPEXT
+
+Log in to the SPEXT platform using your VeevoTech/OneID account.
+
+After logging in, you will see the SPEXT dashboard.
+
+> <Frame>
+>   ![Screenshot 2026 09 09 164226](/images/Screenshot-2026-09-09-164226.png "Screenshot 2026 09 09 164226")
+> </Frame>
+
+## Step 2: Open Manage API
+
+From the SPEXT dashboard, locate the **Manage API** section.
+
+Click **Manage API** to access your API settings and SMS API integration tools.
+
+> <Frame>
+>   ![Screenshot 2026 09 09 164318 1](/images/Screenshot-2026-09-09-164318-1.png "Screenshot 2026 09 09 164318 1")
+> </Frame>
+
+## Step 3: Get Your API Key
+
+On the **Account/API** page, you will find your API account information.
+
+Click **Copy API Hash/Key** to copy your VeevoTech API credential.
+
+This value will be entered as the **API Key** in COD King.
+
+> <Frame>
+>   ![Screenshot 2026 09 09 164404](/images/Screenshot-2026-09-09-164404.png "Screenshot 2026 09 09 164404")
+> </Frame>
+
+**Keep your API Key secure and do not share it publicly.**
+
+## Step 4: Request a Sender ID
+
+Return to the SPEXT dashboard and open **Manage Request**.
+
+Select **Sender ID** to start the Sender ID registration process.
+
+> <Frame>
+>   ![Screenshot 2026 09 09 165852](/images/Screenshot-2026-09-09-165852.png "Screenshot 2026 09 09 165852")
+> </Frame>
+
+On the **Sender ID Request** page, you will see two registration options:
+
+- **Choose Existing Business**
+- **Register a New Business**
+
+If your business is already registered in SPEXT, select **Choose Existing Business** and click **Next**.
+
+> <Frame>
+>   ![Screenshot 2026 09 09 164554](/images/Screenshot-2026-09-09-164554.png "Screenshot 2026 09 09 164554")
+> </Frame>
+
+<Frame>
+  ![Screenshot 2026 09 09 164608](/images/Screenshot-2026-09-09-164608.png "Screenshot 2026 09 09 164608")
+</Frame>
+
+## Step 5: Complete Sender ID Registration
+
+SPEXT will guide you through several sections to complete the Sender ID registration.
+
+The registration process includes:
+
+1. **Select Account/API**
+2. **Traffic Termination Destination**
+3. **Business Details**
+4. **Company Information**
+5. **Sender ID Details**
+6. **Documents/Attachments**
+
+Select the appropriate Account/API and provide the required information in each section.
+
+In the **Sender ID Details** section, enter the sender name you want to use for your SMS messages.
+
+Complete the required business information and upload the required documents.
+
+> <Frame>
+>   ![Screenshot 2026 09 09 164629](/images/Screenshot-2026-09-09-164629.png "Screenshot 2026 09 09 164629")
+> </Frame>
+
+Submit the Sender ID request for review.
+
+## Step 6: Get Your Approved Sender ID
+
+After submitting the request, VeevoTech will review the provided business information and documents.
+
+Once the Sender ID request is approved, you can use the approved **Sender ID** in COD King.
+
+> **Screenshot:** Add screenshot here.
+
+**Important:** The Sender ID is obtained through the registration and approval process. It is different from your API Key.
+
+## Step 7: Open COD King
+
+Log in to your Shopify admin and open **COD King**.
+
+Go to:
+
+**COD King → Local SMS Operators**
+
+From the **Network Provider** dropdown, select:
+
+**Veevotech (Pakistan)**
+
+> <Frame>
+>   ![Screenshot 2026 09 09 170348 1](/images/Screenshot-2026-09-09-170348-1.png "Screenshot 2026 09 09 170348 1")
+> </Frame>
+
+## Step 8: Enter Your VeevoTech Credentials
+
+Enter the credentials obtained from SPEXT.
+
+| COD King Field | Value |
+| --- | --- |
+| **API Key** | API Hash/Key copied from SPEXT |
+| **Sender ID** | Approved VeevoTech Sender ID |
+
+Make sure both values are entered correctly.
+
+## Step 9: Save the Configuration
+
+Save the VeevoTech operator configuration in COD King.
+
+Make sure the operator settings are saved before testing the integration.
+
+> **Screenshot:** Add screenshot here.
+
+## Step 10: Test Your Integration
+
+After saving the operator credentials, go to the **Test Your Integration** section.
+
+Enter a valid phone number with the country code.
+
+For example: **+917548012345**
+
+Click **Send Test SMS** to send a test message and verify that the VeevoTech SMS integration is working correctly.
+
+<Frame>
+  ![Screenshot 2026 09 09 171008](/images/Screenshot-2026-09-09-171008.png "Screenshot 2026 09 09 171008")
+</Frame>
+
+After sending the test SMS, check the recipient's phone to confirm that the message was received successfully.
+
+If the message is delivered successfully, your VeevoTech SMS integration is configured correctly and ready to use.
+
+### Testing Tips
+
+- Make sure your operator credentials are saved before testing.
+- Use a valid phone number with the country code.
+- Verify that the API Key and Sender ID are entered correctly.
+- Make sure your VeevoTech account has sufficient balance.
