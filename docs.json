@@ -87,7 +87,8 @@
                   "local-sms-gateway/connect-twilio-account-to-shopify",
                   "local-sms-gateway/connect-wavecell",
                   "local-sms-gateway/connect-movider",
-                  "local-sms-gateway/connect-veevotech"
+                  "local-sms-gateway/connect-veevotech",
+                  "local-sms-gateway/connect-esms"
                 ]
               }
             ]
