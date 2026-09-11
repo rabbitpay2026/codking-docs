@@ -88,7 +88,8 @@
                   "local-sms-gateway/connect-wavecell",
                   "local-sms-gateway/connect-movider",
                   "local-sms-gateway/connect-veevotech",
-                  "local-sms-gateway/connect-esms"
+                  "local-sms-gateway/connect-esms",
+                  "local-sms-gateway/connect-boomcast"
                 ]
               }
             ]

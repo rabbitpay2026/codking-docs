@@ -1,0 +1,214 @@
+---
+title: "Connect BoomCast SMS to COD King"
+description: "Learn how to connect BoomCast SMS with COD King for sending customer notifications."
+icon: "message-captions"
+---
+
+BoomCast provides SMS services in Bangladesh, including masking and non-masking SMS. COD King allows you to connect your BoomCast account and use it to send SMS notifications to your customers.
+
+This guide explains how to prepare your BoomCast account, obtain the required credentials, configure your masking, connect BoomCast to COD King, and test the SMS integration.
+
+> **Note:** SMS charges are billed directly by BoomCast according to their pricing. Your COD King subscription is separate.
+
+## Requirements
+
+Before you begin, make sure you have:
+
+- An active BoomCast account
+- A valid Bangladesh mobile number for registration and verification
+- Your BoomCast **Username**
+- Your BoomCast **Password**
+- An approved **Masking** name
+- Access to **Local SMS Operators** in COD King
+
+## Step 1: Create a BoomCast Account
+
+Create an account through the [official BoomCast website](https://boomcast.io/) and complete the registration process.
+
+Provide the required account and business information and complete any verification required by BoomCast.
+
+> **Important:** BoomCast registration may require a valid Bangladesh mobile number for account verification.
+
+If you cannot complete registration because you do not have a Bangladesh mobile number, contact [BoomCast Contact and Support](https://boomcast.io/contact-us/) to confirm the available registration options for your business.
+
+## Step 2: Log in to Your BoomCast Account
+
+After completing registration and verification, log in to your BoomCast account.
+
+From the BoomCast dashboard, you can manage your SMS services, account information, SMS packages, masking, and other available features.
+
+## Step 3: Get Your BoomCast Credentials
+
+Your BoomCast credentials are required to connect the service with COD King.
+
+You will need:
+
+- **Username** — Your BoomCast account username.
+- **Password** — The password/API credential associated with your BoomCast SMS service.
+
+The [official BoomCast SMS API documentation](https://portal.boom-cast.com/boomcast/WebFramework/boomCastWebService/downloadAmskingAuthDemo.php?type=api) identifies the Username and Password as required parameters for sending SMS through the API.
+
+> **Important:** Keep your BoomCast credentials private and do not share them publicly.
+
+## Step 4: Register Your Masking
+
+BoomCast supports **Masking SMS**, where an approved sender name can be displayed as the SMS sender.
+
+Register the masking name you want to use for your business through your BoomCast account.
+
+The [official BoomCast SMS API documentation](https://portal.boom-cast.com/boomcast/WebFramework/boomCastWebService/downloadAmskingAuthDemo.php?type=api) specifies that the masking value is mandatory and supports a maximum of 10 characters.
+
+For additional information about sending SMS through BoomCast, refer to the [official BoomCast SMS documentation](https://portal.boom-cast.com/boomcast/WebFramework/boomCastWebService/downloadAmskingAuthDemo.php?type=sms).
+
+> **Important:** Use only a masking name that has been registered and approved for your BoomCast account.
+
+## Step 5: Verify Your BoomCast Account
+
+Before connecting BoomCast to COD King, make sure your account is ready to send SMS.
+
+Verify that:
+
+- Your BoomCast account is active.
+- Your Username is correct.
+- Your Password/API credential is available.
+- Your Masking has been approved.
+- Your BoomCast account has sufficient SMS balance or an active SMS package.
+
+## Step 6: Open COD King
+
+Log in to your Shopify admin and open **COD King**.
+
+Go to:
+
+**COD King → Local SMS Operators**
+
+From the **Network Provider** dropdown, select:
+
+**BoomCast (Bangladesh)**
+
+## Step 7: Enter Your BoomCast Credentials
+
+Enter the credentials obtained from your BoomCast account.
+
+| COD King Field | Value |
+| --- | --- |
+| **Username** | Your BoomCast account username |
+| **Password** | Your BoomCast password/API credential |
+| **Masking** | Your approved BoomCast masking name |
+
+The **Masking** field is case-sensitive, so enter the masking exactly as it is registered with BoomCast.
+
+## Step 8: Save the Configuration
+
+After entering the BoomCast credentials, save the operator configuration in COD King.
+
+Before testing the integration, verify that:
+
+- The Username is correct.
+- The Password/API credential is correct.
+- The Masking matches your approved BoomCast masking.
+- Your BoomCast account has sufficient SMS balance.
+
+## Step 9: Test Your Integration
+
+After saving the operator configuration, go to the **Test Your Integration** section in COD King.
+
+Enter a valid phone number with the country code.
+
+For example, a Bangladesh number can be entered in international format such as `+8801712345678`.
+
+Click **Send Test SMS** to send a test message to the entered phone number.
+
+Check the recipient's phone to confirm that the test SMS was delivered successfully.
+
+If the SMS is delivered successfully, your BoomCast SMS integration is configured correctly and ready to use.
+
+### Testing Tips
+
+- Ensure your operator credentials are saved before testing.
+- Use a valid phone number with the country code.
+- Make sure the Username and Password/API credential are correct.
+- Verify that the Masking matches your approved BoomCast masking.
+- Check your BoomCast account balance if the test message fails.
+
+## Manage Your Integration
+
+After configuring BoomCast, you can manage the SMS integration from the **Local SMS Operators** section in COD King.
+
+You can:
+
+- Update your BoomCast Username when required.
+- Update your BoomCast Password/API credential when required.
+- Update the Masking when your approved sender name changes.
+- Test SMS delivery using the COD King test option.
+- Manage your SMS balance and packages directly through BoomCast.
+
+## SMS API Information
+
+BoomCast provides an SMS API for sending messages through its platform.
+
+The [official BoomCast SMS API documentation](https://portal.boom-cast.com/boomcast/WebFramework/boomCastWebService/downloadAmskingAuthDemo.php?type=api) defines the following parameters:
+
+| Parameter | Description |
+| --- | --- |
+| **Masking** | Registered masking name |
+| **Username** | BoomCast account username |
+| **Password** | BoomCast API password/credential |
+| **MsgType** | `TEXT` for English messages or `UNICODE` for other languages |
+| **Receiver** | Recipient phone number |
+| **Message** | SMS message content |
+
+The BoomCast SMS API supports both **GET** and **POST** requests.
+
+The API documentation specifies a maximum message length of 459 characters and requires the receiver number for each SMS request.
+
+## SMS Message Types
+
+BoomCast supports different message types depending on the content of the SMS.
+
+Use:
+
+- `TEXT` for English messages.
+- `UNICODE` for messages containing other languages or characters requiring Unicode encoding.
+
+The appropriate message type should be used when submitting the SMS through the BoomCast API.
+
+## SMS Response
+
+After an SMS request is submitted, BoomCast returns a response indicating whether the message was successfully submitted.
+
+A successful response can include information such as:
+
+- Message ID
+- Job ID
+- Recipient number
+- Submission status
+
+If the request fails, BoomCast returns a failure response.
+
+This information can help identify problems with SMS submission and troubleshoot API-related issues.
+
+## Troubleshooting
+
+If the test SMS fails, check the following:
+
+1. Verify that the **Username** is correct.
+2. Verify that the **Password/API credential** is correct.
+3. Confirm that the **Masking** matches the approved BoomCast masking.
+4. Make sure your BoomCast account has sufficient SMS balance.
+5. Make sure the recipient phone number includes the country code.
+6. Verify that your BoomCast account is active.
+
+If the issue continues, contact [BoomCast Contact and Support](https://boomcast.io/contact-us/) for assistance.
+
+## You're All Set
+
+Once your BoomCast account is active, your Username and Password/API credential are available, and your Masking has been approved, configure the provider in:
+
+**COD King → Local SMS Operators → BoomCast (Bangladesh)**
+
+Enter your **Username**, **Password**, and **Masking**, then save the configuration.
+
+Finally, use **Test Your Integration** to send a test SMS.
+
+If the test SMS is delivered successfully, your BoomCast integration is ready to send SMS notifications to your customers.
