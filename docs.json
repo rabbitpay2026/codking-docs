@@ -11,7 +11,8 @@
 
   "logo": {
     "light": "/images/withbglogo2.png",
-    "dark": "/images/withbglogo2.png"
+    "dark": "/images/withbglogo2.png",
+    "href": "https://codking.tech/"
   },
 
   "favicon": "/logo/CK logo icon-1200px.png",
@@ -31,7 +32,7 @@
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://codking.tech/"
+      "href": "https://docs.codking.tech/"
     }
   },
 
