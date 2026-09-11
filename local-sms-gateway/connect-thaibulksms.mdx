@@ -1,0 +1,228 @@
+---
+title: "Connect ThaiBulkSMS SMS to COD King"
+description: "Learn how to connect ThaiBulkSMS with COD King for sending customer SMS notifications in Thailand."
+---
+
+ThaiBulkSMS provides SMS services in Thailand, including SMS API connectivity and Sender Name management. COD King allows you to connect your ThaiBulkSMS account and use it to send SMS notifications to your customers.
+
+This guide explains how to create and prepare your ThaiBulkSMS account, obtain the required API credentials, configure your Sender Name, connect ThaiBulkSMS to COD King, and test the SMS integration.
+
+> **Note:** SMS charges are billed directly by ThaiBulkSMS according to their pricing. Your COD King subscription is separate.
+
+## Requirements
+
+Before you begin, make sure you have:
+
+- An active ThaiBulkSMS account
+- Your ThaiBulkSMS **API Key**
+- Your ThaiBulkSMS **API Secret**
+- An approved **Sender Name**
+- Access to **Local SMS Operators** in COD King
+
+## Step 1: Create a ThaiBulkSMS Account
+
+Create an account through the [official ThaiBulkSMS website](https://www.thaibulksms.com/) and complete the registration process.
+
+Provide the required account information and complete any verification required by ThaiBulkSMS.
+
+ThaiBulkSMS also provides a developer section with API information and integration resources.
+
+You can refer to the [official ThaiBulkSMS Developer Guide](https://www.thaibulksms.com/developer/) for API integration information.
+
+## Step 2: Log in to Your ThaiBulkSMS Account
+
+After completing registration and verification, log in to your ThaiBulkSMS account.
+
+From the ThaiBulkSMS console, you can manage your SMS services, Sender Names, API credentials, SMS usage, and account settings.
+
+The [official ThaiBulkSMS SMS User Manual](https://www.thaibulksms.com/user-manual/sms/) provides additional information about using the SMS console.
+
+## Step 3: Create Your API Credentials
+
+ThaiBulkSMS uses **API Key** and **API Secret** authentication for its current SMS API.
+
+Open the API or developer settings in your ThaiBulkSMS account and create or retrieve your API credentials.
+
+You will need:
+
+- **API Key** — Your ThaiBulkSMS API authentication key.
+- **API Secret** — Your ThaiBulkSMS API authentication secret.
+
+The [official ThaiBulkSMS API documentation](https://developer.thaibulksms.com/) confirms that API requests use Basic Authentication with an API Key and API Secret.
+
+The [official ThaiBulkSMS developer guide](https://www.thaibulksms.com/developer/) also provides instructions for creating and managing API credentials.
+
+> **Important:** Keep your API Key and API Secret private. Do not share them publicly.
+
+## Step 4: Request a Sender Name
+
+ThaiBulkSMS uses a **Sender Name** to identify the sender of an SMS.
+
+Log in to your ThaiBulkSMS account and open the Sender Name section.
+
+Submit the Sender Name you want to use for your business and complete the required information.
+
+According to the [official ThaiBulkSMS FAQ](https://www.thaibulksms.com/faq/), Sender Name approval normally takes approximately 5–7 business days.
+
+ThaiBulkSMS also provides predefined Sender Names that may be available while your requested Sender Name is being reviewed.
+
+> **Important:** Use a Sender Name that is approved and available in your ThaiBulkSMS account before configuring COD King.
+
+### Sender Name Requirements
+
+ThaiBulkSMS specifies that Sender Names must follow its naming requirements.
+
+According to the [official ThaiBulkSMS FAQ](https://www.thaibulksms.com/faq/), a Sender Name can contain English letters or numbers and may use supported special characters such as `.`, `-`, and `_`. Spaces and Thai characters are not supported.
+
+The Sender Name must also follow the character-length requirements specified by ThaiBulkSMS.
+
+## Step 5: Verify Your ThaiBulkSMS Account
+
+Before connecting ThaiBulkSMS to COD King, make sure your account is ready to send SMS.
+
+Verify that:
+
+- Your ThaiBulkSMS account is active.
+- Your API Key is available.
+- Your API Secret is available.
+- Your Sender Name is approved and available.
+- Your account has sufficient SMS credit.
+
+The current ThaiBulkSMS API also provides a credit endpoint that can be used to check the remaining SMS credit.
+
+## Step 6: Open COD King
+
+Log in to your Shopify admin and open **COD King**.
+
+Go to:
+
+**COD King → Local SMS Operators**
+
+From the **Network Provider** dropdown, select:
+
+**ThaiBulkSMS (Thailand)**
+
+## Step 7: Enter Your ThaiBulkSMS Credentials
+
+Enter the credentials obtained from your ThaiBulkSMS account.
+
+| COD King Field | Value |
+| --- | --- |
+| **API Key** | Your ThaiBulkSMS API Key |
+| **API Secret** | Your ThaiBulkSMS API Secret |
+| **Sender ID** | Your approved ThaiBulkSMS Sender Name |
+
+Enter the **Sender ID** exactly as it appears in your ThaiBulkSMS account because the Sender value is case-sensitive.
+
+The [official ThaiBulkSMS API Reference](https://developer.thaibulksms.com/) confirms that the SMS API requires API Key and API Secret authentication and that the sender value is required when sending an SMS.
+
+## Step 8: Save the Configuration
+
+After entering the ThaiBulkSMS credentials, save the operator configuration in COD King.
+
+Before testing the integration, verify that:
+
+- The API Key is correct.
+- The API Secret is correct.
+- The Sender ID matches your approved Sender Name.
+- Your ThaiBulkSMS account has sufficient SMS credit.
+
+## Step 9: Test Your Integration
+
+After saving the operator configuration, go to the **Test Your Integration** section in COD King.
+
+Enter a valid phone number with the country code.
+
+For example, a Thai mobile number can be entered in an international format such as `+66812345678`.
+
+Click **Send Test SMS** to send a test message to the entered phone number.
+
+Check the recipient's phone to confirm that the test SMS was delivered successfully.
+
+If the SMS is delivered successfully, your ThaiBulkSMS integration is configured correctly and ready to use.
+
+### Testing Tips
+
+- Ensure your operator credentials are saved before testing.
+- Use a valid phone number with the country code.
+- Make sure the API Key and API Secret are correct.
+- Verify that the Sender ID matches your approved ThaiBulkSMS Sender Name.
+- Check your ThaiBulkSMS account credit if the test message fails.
+
+## Manage Your Integration
+
+After configuring ThaiBulkSMS, you can manage the SMS integration from the **Local SMS Operators** section in COD King.
+
+You can:
+
+- Update your API Key when required.
+- Update your API Secret when required.
+- Update the Sender ID when your approved Sender Name changes.
+- Test SMS delivery using the COD King test option.
+- Manage your SMS credit and account directly through ThaiBulkSMS.
+
+## SMS API Information
+
+ThaiBulkSMS provides an SMS API for sending messages from applications and platforms.
+
+The [official ThaiBulkSMS API Reference](https://developer.thaibulksms.com/) currently uses Basic Authentication with:
+
+- **API Key**
+- **API Secret**
+
+The SMS API uses the endpoint:
+
+`https://api-v2.thaibulksms.com/sms`
+
+The SMS request requires:
+
+| Parameter | Description |
+| --- | --- |
+| **sender** | Your approved Sender Name |
+| **msisdn** | Recipient phone number |
+| **message** | SMS message content |
+
+The API also supports additional options such as scheduled delivery, URL shortening, tracking, and expiration.
+
+## Recipient Phone Number Format
+
+ThaiBulkSMS supports Thai mobile numbers in several formats, including:
+
+- `0812345678`
+- `66812345678`
+- `+66812345678`
+
+For COD King testing, use the international format with the country code where possible.
+
+## SMS Credit
+
+ThaiBulkSMS provides an API endpoint for checking remaining SMS credit.
+
+If SMS delivery fails, make sure your account has sufficient credit before troubleshooting the API credentials or Sender ID.
+
+The [official ThaiBulkSMS API Reference](https://developer.thaibulksms.com/) provides information about checking remaining credit.
+
+## Troubleshooting
+
+If the test SMS fails, check the following:
+
+1. Verify that the **API Key** is correct.
+2. Verify that the **API Secret** is correct.
+3. Confirm that the **Sender ID** matches the approved Sender Name.
+4. Make sure your ThaiBulkSMS account has sufficient SMS credit.
+5. Make sure the recipient phone number includes the country code.
+6. Verify that your ThaiBulkSMS account and API credentials are active.
+
+If the issue continues, refer to the [official ThaiBulkSMS Developer Guide](https://www.thaibulksms.com/developer/) or contact ThaiBulkSMS support.
+
+## You're All Set
+
+Once your ThaiBulkSMS account is active, your API Key and API Secret are available, and your Sender Name has been approved, configure the provider in:
+
+**COD King → Local SMS Operators → ThaiBulkSMS (Thailand)**
+
+Enter your **API Key**, **API Secret**, and **Sender ID**, then save the configuration.
+
+Finally, use **Test Your Integration** to send a test SMS.
+
+If the test SMS is delivered successfully, your ThaiBulkSMS integration is ready to send SMS notifications to your customers.

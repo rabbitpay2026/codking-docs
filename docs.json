@@ -89,7 +89,8 @@
                   "local-sms-gateway/connect-movider",
                   "local-sms-gateway/connect-veevotech",
                   "local-sms-gateway/connect-esms",
-                  "local-sms-gateway/connect-boomcast"
+                  "local-sms-gateway/connect-boomcast",
+                  "local-sms-gateway/connect-thaibulksms"
                 ]
               }
             ]
