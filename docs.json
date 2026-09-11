@@ -28,12 +28,7 @@
         "href": "mailto:support@notifiktech.com",
         "label": "Support"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://docs.codking.tech/"
-    }
+    ]
   },
 
   "seo": {
