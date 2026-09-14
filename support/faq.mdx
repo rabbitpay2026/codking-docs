@@ -1,26 +1,418 @@
 ---
-title: "FAQs"
-description: "Frequently asked questions about COD King."
-sidebarTitle: "FAQs"
-icon: "circle-question"
+title: "Frequently Asked Questions"
+description: "Find answers to common questions about COD King, COD workflows, payments, customer verification, messaging, Local SMS Gateways, and support."
+icon:
+  name: "question-circle"
+  style: "regular"
+  library: "fontawesome"
 ---
 
-# Frequently Asked Questions
+Find quick answers to common questions about **COD King**, its features, configuration, messaging integrations, and Cash on Delivery workflows.
+
+If you are looking for general information about COD King, pricing, plans, or product capabilities, you can also visit the [official COD King FAQ](https://codking.tech/faq).
+
+<CardGroup cols={3}>
+  <Card title="Getting Started" icon="rocket" href="#general">
+    Learn about COD King, Shopify setup, and getting started.
+  </Card>
+
+  <Card title="COD & Payments" icon="money-bill-transfer" href="#cod-and-payments">
+    Find answers about COD fees, partial payments, prepaid discounts, and COD conversion.
+  </Card>
+
+  <Card title="Messaging" icon="message-sms" href="#sms-and-whatsapp">
+    Learn about SMS, WhatsApp, OTP, and messaging configuration.
+  </Card>
+
+  <Card title="Local SMS Gateway" icon="tower-broadcast" href="#local-sms-gateway">
+    Find answers about Local SMS Operators and provider configuration.
+  </Card>
+
+  <Card title="Troubleshooting" icon="wrench" href="/guides/troubleshooting">
+    Find solutions to common COD King configuration issues.
+  </Card>
+
+  <Card title="Contact Support" icon="headset" href="https://codking.tech/contact">
+    Contact the COD King support team if you need additional assistance.
+  </Card>
+</CardGroup>
+
+## General
 
 <AccordionGroup>
   <Accordion title="What is COD King?">
-    COD King is a Shopify application by Notifik Technologies LLP focused on helping merchants manage and optimize Cash on Delivery operations.
+    COD King is a Shopify app designed to help merchants manage and optimize their Cash on Delivery workflows.
+
+    It provides tools for COD verification, COD fees, partial payments, prepaid conversion, customer engagement, messaging, and other COD-related workflows.
+
+    For more information about COD King's features, visit the [official COD King FAQ](https://codking.tech/faq).
   </Accordion>
 
-  <Accordion title="What areas does COD King support?">
-    COD King product areas include COD OTP verification, Partial COD, COD fees, COD rules, COD-to-prepaid workflows, notifications, abandoned cart recovery, order verification, analytics, and supported integrations.
+  <Accordion title="Is COD King compatible with Shopify?">
+    Yes. COD King is designed for Shopify stores and can be configured directly from your Shopify admin.
   </Accordion>
 
-  <Accordion title="Where can I find detailed setup instructions?">
-    Detailed guides are being documented using verified COD King dashboard workflows. Use the sidebar to browse currently available documentation.
+  <Accordion title="Where can I configure COD King?">
+    After installing COD King, open the app from your Shopify admin and configure the required features from the COD King dashboard.
+
+    Each feature has its own documentation guide with step-by-step instructions.
+  </Accordion>
+
+  <Accordion title="Where can I find all COD King documentation?">
+    Start from the [COD King Introduction](/) to browse the available feature guides, Local SMS Gateway integrations, troubleshooting resources, and support documentation.
+  </Accordion>
+
+  <Accordion title="Do I need coding knowledge to use COD King?">
+    No. Normal COD King configuration can be completed from the app without requiring coding knowledge.
+
+    Follow the relevant documentation guide for the feature you want to configure.
   </Accordion>
 </AccordionGroup>
 
-## Still need help?
+## COD and Payments
 
-Visit the [COD King website](https://codking.tech/) for product and support information.
+<AccordionGroup>
+  <Accordion title="What is Cash on Delivery?">
+    Cash on Delivery allows customers to place an order and pay when the order is delivered.
+
+    COD King provides tools that help merchants configure and manage their COD workflow.
+  </Accordion>
+
+  <Accordion title="Can I charge an additional fee for COD orders?">
+    Yes. COD King provides a COD Fees feature that allows merchants to configure additional charges for Cash on Delivery orders.
+
+    See [Setting COD Fees in Shopify](/setting-cod-fees-in-shopify) for detailed instructions.
+  </Accordion>
+
+  <Accordion title="What is Partial Payment?">
+    Partial Payment allows customers to pay a portion of an order online while the remaining amount follows the configured COD workflow.
+
+    See [Setting Up Partial Payment](/partial-payment/overview) for configuration instructions.
+  </Accordion>
+
+  <Accordion title="Why is Partial Payment not appearing?">
+    Check the following:
+
+    - Confirm that Partial Payment is enabled.
+    - Verify the configured amount or percentage.
+    - Check that the order meets the configured conditions.
+    - Verify that the required payment method is available.
+    - Save the configuration and test again.
+
+    If the issue continues, see [Troubleshooting](/guides/troubleshooting).
+  </Accordion>
+
+  <Accordion title="What is Prepaid Discount?">
+    Prepaid Discount allows merchants to offer customers an incentive to choose prepaid payment instead of Cash on Delivery.
+
+    See [Setting Up Prepaid Discount](/setting-prepaid-discount-in-shopify) for configuration instructions.
+  </Accordion>
+
+  <Accordion title="Why is my prepaid discount not appearing?">
+    Check that:
+
+    - Prepaid Discount is enabled.
+    - The discount amount or percentage is configured correctly.
+    - The customer is using the supported prepaid payment method.
+    - The order meets the configured conditions.
+    - Your latest configuration has been saved.
+  </Accordion>
+
+  <Accordion title="What is COD to Prepaid Conversion?">
+    COD to Prepaid Conversion helps encourage customers with COD orders to switch to prepaid payment.
+
+    This can help merchants increase prepaid orders and reduce COD-related risk.
+
+    See [Setting Up COD to Prepaid Conversion](/setting-cod-to-prepaid-conversion-in-shopify).
+  </Accordion>
+
+  <Accordion title="Why is COD to Prepaid Conversion not appearing?">
+    Check that:
+
+    - COD to Prepaid Conversion is enabled.
+    - The order meets the configured conditions.
+    - The prepaid payment method is available.
+    - Any configured discount settings are correct.
+    - The latest configuration has been saved.
+  </Accordion>
+</AccordionGroup>
+
+## OTP and Customer Verification
+
+<AccordionGroup>
+  <Accordion title="Why should I use OTP verification for COD orders?">
+    OTP verification helps confirm that the customer has access to the phone number provided with the order.
+
+    This can help merchants reduce fake or unwanted COD orders.
+  </Accordion>
+
+  <Accordion title="How do I enable OTP verification?">
+    Open COD King and configure the OTP verification feature.
+
+    For detailed instructions, see [Setting Up OTP Verification on Shopify](/setting-otp-verification-on-shopify).
+  </Accordion>
+
+  <Accordion title="What should I check if customers are not receiving OTPs?">
+    Check the following:
+
+    - Confirm that OTP verification is enabled.
+    - Verify the customer's phone number.
+    - Make sure the phone number is in a valid format.
+    - Check your configured messaging provider.
+    - Verify that your provider credentials are correct.
+    - Check your provider account balance or available credits.
+    - Make sure your latest configuration changes have been saved.
+  </Accordion>
+
+  <Accordion title="Can OTP be sent through SMS or WhatsApp?">
+    The available OTP delivery method depends on your configured messaging setup.
+
+    For SMS and WhatsApp configuration, see [Setting Up SMS and WhatsApp on Shopify](/setting-sms-and-whatsapp-in-shopify).
+  </Accordion>
+</AccordionGroup>
+
+## SMS and WhatsApp
+
+<AccordionGroup>
+  <Accordion title="Can COD King send SMS and WhatsApp notifications?">
+    Yes. COD King supports customer engagement through supported SMS and WhatsApp configurations.
+
+    See [Setting Up SMS and WhatsApp on Shopify](/setting-sms-and-whatsapp-in-shopify) for setup instructions.
+  </Accordion>
+
+  <Accordion title="Why are my SMS messages not being delivered?">
+    Check the following:
+
+    - Confirm that messaging is enabled.
+    - Verify the selected provider.
+    - Check that the provider credentials are correct.
+    - Verify the Sender ID, Sender Name, or Masking where required.
+    - Check your provider account balance or available credits.
+    - Make sure the recipient phone number is valid.
+    - Include the correct country code where required.
+
+    If you are using a Local SMS Gateway, follow the setup guide for your provider.
+  </Accordion>
+
+  <Accordion title="Can I use a local SMS provider?">
+    Yes. COD King supports Local SMS Operators for supported regions.
+
+    Each provider has its own setup requirements and credentials.
+  </Accordion>
+
+  <Accordion title="Why is my Sender ID not working?">
+    Some SMS providers require a Sender ID or Sender Name to be registered and approved before it can be used.
+
+    Make sure the Sender ID entered in COD King exactly matches the approved sender information provided by your SMS operator.
+
+    Some providers may also apply country-specific restrictions.
+  </Accordion>
+</AccordionGroup>
+
+## Local SMS Gateway
+
+COD King supports multiple Local SMS Operators for regional SMS delivery.
+
+<AccordionGroup>
+  <Accordion title="What is a Local SMS Gateway?">
+    A Local SMS Gateway allows COD King to connect with a supported regional SMS provider for sending SMS notifications.
+
+    This can be useful when merchants want to use an SMS provider that operates in their target country or region.
+  </Accordion>
+
+  <Accordion title="How do I configure a Local SMS Gateway?">
+    Open:
+
+    **COD King → Local SMS Operators**
+
+    Select your provider from the **Network Provider** dropdown.
+
+    Enter the credentials required by the provider and save the configuration.
+
+    The required fields vary between providers.
+  </Accordion>
+
+  <Accordion title="What credentials are required for a Local SMS Gateway?">
+    The required fields depend on the SMS provider.
+
+    They may include:
+
+    - API Key
+    - API Secret
+    - API Token
+    - Username
+    - Password
+    - Sender ID
+    - Sender Name
+    - Masking
+
+    Always follow the provider-specific documentation for the exact configuration.
+  </Accordion>
+
+  <Accordion title="Why is my Local SMS Gateway test failing?">
+    Check the following:
+
+    1. Make sure the operator credentials are saved.
+    2. Verify all credentials entered in COD King.
+    3. Confirm that the Sender ID, Sender Name, or Masking is approved.
+    4. Use a valid recipient phone number.
+    5. Include the country code where required.
+    6. Check your provider account balance or SMS credit.
+    7. Confirm that the provider account is active.
+
+    For additional help, see [Troubleshooting](/guides/troubleshooting).
+  </Accordion>
+
+  <Accordion title="Can I change my SMS provider later?">
+    Yes. You can configure another supported provider from the **Local SMS Operators** section.
+
+    Make sure the new provider credentials and Sender ID are configured and tested before using the provider for customer notifications.
+  </Accordion>
+</AccordionGroup>
+
+## Supported Local SMS Providers
+
+<CardGroup cols={3}>
+  <Card title="Twilio" icon="message-sms" href="/local-sms-gateway/connect-twilio-account-to-shopify">
+    Configure Twilio for SMS delivery.
+  </Card>
+
+  <Card title="Wavecell" icon="message-sms" href="/local-sms-gateway/connect-wavecell">
+    Configure Wavecell through 8x8 Connect.
+  </Card>
+
+  <Card title="Movider" icon="message-sms" href="/local-sms-gateway/connect-movider">
+    Configure Movider for SMS delivery.
+  </Card>
+
+  <Card title="VeevoTech" icon="message-sms" href="/local-sms-gateway/connect-veevotech">
+    Configure VeevoTech SMS integration.
+  </Card>
+
+  <Card title="eSMS" icon="message-sms" href="/local-sms-gateway/connect-esms">
+    Configure eSMS for SMS delivery.
+  </Card>
+
+  <Card title="BoomCast" icon="message-sms" href="/local-sms-gateway/connect-boomcast">
+    Configure BoomCast SMS integration.
+  </Card>
+
+  <Card title="ThaiBulkSMS" icon="message-sms" href="/local-sms-gateway/connect-thaibulksms">
+    Configure ThaiBulkSMS for SMS delivery.
+  </Card>
+</CardGroup>
+
+> **More providers:** New Local SMS Gateway providers will be added to the documentation as integrations become available.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="What should I do if a COD King feature is not working?">
+    Start by checking:
+
+    - Whether the feature is enabled.
+    - Whether the configuration is correct.
+    - Whether your changes were saved.
+    - Whether the order meets the configured conditions.
+    - Whether any connected third-party service is working correctly.
+
+    Then review the relevant feature documentation.
+
+    For additional help, see [Troubleshooting](/guides/troubleshooting).
+  </Accordion>
+
+  <Accordion title="I changed a setting but the change is not visible. What should I do?">
+    Make sure the configuration was saved successfully.
+
+    Then:
+
+    1. Refresh the COD King page.
+    2. Reopen the relevant feature.
+    3. Confirm that the new configuration is still saved.
+    4. Test the feature again.
+
+    If the issue continues, see [Troubleshooting](/guides/troubleshooting).
+  </Accordion>
+
+  <Accordion title="What information should I provide when contacting support?">
+    To help the support team investigate the issue quickly, provide:
+
+    - Your Shopify store URL.
+    - The COD King feature involved.
+    - A clear description of the issue.
+    - The steps you took before the issue occurred.
+    - Any relevant error message.
+    - The SMS or WhatsApp provider, if applicable.
+    - Whether the issue affects all orders or only specific orders.
+
+    > **Security:** Never send API keys, API secrets, passwords, authentication tokens, or other private credentials in a support request.
+  </Accordion>
+</AccordionGroup>
+
+## Plans and Billing
+
+<AccordionGroup>
+  <Accordion title="Where can I find COD King pricing and plan information?">
+    For current pricing, plans, billing information, and general product questions, visit the [official COD King FAQ](https://codking.tech/faq).
+  </Accordion>
+
+  <Accordion title="Are SMS provider charges included with COD King?">
+    Messaging charges depend on the SMS or WhatsApp provider you configure.
+
+    If you connect your own Local SMS Operator, the provider may charge you directly according to its pricing and account terms.
+
+    Your COD King subscription and third-party messaging charges are separate.
+  </Accordion>
+</AccordionGroup>
+
+## Support
+
+<AccordionGroup>
+  <Accordion title="How can I contact COD King support?">
+    Visit the [COD King Contact page](https://codking.tech/contact) to contact the support team.
+
+    The Contact page provides available support options including WhatsApp, live chat, email, and the support form.
+  </Accordion>
+
+  <Accordion title="Where can I find the official COD King FAQ?">
+    Visit the [official COD King FAQ](https://codking.tech/faq) for broader questions about COD King, its features, pricing, billing, messaging, and Cash on Delivery workflows.
+  </Accordion>
+
+  <Accordion title="Where can I find the latest COD King updates?">
+    Visit the [COD King Changelog](/support/changelog) for product updates, improvements, and release notes.
+  </Accordion>
+</AccordionGroup>
+
+## Helpful Resources
+
+<CardGroup cols={3}>
+  <Card title="Documentation Home" icon="book-open" href="/">
+    Browse all COD King guides and configuration documentation.
+  </Card>
+
+  <Card title="Troubleshooting" icon="wrench" href="/guides/troubleshooting">
+    Find solutions to common configuration and integration issues.
+  </Card>
+
+  <Card title="COD King FAQ" icon="circle-question" href="https://codking.tech/faq">
+    Visit the official FAQ for general product and billing questions.
+  </Card>
+
+  <Card title="Contact Support" icon="headset" href="https://codking.tech/contact">
+    Contact the COD King support team for additional assistance.
+  </Card>
+
+  <Card title="Changelog" icon="clock-rotate-left" href="/support/changelog">
+    View the latest COD King product updates and improvements.
+  </Card>
+
+  <Card title="Local SMS Gateway" icon="message-sms" href="/local-sms-gateway/connect-twilio-account-to-shopify">
+    Explore the available Local SMS Gateway integrations.
+  </Card>
+</CardGroup>
+
+## Still Need Help?
+
+If you cannot find the answer in this documentation or the [official COD King FAQ](https://codking.tech/faq), visit the [COD King Contact page](https://codking.tech/contact) and contact the support team.
+
+When contacting support, provide enough information about the issue to help the team investigate it quickly.
