@@ -1,0 +1,116 @@
+---
+title: "Connect iSmart SMS to COD King"
+description: "Learn how to connect iSmart SMS with COD King for sending SMS notifications to customers in Oman."
+icon:
+  name: "message-quote"
+  style: "regular"
+  library: "fontawesome"
+---
+
+iSmart SMS is an SMS messaging service in Oman that provides SMS APIs for integrating messaging with applications and websites.
+
+This guide explains how to create an iSmart SMS account, obtain the required API credentials and Sender ID, configure iSmart SMS in COD King, and test the integration.
+
+## Step 1: Create an iSmart SMS Account
+
+Go to the official [iSmart SMS website](https://ismartsms.net/).
+
+Select **Register** and complete the registration form with your required account and organization details.
+
+The registration process requires information such as:
+
+- Sender ID
+- User ID
+- Password
+- Name
+- Mobile Number
+- Email
+- Organization details
+
+Make sure you provide valid information during registration.
+
+For more information about the iBulk SMS registration process, see the official [iBulk SMS documentation](https://ismartsms.net/ibulk.html).
+
+> **Note:** iSmart SMS may require additional business information and documents during the account setup process.
+
+## Step 2: Get Your API Credentials
+
+After your iSmart SMS account has been created and activated, log in to the **iBulk SMS** portal.
+
+Open the [iBulk SMS Login page](https://www.ismartsms.net/ibulksms/loginmain.aspx).
+
+According to the official iSmart SMS developer documentation, API credentials can be accessed from the iBulk SMS interface under:
+
+**Admin → Manage Users**
+
+Use the API credentials provided by iSmart SMS for the COD King integration.
+
+For more information, see the official [iSmart SMS Developer Documentation](https://ismartsms.net/developers.html).
+
+> **Security:** Do not share your API credentials publicly.
+
+## Step 3: Configure Your Sender ID
+
+The **Sender ID** is the name that appears as the sender of the SMS on the recipient's phone.
+
+iSmart SMS supports an alphanumeric Sender ID of up to **11 characters** using English characters.
+
+Make sure your Sender ID is registered and approved by iSmart SMS before using it with COD King.
+
+For more information, see the official [iBulk SMS documentation](https://ismartsms.net/ibulk.html).
+
+## Step 4: Configure iSmart SMS in COD King
+
+In your Shopify admin, open:
+
+**Apps → COD King → Local SMS Operators**
+
+Select **iSmart (Oman)** from the **Network Provider** dropdown.
+
+Enter the required details:
+
+### API Key
+
+Enter the API key provided for your iSmart SMS integration.
+
+### Sender ID
+
+Enter the Sender ID registered with iSmart SMS.
+
+Make sure the Sender ID matches the value approved for your iSmart SMS account.
+
+Save the operator configuration before testing the integration.
+
+> **Screenshot:** Add screenshot here.
+
+## Step 5: Test Your Integration
+
+After saving the iSmart SMS configuration, go to the **Test Your Integration** section.
+
+Enter a valid phone number with the country code in the **Phone Number** field.
+
+For example:
+
+`+968XXXXXXXX`
+
+Click **Send Test SMS** to send a test message.
+
+Check the recipient's phone to confirm that the SMS was delivered successfully.
+
+> **Screenshot:** Add screenshot here.
+
+If the test SMS is delivered successfully, your iSmart SMS integration is configured correctly and ready to use.
+
+### Testing Tips
+
+- Make sure your iSmart SMS configuration is saved before testing.
+- Use a valid phone number with the country code.
+- Make sure the Sender ID matches your registered Sender ID.
+- Check that your iSmart SMS account has sufficient SMS credit.
+- Verify your API credentials if the test message fails.
+
+## Need Help?
+
+If you have issues creating your iSmart SMS account or configuring the integration, visit the official [iSmart SMS Contact page](https://www.ismartsms.net/contact.html).
+
+You can also contact iSmart SMS support at [**support@ismartsms.net**](mailto:support@ismartsms.net).
