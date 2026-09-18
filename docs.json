@@ -87,7 +87,8 @@
                   "local-sms-gateway/connect-esms",
                   "local-sms-gateway/connect-boomcast",
                   "local-sms-gateway/connect-thaibulksms",
-                  "local-sms-gateway/connect-ismart"
+                  "local-sms-gateway/connect-ismart",
+                  "local-sms-gateway/connect-winsms"
                 ]
               }
             ]
