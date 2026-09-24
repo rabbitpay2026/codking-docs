@@ -1,0 +1,67 @@
+---
+title: "Connect Branded SMS to COD King"
+description: "Connect your Branded SMS Pakistan account with COD King to send SMS notifications to customers in Pakistan."
+icon: "message-lines"
+---
+
+Branded SMS Pakistan allows businesses to send SMS notifications through its SMS API. You can connect your Branded SMS account to COD King to send customer notifications from your Shopify store.
+
+## Step 1: Create a Branded SMS Account
+
+If you don't already have an account, visit the [official Branded SMS Pakistan website](https://brandedsmspakistan.com/) and register.
+
+After your account is activated, log in to the Branded SMS customer portal.
+
+For assistance with account registration, contact Branded SMS Pakistan through its [official website](https://brandedsmspakistan.com/).
+
+## Step 2: Get Your API Key
+
+Log in to your Branded SMS account and locate the API or developer settings.
+
+Retrieve and copy your **API Key**. You will need it to connect your account to COD King.
+
+For more information, refer to the [official Branded SMS API documentation](https://www.postman.com/brandedsmspakistan/branded-sms-pakistan-s-public-workspace/documentation/yfwalq4/branded-sms-pakistan).
+
+## Step 3: Get Your Sender ID
+
+Branded SMS refers to Sender IDs as **Masking IDs** in its API documentation.
+
+Make sure a Sender ID is available and enabled for your account. Copy the Sender ID you want to use when sending SMS messages.
+
+You can refer to the [official Sender ID documentation](https://www.postman.com/brandedsmspakistan/branded-sms-pakistan-s-public-workspace/folder/gi56v22/sender-id) for more information.
+
+## Step 4: Connect Branded SMS to COD King
+
+1. Open the **Shopify Admin**.
+2. Navigate to **Apps** and open **COD King**.
+3. Go to **Settings** and select **Local SMS gateway**.
+4. Select **Branded SMS (Pakistan)** from the Network Provider dropdown.
+5. Enter your Branded SMS credentials in the corresponding fields:
+   - **API Key:** Enter the API Key from your Branded SMS account.
+   - **Sender ID:** Enter the Sender ID (Masking ID) assigned to your account.
+6. Save your settings.
+
+Make sure the credentials and Sender ID are entered correctly.
+
+## Step 5: Send a Test SMS
+
+After saving your credentials:
+
+1. Enter a phone number in the **Phone Number** field.
+2. Click **Send Test SMS**.
+3. Check whether the test message is received on the specified phone.
+
+If the test message is not received, verify your API Key, Sender ID, account status, and available SMS balance.
+
+## Troubleshooting
+
+If the integration does not work:
+
+- Confirm that your API Key is correct.
+- Make sure your Sender ID is available and valid for your account.
+- Check that your account has sufficient SMS credits.
+- Verify that the recipient phone number is entered correctly.
+
+Branded SMS API documentation lists errors such as authentication failure, invalid phone number, insufficient balance, and invalid Sender ID. Check the [official API documentation](https://www.postman.com/brandedsmspakistan/branded-sms-pakistan-s-public-workspace/documentation/yfwalq4/branded-sms-pakistan) for API response details.
+
+If the issue continues, contact Branded SMS Pakistan for assistance.
