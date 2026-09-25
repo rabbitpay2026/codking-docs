@@ -91,7 +91,7 @@
                   "local-sms-gateway/connect-winsms",
                   "local-sms-gateway/connect-palpigeon",
                   "local-sms-gateway/connect-brandedsms",
-                  "untitled-page-5"
+                  "local-sms-gateway/connect-bulksms-bd-service"
                 ]
               }
             ]
