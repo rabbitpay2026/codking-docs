@@ -1,0 +1,105 @@
+---
+description: "Connect your Bulk SMS BD account with COD King to send SMS notifications to customers in Bangladesh."
+icon:
+  name: "message-code"
+  style: "regular"
+  library: "fontawesome"
+---
+
+Bulk SMS BD provides SMS delivery services in Bangladesh. You can connect your Bulk SMS BD account to COD King to send SMS notifications to customers through your Shopify store.
+
+## Step 1: Create a Bulk SMS BD Account
+
+If you don't already have an account, create an account through the [official Bulk SMS BD website](https://bulksmsbd.com/).
+
+During registration, you may be required to provide your personal and business information for account verification.
+
+The registration process requires information such as your mobile number, name, email address, NID number, date of birth, address, and purpose of using the SMS service. Business users may also need to provide company information and supporting documents.
+
+After submitting the registration form, complete the verification process before using the SMS service.
+
+For more information, visit the [official Bulk SMS BD website](https://bulksmsbd.com/).
+
+## Step 2: Get Your API Key
+
+Log in to your Bulk SMS BD account and open your account dashboard.
+
+Locate the section where your API credentials are provided and copy your **API Key**.
+
+The API Key is required by COD King to authenticate requests with the Bulk SMS BD SMS gateway.
+
+Bulk SMS BD's API uses an API key to authenticate SMS requests. The API endpoint used for sending SMS is:
+
+`https://bulksmsbd.net/api/smsapi`
+
+## Step 3: Get Your Sender ID
+
+Before sending SMS messages, make sure you have an approved **Sender ID** configured for your Bulk SMS BD account.
+
+The Sender ID is the name or identity that is used when sending SMS messages to your customers.
+
+Log in to your Bulk SMS BD account and locate the Sender ID or SMS settings section.
+
+Copy your approved **Sender ID**.
+
+BulkSMSBD integrations use an API Key together with an approved Sender ID for SMS delivery. :contentReference[oaicite:1]{index=1}
+
+If your Sender ID has not been approved or enabled, contact Bulk SMS BD support before testing the integration.
+
+## Step 4: Connect Bulk SMS BD to COD King
+
+1. Open your **Shopify Admin**.
+2. Go to **Apps** and open **COD King**.
+3. Navigate to **Settings**.
+4. Select **Local SMS gateway**.
+5. Select **BulkSmsBdService (Bangladesh)** from the **Network Provider** dropdown.
+6. Enter the following details:
+   - **API Key:** Enter the API Key from your Bulk SMS BD account.
+   - **Sender ID:** Enter your approved Sender ID.
+7. Save your settings.
+
+<Frame>
+  ![Screenshot 2026 09 25 115854 1](/images/Screenshot-2026-09-25-115854-1.png "Screenshot 2026 09 25 115854 1")
+</Frame>
+
+Make sure both the API Key and Sender ID are entered correctly before testing the integration.
+
+## Step 5: Send a Test SMS
+
+After saving your Bulk SMS BD configuration:
+
+1. Scroll to the **Test Your Integration** section.
+2. Enter a valid phone number in the **Phone Number** field.
+3. Click **Send Test SMS**.
+4. Check the recipient phone for the test message.
+
+The phone number in this section is only used to verify that your Bulk SMS BD configuration is working correctly.
+
+<Frame>
+  ![Untitled 3](/images/Untitled-3.png "Untitled 3")
+</Frame>
+
+## Step 6: Check Your SMS Balance
+
+Make sure your Bulk SMS BD account has sufficient SMS balance before sending messages through COD King.
+
+The BulkSMSBD API provides a balance endpoint that can be used to retrieve the available SMS balance:
+
+`https://bulksmsbd.net/api/getBalanceApi`
+
+You can also check your available balance from your Bulk SMS BD account dashboard.
+
+## Troubleshooting
+
+If the test SMS is not delivered:
+
+- Verify that the **API Key** is correct.
+- Make sure the **Sender ID** is approved and active.
+- Check that your Bulk SMS BD account is verified.
+- Make sure your account has sufficient SMS balance.
+- Verify that the test phone number is entered correctly.
+- Check that your Sender ID is associated with the API Key.
+
+BulkSMSBD API integrations commonly return errors for invalid numbers, incorrect or disabled Sender IDs, insufficient balance, and account or sender configuration issues. :contentReference[oaicite:2]{index=2}
+
+If the issue continues, contact Bulk SMS BD support through the [official Bulk SMS BD website](https://bulksmsbd.com/).
