@@ -103,23 +103,30 @@ From the **Network Provider** dropdown, select:
 
 **ThaiBulkSMS (Thailand)**
 
+<Frame>
+  ![ThaiBulkSMS (Thailand) selected as Network Provider](/images/sms-thaibulksms-provider.png "ThaiBulkSMS (Thailand) selected as Network Provider")
+</Frame>
+
 ## Step 7: Enter Your ThaiBulkSMS Credentials
 
 Enter the credentials obtained from your ThaiBulkSMS account.
 
 | COD King Field | Value |
 | --- | --- |
-| **API Key** | Your ThaiBulkSMS API Key |
-| **API Secret** | Your ThaiBulkSMS API Secret |
+| **API Key / Authorization header** | The exact authorization value from ThaiBulkSMS (for example `Basic xxxxxx`) |
 | **Sender ID** | Your approved ThaiBulkSMS Sender Name |
 
 Enter the **Sender ID** exactly as it appears in your ThaiBulkSMS account because the Sender value is case-sensitive.
+
+<Frame>
+  ![ThaiBulkSMS credential fields and Save button](/images/sms-thaibulksms-credentials.png "ThaiBulkSMS credential fields and Save button")
+</Frame>
 
 The [official ThaiBulkSMS API Reference](https://developer.thaibulksms.com/) confirms that the SMS API requires API Key and API Secret authentication and that the sender value is required when sending an SMS.
 
 ## Step 8: Save the Configuration
 
-After entering the ThaiBulkSMS credentials, save the operator configuration in COD King.
+After entering the ThaiBulkSMS credentials, click **Save** in the bar at the top of the page to save the operator configuration in COD King.
 
 Before testing the integration, verify that:
 
@@ -137,6 +144,10 @@ Enter a valid phone number with the country code.
 For example, a Thai mobile number can be entered in an international format such as `+66812345678`.
 
 Click **Send Test SMS** to send a test message to the entered phone number.
+
+<Frame>
+  ![Test Your Integration section](/images/sms-test-your-integration.png "Test Your Integration section")
+</Frame>
 
 Check the recipient's phone to confirm that the test SMS was delivered successfully.
 
@@ -222,7 +233,7 @@ Once your ThaiBulkSMS account is active, your API Key and API Secret are availab
 
 **COD King → Settings → Local SMS gateway → ThaiBulkSMS (Thailand)**
 
-Enter your **API Key**, **API Secret**, and **Sender ID**, then save the configuration.
+Enter your **API Key / Authorization header** value and **Sender ID**, then save the configuration.
 
 Finally, use **Test Your Integration** to send a test SMS.
 
