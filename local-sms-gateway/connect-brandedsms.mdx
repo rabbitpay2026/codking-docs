@@ -37,19 +37,28 @@ You can refer to the [official Sender ID documentation](https://www.postman.com/
 3. Go to **Settings** and select **Local SMS gateway**.
 4. Select **Branded SMS (Pakistan)** from the Network Provider dropdown.
 5. Enter your Branded SMS credentials in the corresponding fields:
+   - **Email:** Enter the email address registered with your Branded SMS account.
    - **API Key:** Enter the API Key from your Branded SMS account.
    - **Sender ID:** Enter the Sender ID (Masking ID) assigned to your account.
-6. Save your settings.
+6. Click **Save** in the bar at the top of the page.
 
 Make sure the credentials and Sender ID are entered correctly.
+
+<Frame>
+  ![Branded SMS (Pakistan) selected with the Email, API Key and Sender ID fields](/images/sms-brandedsms-setup.png "Branded SMS (Pakistan) selected with the Email, API Key and Sender ID fields")
+</Frame>
 
 ## Step 5: Send a Test SMS
 
 After saving your credentials:
 
-1. Enter a phone number in the **Phone Number** field.
+1. Scroll to the **Test Your Integration** section and enter a phone number in the **Phone Number** field.
 2. Click **Send Test SMS**.
 3. Check whether the test message is received on the specified phone.
+
+<Frame>
+  ![Test Your Integration section](/images/sms-test-your-integration.png "Test Your Integration section")
+</Frame>
 
 If the test message is not received, verify your API Key, Sender ID, account status, and available SMS balance.
 
