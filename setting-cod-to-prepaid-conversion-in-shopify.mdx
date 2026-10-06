@@ -42,22 +42,22 @@ COD King sends **WhatsApp or SMS messages** with a secure payment link, allowing
 
 ## **Step 1 : Activate COD to Prepaid Conversion**
 
-1. Go to the **COD King Dashboard**.
+1. Go to **COD King → Settings**.
 
 <Frame>
-  ![COD Prepaid 1](/images/COD-prepaid-1.png "COD Prepaid 1")
+  ![COD to prepaid in COD King Settings](/images/c2p-01-open-cod-to-prepaid.png "COD to prepaid in COD King Settings")
 </Frame>
 
-2. Open **COD To Prepaid** by clicking on Manage.
+2. Open **COD to prepaid** under **COD Workflow**.
 
 <Frame>
-  ![Manage](/images/Manage.png "Manage")
+  ![COD To Prepaid page](/images/c2p-02-cod-to-prepaid-page.png "COD To Prepaid page")
 </Frame>
 
-3. Click **Activate COD to Prepaid Conversion**.
+3. Under **General Settings**, tick **Activate COD to Prepaid**.
 
 <Frame>
-  ![Activate](/images/Activate.png "Activate")
+  ![Activate COD to Prepaid](/images/c2p-03-activate.png "Activate COD to Prepaid")
 </Frame>
 
 This ensures customers receive the payment link immediately after placing a COD order.
@@ -68,10 +68,10 @@ This step is required for showing the conversion banner on the Thank You and Ord
 
 ### **1.  Enable COD King Extension on the Thank You Page**
 
-- Open your Shopify **Thank You Page** settings.
+- In the **Activate in theme** section, click **Open Thank You Settings** to open your Shopify **Thank You Page** settings.
 
 <Frame>
-  ![Thank You 2](/images/thank-you-2.png "Thank You 2")
+  ![Open Thank You Settings](/images/c2p-04-open-thank-you-settings.png "Open Thank You Settings")
 </Frame>
 
 - Go to **App Blocks** and Select **otp-cod-king-thankyou**.
@@ -84,10 +84,10 @@ This step is required for showing the conversion banner on the Thank You and Ord
 
 ### **2.  Enable COD King Extension on the Order Status Page**
 
-- Open **Order Status Page settings**.
+- In the **Activate in theme** section, click **Open Order Status Settings** to open the **Order Status Page settings**.
 
 <Frame>
-  ![Order](/images/order.png "Order")
+  ![Open Order Status Settings](/images/c2p-05-open-order-status-settings.png "Open Order Status Settings")
 </Frame>
 
 - Go to **App Blocks**  and Select **otp-cod-king-thankyou**.
@@ -106,16 +106,16 @@ This step is required for showing the conversion banner on the Thank You and Ord
 
 Select your preferred payment gateway. **Razorpay** is a commonly used option.
 
-- Select **Razorpay**.
+- In the **Payment** section, select **Razorpay** under **Payment account type**.
 
 <Frame>
-  ![Razorpay](/images/Razorpay.png "Razorpay")
+  ![Payment gateway](/images/c2p-06-payment-gateway.png "Payment gateway")
 </Frame>
 
 - Enter your **API Key** and **API Secret**.
 
 <Frame>
-  ![Arrow](/images/Arrow.png "Arrow")
+  ![API Key and API Secret](/images/c2p-07-api-credentials.png "API Key and API Secret")
 </Frame>
 
 - Save the configuration.
@@ -126,16 +126,16 @@ This enables COD King to generate secure payment links for COD orders.
 
 Encourage customers to convert by offering a small discount.
 
-- Select **Flat Amount**.
+- In the **Discount Settings** section, select **Flat Amount** under **Discount for users paying online**.
 
 <Frame>
-  ![Flat](/images/flat.png "Flat")
+  ![Discount type](/images/c2p-08-discount-type.png "Discount type")
 </Frame>
 
 - Enter your discount value, such as **₹50.**
 
 <Frame>
-  ![Save](/images/save.png "Save")
+  ![Discount Value](/images/c2p-09-discount-value.png "Discount Value")
 </Frame>
 
 - Save the settings.
@@ -145,18 +145,19 @@ Encourage customers to convert by offering a small discount.
 As per the **Meta policy**, customers cannot receive more than one marketing message within **24 hours**.
 
 <Frame>
-  ![Remind](/images/remind.png "Remind")
+  ![Prepaid reminders](/images/c2p-10-prepaid-reminders.png "Prepaid reminders")
 </Frame>
 
 ### **First Reminder**
 
-- Choose: **Send** or **Don’t Send**
-- This message goes right after the order is placed.
+- In the **Prepaid reminders** section, click **Add reminder** and use the **Enabled** option to choose whether this reminder is sent.
+- Set the **Trigger Delay** and **Unit** to decide how long after the COD order is placed this reminder is sent.
+- Optionally set the **Cart range** (Min/Max) and a **Discount override**, then click **Save** in the window.
 
 ### **Second Reminder**
 
-- Again choose: **Send** or **Don’t Send**
-- The message will be sent **24 hours after the first one**.
+- Click **Add reminder** again and choose with **Enabled** whether it is sent.
+- Its trigger delay must be at least **24 hours after the first one**.
 
 <Frame>
   ![Screenshot 2026 08 21 160249](/images/Screenshot-2026-08-21-160249.png "Screenshot 2026 08 21 160249")
@@ -168,10 +169,10 @@ These reminders include the payment link, encouraging customers to complete thei
   **Tip:** Keep reminder messages short and benefit-focused. A small prepaid discount can make the payment link more compelling.
 </Tip>
 
-- Go to Banner settings, here we can customize what to be displayed in the Pop-up after order is placed
+- Scroll to the **Banner Settings** section, here we can customize what to be displayed in the Pop-up after order is placed
 
 <Frame>
-  ![Banner](/images/Banner.png "Banner")
+  ![Banner Settings](/images/c2p-11-banner-settings.png "Banner Settings")
 </Frame>
 
 - Test the flow from your online store
