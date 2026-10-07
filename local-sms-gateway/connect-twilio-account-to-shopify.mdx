@@ -42,22 +42,22 @@ Once you're verified, log in and head to the [Twilio Console](https://console.tw
 
 Now switch over to your COD King dashboard:
 
-1. Go to **Local SMS provider**
+1. Go to **Settings → Local SMS gateway**
 
 <Frame>
-  ![Screenshot 08 21, 06 04 58 PM](/images/screenshot-08_21,-06_04_58-PM.jpg "Screenshot 08 21, 06 04 58 PM")
+  ![Local SMS gateway in COD King Settings](/images/sms-01-open-local-sms-gateway.png "Local SMS gateway in COD King Settings")
 </Frame>
 
-2. Scroll down and choose **Twilio (Global)** from the Network Provider dropdown
+2. Under **Local SMS Operator Integration**, choose **Twilio (Global)** from the Network Provider dropdown
 
 <Frame>
-  ![Screenshot 08 21, 06 07 21 PM](/images/screenshot-08_21,-06_07_21-PM.jpg "Screenshot 08 21, 06 07 21 PM")
+  ![Twilio (Global) selected as Network Provider](/images/sms-twilio-provider.png "Twilio (Global) selected as Network Provider")
 </Frame>
 
 3. Paste in your **Account SID** and **Auth Token**
 
 <Frame>
-  ![Screenshot 08 21, 06 19 34 PM](/images/screenshot-08_21,-06_19_34-PM.jpg "Screenshot 08 21, 06 19 34 PM")
+  ![Account SID and Auth Token fields](/images/sms-twilio-credentials.png "Account SID and Auth Token fields")
 </Frame>
 
 ### Step 4: Buy a Phone Number
@@ -74,7 +74,7 @@ Head back to Twilio and go to **Phone Numbers → Manage → [Buy a Number](http
 
 ### Step 5: Set Your Sender ID
 
-Copy the number you just purchased (strip out any spaces), then paste it into the **Sender ID** field back in COD King's network settings.
+Copy the number you just purchased (strip out any spaces), then paste it into the **Sender ID** field back in COD King's **Local SMS gateway** settings, just below the Auth Token.
 
 ### Step 6: Fund Your Twilio Wallet
 
@@ -84,6 +84,10 @@ Almost there. Go back to your [Twilio Console](https://console.twilio.com/?frame
 
 ### Step 7: Test, Save, and Go Live
 
-Before you fully commit, send yourself a test SMS from the **Settings** tab in COD King to confirm everything's wired up correctly. Once it lands in your inbox, head to the **Subscription** tab, pick a plan that matches your order volume, and hit subscribe.
+Before you fully commit, click **Save** in the **Unsaved changes** bar at the top of the page, then scroll down to the **Test Your Integration** section on the same **Local SMS gateway** page, enter your phone number with the country code in the **Phone Number** field and click **Send Test SMS** to confirm everything's wired up correctly. Once it lands in your inbox, head to **Plans**, pick a plan that matches your order volume, and hit subscribe.
 
-Last but not least—save **your changes**. It's a small click that's easy to forget after all that setup.
+<Frame>
+  ![Test Your Integration section](/images/sms-test-your-integration-blue.png "Test Your Integration section")
+</Frame>
+
+Last but not least—save **your changes** again whenever you update these settings. It's a small click that's easy to forget after all that setup.

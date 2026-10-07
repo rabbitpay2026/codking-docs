@@ -76,22 +76,22 @@ Pre-order OTP in the COD King app is a security feature that verifies a customer
 
 The purpose of Pre-Order OTP in the COD King app is to **ensure order authenticity** and **reduce return-to-origin (RTO) losses** for Cash on Delivery (COD) orders. Now let's understand this step by step :
 
-1. Open your COD King Dashboard → Features, then click Manage under OTP Verification.
+1. Open COD King → Settings, then click OTP verification under Checkout Widget.
 
 <Frame>
-  ![COD King Feature](/images/COD-King-Feature.png "COD King Feature")
+  ![OTP verification in COD King Settings](/images/otp-01-open-otp-verification.png "OTP verification in COD King Settings")
 </Frame>
 
-2. Select the OTP in Product /Pre Order OTP
+2. The Pre-Order OTP Setup page opens
 
 <Frame>
-  ![Pre Order Otp](/images/Pre-Order-Otp.png "Pre Order Otp")
+  ![Pre-Order OTP Setup page](/images/otp-02-pre-order-setup.png "Pre-Order OTP Setup page")
 </Frame>
 
-- Enable Theme Integration to proceed further; now click Open Theme Editor
+- Enable Theme Integration to proceed further; go to the COD King dashboard and click Open Theme in the Theme App Embed row
 
 <Frame>
-  ![Theme Editor 2](/images/Theme-editor-2.png "Theme Editor 2")
+  ![Open Theme button on the COD King dashboard](/images/otp-03-open-theme.png "Open Theme button on the COD King dashboard")
 </Frame>
 
 - A new page will appear. Make sure to enable the extension and hit the Save button
@@ -100,21 +100,21 @@ The purpose of Pre-Order OTP in the COD King app is to **ensure order authentici
   ![Save](/images/Save.png "Save")
 </Frame>
 
-4. Once done, go back to the previous tab and select step 2 to Activate OTP Verification
+4. Once done, go back to the previous tab, open Settings → OTP verification and check Activate OTP Verification, then choose your countries under Settings (Required)
 
 <Frame>
-  ![Activate Otp Verification](/images/Activate-Otp-Verification.png "Activate Otp Verification")
+  ![Activate OTP Verification checkbox](/images/otp-04-activate.png "Activate OTP Verification checkbox")
 
-  ![Select Country](/images/Select-Country.png "Select Country")
+  ![Select Countries under Settings (Required)](/images/otp-05-select-countries.png "Select Countries under Settings (Required)")
 </Frame>
 
-- Select the checkbox for Enable Prefilled Shipping Address (Only for India)
+- Go to UI customization → Customize → Delivery address and select the checkbox for Auto-fill shipping at checkout (India only)
 
 <Frame>
-  ![Select Country](/images/Select-Country.png "Select Country")
+  ![Auto-fill shipping at checkout (India only)](/images/otp-06-autofill-shipping.png "Auto-fill shipping at checkout (India only)")
 </Frame>
 
-- Go to UI customization and update the URL link of the image logo to appear in the OTP verification dialog box 
+- Go to UI customization → Customize → Logo and colours and update the URL link of the image logo to appear in the OTP verification dialog box 
 
 5. Open your Store and add a product to the cart to check for the OTP Verification
 
@@ -128,18 +128,18 @@ The purpose of Pre-Order OTP in the COD King app is to **ensure order authentici
   ![Done](/images/Done.png "Done")
 </Frame>
 
-- Under Advanced settings, if Hide the COD Shipping Method is enabled, the customer will be directed to the checkout page with the COD option
-- OTP pop-up will be shown only in selected countries based on customer IP. Shows everywhere if no countries are selected.
+- Further down the OTP verification page, under Shipping method, if Hide COD Shipping Method is enabled, the customer will be directed to the checkout page with the COD option
+- Under Where verification applies, the OTP pop-up will be shown only in selected countries based on customer IP. Shows everywhere if no countries are selected.
 - We can also Blacklist the phone number; once done save the changes
 
 <Frame>
-  ![Advanced Settings](/images/advanced-settings.png "Advanced Settings")
+  ![Shipping method and Where verification applies](/images/otp-07-advanced-settings.png "Shipping method and Where verification applies")
 </Frame>
 
-- Go back to the previous tab and check the OTP verification option under COD King Features; it will be enabled as below
+- Scroll back to the top of the OTP verification page and check the status next to OTP verification; it will be enabled as below
 
 <Frame>
-  ![Otp](/images/otp.png "Otp")
+  ![OTP verification Enabled status](/images/otp-08-enabled-status.png "OTP verification Enabled status")
 </Frame>
 
 - Now, if you go to the online store and buy a product, a dialog box will appear to enter the phone number to verify with the OTP to proceed further
@@ -233,27 +233,29 @@ By requiring a one-time password at delivery, it **confirms buyer intent**, **pr
 1. **Install COD King App**
 2. Go to the Shopify App Store and install the _COD King – Verify COD Orders_ app.
 3. **Enable Post Order OTP**
-4. Navigate to Features –\>OTP Verification–\>Manage
+4. Navigate to Settings –> Post-order OTP verification (under COD Workflow)
 
 <Frame>
-  ![COD King Feature 1](/images/COD-King-Feature-1.png "COD King Feature 1")
+  ![Post-order OTP verification in COD King Settings](/images/otp-09-open-post-order.png "Post-order OTP verification in COD King Settings")
 </Frame>
 
-- Now select the **“Post Order OTP”** section and click Set Post Order OTP
+- The **After Order OTP verification** page opens
 
 <Frame>
-  ![Post Order](/images/Post-Order.png "Post Order")
+  ![After Order OTP verification page](/images/otp-10-post-order-setup.png "After Order OTP verification page")
 </Frame>
 
-- Toggle the switch to activate this feature
+- Check **Activate OTP verification** to activate this feature
 
 <Frame>
-  ![Enable](/images/Enable.png "Enable")
+  ![Activate OTP verification checkbox](/images/otp-11-activate-post-order.png "Activate OTP verification checkbox")
+
+  ![Open Thank You Settings and Open Order Status Settings](/images/otp-12-activate-in-theme.png "Open Thank You Settings and Open Order Status Settings")
 </Frame>
 
 5. **Activate in Theme**
 
-- Open  Thank You Page settings,
+- Open  Thank You Settings (under Activate in theme),
 - Click on Add block, select the otp-cod-king-thankyou and save
 - **Thank You page OTP preview**
 
@@ -261,8 +263,8 @@ By requiring a one-time password at delivery, it **confirms buyer intent**, **pr
   ![Thnak You](/images/Thnak-you.png "Thnak You")
 </Frame>
 
-- Click on Add block and select the otp-cod-king-order status and save     
-- Go back to previous settings and Open Order Status Page Settings
+- Go back to previous settings and click Open Order Status Settings     
+- Then click on Add block, select the otp-cod-king-order status and save
 
 Order Status Page OTP Preview
 
@@ -278,7 +280,7 @@ Order Status Page OTP Preview
 - Save the changes without fail
 
 <Frame>
-  ![New](/images/new.png "New")
+  ![More Settings on the After Order OTP verification page](/images/otp-13-more-settings.png "More Settings on the After Order OTP verification page")
 </Frame>
 
 - **Test the Flow**
@@ -312,13 +314,13 @@ WhatsApp Verification for COD Orders is a secure order confirmation process that
 Follow these simple steps to enable WhatsApp OTP verification for your Cash on Delivery (COD) orders:
 
 - Open the **COD King** app from your Shopify admin panel
-- Navigate to the **Features** section
-- Scroll down to the **Customer Engagement** section
-- Click **Manage**
-- Locate the **COD Verification Whatsapp** option
+- Navigate to the **Settings** section
+- Find the **COD Workflow** group in the left sidebar
+- Click **WhatsApp COD verification**
+- Locate the **Send the verification link on WhatsApp** option
 
 <Frame>
-  ![What 2 1](/images/what-2-1.png "What 2 1")
+  ![WhatsApp COD verification settings](/images/otp-14-whatsapp-cod-verification.png "WhatsApp COD verification settings")
 </Frame>
 
 - Check the box to enable the feature
@@ -327,7 +329,7 @@ Follow these simple steps to enable WhatsApp OTP verification for your Cash on D
 **Whatsapp Preview Message**
 
 <Frame>
-  ![Screenshot 2026 08 10 152754 1](/images/Screenshot-2026-08-10-152754-1.png "Screenshot 2026 08 10 152754 1")
+  ![WhatsApp preview message](/images/otp-15-whatsapp-preview.png "WhatsApp preview message")
 </Frame>
 
 <Info>

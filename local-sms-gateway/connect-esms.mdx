@@ -16,7 +16,7 @@ Before you begin, make sure you have:
 - An **API Key**
 - A **Secret Key**
 - A registered **Brandname**
-- Access to **Local SMS Operators** in COD King
+- Access to **Local SMS gateway** in COD King
 
 ## Step 1: Create an eSMS Account
 
@@ -85,11 +85,15 @@ Log in to your Shopify admin and open **COD King**.
 
 Go to:
 
-**COD King → Local SMS Operators**
+**COD King → Settings → Local SMS gateway**
 
 From the **Network Provider** dropdown, select:
 
 **eSMS (Vietnam)**
+
+<Frame>
+  ![eSMS (Vietnam) selected as Network Provider](/images/sms-esms-provider.png "eSMS (Vietnam) selected as Network Provider")
+</Frame>
 
 ## Step 7: Enter Your eSMS Credentials
 
@@ -98,27 +102,31 @@ Enter the credentials obtained from your eSMS account.
 | COD King Field | Value |
 | --- | --- |
 | **API Key** | API Key obtained from eSMS |
-| **Secret Key** | Secret Key obtained from eSMS |
+| **API Secret** | Secret Key obtained from eSMS |
 | **Sender ID** | Your approved eSMS Brandname |
 
 Make sure each value is entered correctly.
 
+<Frame>
+  ![eSMS credential fields and Save button](/images/sms-esms-credentials.png "eSMS credential fields and Save button")
+</Frame>
+
 ## Step 8: Save the Configuration
 
-After entering the eSMS credentials, save the operator configuration in COD King.
+After entering the eSMS credentials, click **Save** in the bar at the top of the page to save the operator configuration in COD King.
 
 Verify that the API Key, Secret Key, and Sender ID are entered correctly before using the SMS service.
 
 ## Step 9: Test SMS
 
-After saving the eSMS configuration, trigger an SMS notification from your Shopify store.
+After saving the eSMS configuration, scroll down to the **Test Your Integration** section on the same page.
 
-For example :- 
+Enter a valid phone number with the country code in the **Phone Number** field.
 
 Click **Send Test SMS** to send a test message to the entered phone number.
 
 <Frame>
-  ![Screenshot 2026 09 09 185626](/images/Screenshot-2026-09-09-185626.png "Screenshot 2026 09 09 185626")
+  ![Test Your Integration section](/images/sms-test-your-integration.png "Test Your Integration section")
 </Frame>
 
 Check the recipient's phone to confirm that the test SMS was delivered successfully.
@@ -133,7 +141,7 @@ If the test SMS is delivered successfully, your eSMS integration is configured c
 
 ## Manage Your Integration
 
-After configuring eSMS, you can manage the integration from the **Local SMS Operators** section in COD King.
+After configuring eSMS, you can manage the integration from the **Local SMS gateway** section in COD King.
 
 You can:
 
@@ -163,6 +171,6 @@ For additional information and API reference, use the official eSMS resources:
 
 ## You're All Set
 
-Once your eSMS account is verified, your API Key and Secret Key are available, and your Brandname has been approved, enter these credentials in **COD King → Local SMS Operators → eSMS (Vietnam)**.
+Once your eSMS account is verified, your API Key and Secret Key are available, and your Brandname has been approved, enter these credentials in **COD King → Settings → Local SMS gateway → eSMS (Vietnam)**.
 
 After saving and successfully testing the configuration, COD King will be ready to use eSMS for sending SMS notifications to your customers.

@@ -52,37 +52,29 @@ Here's the full walkthrough for getting Partial COD live on your store. Steps 5 
 Head to the Shopify App Store, search for **Codking**, and hit Install. You'll be asked to authorize a few permissions so the app can read your store catalog—go ahead and approve them.
 
 <Frame>
-  ![Screenshot 08 11, 07 07 33 PM](/images/screenshot-08_11,-07_07_33-PM.jpg "Screenshot 08 11, 07 07 33 PM")
+  ![COD King in the Shopify admin sidebar](/images/pp-01-open-cod-king.png "COD King in the Shopify admin sidebar")
 </Frame>
 
 <Warning>
   Make sure your Shopify store is connected to the desired payment gateway. Double-check that your gateway is set to **Auto-Capture**. If it isn't, upfront deposits will be authorized but not actually collected at checkout.
 </Warning>
 
-### Step 8: Turn It On
-
-Scroll back up to the top and check the **Activate Partial Payment** box.
-
-<Frame>
-  ![Screenshot 08 10, 08 23 41 PM](/images/screenshot-08_10,-08_23_41-PM.jpg "Screenshot 08 10, 08 23 41 PM")
-</Frame>
-
 ### Step 3: Open the Partial Payment Feature
 
-From the app dashboard, click **Manage**.
+Under COD King in your left sidebar, click **Settings**, then choose **Partial payments & COD**.
 
 <Frame>
-  ![Screenshot 08 12, 07 24 08 PM](/images/screenshot-08_12,-07_24_08-PM.jpg "Screenshot 08 12, 07 24 08 PM")
+  ![Partial payments & COD in COD King Settings](/images/pp-02-open-partial-payments.png "Partial payments & COD in COD King Settings")
 </Frame>
 
 ### Step 4: Head Into the Theme Editor
 
-You'll find this option sitting right under COD King in the Apps section of your left sidebar.
+You'll find this option on the COD King dashboard—click **COD King** in the Apps section of your left sidebar.
 
-- Click **Open Theme Editor—this** drops you into your Shopify store's own editing interface.
+- In the **Theme App Embed** row, click **Open Theme—this** drops you into your Shopify store's own editing interface.
 
 <Frame>
-  ![Screenshot 08 10, 08 20 37 PM](/images/screenshot-08_10,-08_20_37-PM.jpg "Screenshot 08 10, 08 20 37 PM")
+  ![Open Theme button on the COD King dashboard](/images/pp-03-open-theme.png "Open Theme button on the COD King dashboard")
 </Frame>
 
 <Info>
@@ -95,7 +87,7 @@ You'll find this option sitting right under COD King in the Apps section of your
 
 ### Step 5: Build Your Payment Rules
 
-Back in the Shopify tab, scroll down to the rules section. This is really the heart of the whole setup—it decides how much a customer pays upfront and under what conditions they even see that option. A rule is made up of a few parts:
+Back in the Shopify tab, open **Settings → Partial payments & COD**, scroll down to **Payment Rules & Settings**, and click **Add Payment Rule**. This is really the heart of the whole setup—it decides how much a customer pays upfront and under what conditions they even see that option. A rule is made up of a few parts:
 
 **5a. Rule Configuration**
 
@@ -107,7 +99,7 @@ Start by naming the rule—something like "Full Payment" or "10% Deposit" works 
 - **Cash on Delivery (COD)—nothing** is paid upfront; the full amount (plus optional delivery fees) is collected on arrival.
 
 <Frame>
-  ![Screenshot 08 13, 05 45 15 PM](/images/screenshot-08_13,-05_45_15-PM.jpg "Screenshot 08 13, 05 45 15 PM")
+  ![Rule Configuration on the Add Rule page](/images/pp-04-rule-configuration.png "Rule Configuration on the Add Rule page")
 </Frame>
 
 <Info>
@@ -116,14 +108,14 @@ Start by naming the rule—something like "Full Payment" or "10% Deposit" works 
 
 **5b. Cart Range (Advanced)**
 
-You can restrict a rule to a certain cart value—set Min to 500 and Max to 5,000, for example, and it'll only apply to carts in that range. Leave both `0.0` if you want it to apply everywhere.
+You can restrict a rule to a certain cart value—set Min to 500 and Max to 5,000, for example, and it'll only apply to carts in that range. Leave both blank if you want it to apply everywhere.
 
 **5 c. Discount Settings (Advanced)**
 
 Want to reward customers for choosing this payment method? Add a discount code (like earth10) and decide whether it's a percentage off or a flat amount off.
 
 <Frame>
-  ![Screenshot 08 13, 05 47 02 PM](/images/screenshot-08_13,-05_47_02-PM.jpg "Screenshot 08 13, 05 47 02 PM")
+  ![Discount Settings section](/images/pp-05-discount-settings.png "Discount Settings section")
 </Frame>
 
 **5 d. Product Filter**
@@ -135,7 +127,7 @@ This decides which products a rule applies to:
 - **Exclude selected products—the** rule hides the moment any excluded product lands in the cart but shows for everything else.
 
 <Frame>
-  ![Screenshot 08 13, 05 47 16 PM](/images/screenshot-08_13,-05_47_16-PM.jpg "Screenshot 08 13, 05 47 16 PM")
+  ![Product filter section](/images/pp-06-product-filter.png "Product filter section")
 </Frame>
 
 **5e. Variant Filter (Advanced)**
@@ -143,7 +135,7 @@ This decides which products a rule applies to:
 Similar idea, but at the variant level—size, color, material. It works alongside the Product Filter, so both conditions need to be met. You could, for instance, allow partial payment on large T-shirts but not small ones.
 
 <Frame>
-  ![Screenshot 08 13, 05 47 53 PM](/images/screenshot-08_13,-05_47_53-PM.jpg "Screenshot 08 13, 05 47 53 PM")
+  ![Variant Filter section](/images/pp-07-variant-filter.png "Variant Filter section")
 </Frame>
 
 **5 f. Collection Filter (Advanced)**
@@ -151,7 +143,7 @@ Similar idea, but at the variant level—size, color, material. It works alongsi
 Same logic, but scoped to Shopify collections—"Winter Collection" or "Clearance Items," for example. The rule only kicks in when cart items belong to the collections you've chosen.
 
 <Frame>
-  ![Screenshot 08 13, 05 48 07 PM](/images/screenshot-08_13,-05_48_07-PM.jpg "Screenshot 08 13, 05 48 07 PM")
+  ![Collection Filter section](/images/pp-08-collection-filter.png "Collection Filter section")
 </Frame>
 
 **5g. Match Any Product in Cart**
@@ -162,7 +154,7 @@ This toggle changes how strict the filters above are for mixed carts:
 - **Checked;** just one qualifying product is enough to show the rule for the whole cart.
 
 <Frame>
-  ![Screenshot 08 13, 05 48 22 PM](/images/screenshot-08_13,-05_48_22-PM.jpg "Screenshot 08 13, 05 48 22 PM")
+  ![Match any product in cart section](/images/pp-09-match-any-product.png "Match any product in cart section")
 </Frame>
 
 **5h. Zipcode Restrictions & Zipcode Includes**
@@ -173,7 +165,11 @@ You can also gate a rule by delivery pincode—handy if certain areas have a his
 - **Zipcode Includes** does the opposite—the option only shows in the zip codes you list.
 
 <Frame>
-  ![Screenshot 08 13, 05 55 55 PM](/images/screenshot-08_13,-05_55_55-PM.jpg "Screenshot 08 13, 05 55 55 PM")
+  ![Zipcode Restrictions section](/images/pp-10-zipcode-restrictions.png "Zipcode Restrictions section")
+</Frame>
+
+<Frame>
+  ![Zipcode Includes section](/images/pp-11-zipcode-includes.png "Zipcode Includes section")
 </Frame>
 
 **5i. Display Settings (Advanced)**
@@ -181,19 +177,19 @@ You can also gate a rule by delivery pincode—handy if certain areas have a his
 If you'd rather not let the app auto-calculate the deposit, use this field to override it—set a fixed upfront fee or add an extra charge (say, a ₹50 processing fee) without changing the base product price. Leave it blank, and the app handles the math for you.
 
 <Frame>
-  ![Screenshot 08 13, 05 49 35 PM](/images/screenshot-08_13,-05_49_35-PM.jpg "Screenshot 08 13, 05 49 35 PM")
+  ![Display Settings section](/images/pp-12-display-settings.png "Display Settings section")
 </Frame>
 
 ### Step 6: Tune the Advanced Settings
 
-With your rules in place, these settings let you fine-tune how partial payment behaves across the whole store.
+With your rules in place, these settings let you fine-tune how partial payment behaves across the whole store. On the **Partial payments & COD** page, open the **Advanced Settings** tab next to **Payment Rules**.
 
 **6a. Tax & Calculations**
 
 Decide whether the deposit includes tax or not. If you leave tax for later, use the Partial Tax Text field to explain that—something like "Taxes due on delivery" works well.
 
 <Frame>
-  ![Screenshot 08 13, 05 57 43 PM](/images/screenshot-08_13,-05_57_43-PM.jpg "Screenshot 08 13, 05 57 43 PM")
+  ![Tax & Calculations in Advanced Settings](/images/pp-13-tax-calculations.png "Tax & Calculations in Advanced Settings")
 </Frame>
 
 **6 b. Shipping Configuration**
@@ -201,7 +197,7 @@ Decide whether the deposit includes tax or not. If you leave tax for later, use 
 Set a Shipping Rate Keyword—a word like "partial" or "installment"—that triggers the deposit flow when a customer picks that shipping rate at checkout.
 
 <Frame>
-  ![Screenshot 08 13, 05 57 58 PM](/images/screenshot-08_13,-05_57_58-PM.jpg "Screenshot 08 13, 05 57 58 PM")
+  ![Shipping Configuration in Advanced Settings](/images/pp-14-shipping-configuration.png "Shipping Configuration in Advanced Settings")
 </Frame>
 
 **6 c. Payment Flow**
@@ -212,46 +208,54 @@ Choose how the balance gets collected:
 - **New Order** cancels the original and opens a fresh order for the remaining amount, which suits automated or 3PL fulfillment better.
 
 <Frame>
-  ![Screenshot 08 13, 05 58 25 PM](/images/screenshot-08_13,-05_58_25-PM.jpg "Screenshot 08 13, 05 58 25 PM")
+  ![Payment Flow in Advanced Settings](/images/pp-15-payment-flow.png "Payment Flow in Advanced Settings")
 </Frame>
 
 **6 d. Meta (Facebook) Pixel**
 
-If you're running Facebook Ads, connect your Pixel ID and Access Token here so deposit and purchase data feed back into your conversion tracking.
+If you're running Facebook Ads, go to **Settings → Integrations**, open **Meta Pixel**, and connect your Pixel ID and Conversions API access token so deposit and purchase data feed back into your conversion tracking.
 
 <Frame>
-  ![Screenshot 08 13, 05 58 38 PM](/images/screenshot-08_13,-05_58_38-PM.jpg "Screenshot 08 13, 05 58 38 PM")
+  ![Meta Pixel card under Integrations](/images/pp-16-meta-pixel.png "Meta Pixel card under Integrations")
 </Frame>
 
 **6e. Google Ads Conversion**
 
-Same idea for Google Ads—add your Conversion ID and Conversion Label so partial payment sales show up in your ROI reporting.
+Same idea for Google Ads—open **Google Ads** under **Settings → Integrations** and add your Conversion ID and Conversion Label so partial payment sales show up in your ROI reporting.
 
 <Frame>
-  ![Screenshot 08 13, 05 59 08 PM](/images/screenshot-08_13,-05_59_08-PM.jpg "Screenshot 08 13, 05 59 08 PM")
+  ![Google Ads card under Integrations](/images/pp-17-google-ads.png "Google Ads card under Integrations")
 </Frame>
 
 ### Step 7: Style the Checkout Pop-Up
 
-Last stretch—this is where you make the pop-up feel like part of your store rather than a bolted-on plugin.
+Last stretch—this is where you make the pop-up feel like part of your store rather than a bolted-on plugin. Go to **Settings → UI customization** and click **Customize**.
 
 **7a. Branding**
 
-Add your logo URL and store name so the pop-up is unmistakably yours.
+Under **Logo and colours**, add your brand logo URL and store name so the pop-up is unmistakably yours.
 
 **7 b. Buttons & Fallback Messages**
 
-Rename the checkout button to whatever fits your tone—"Pay Deposit Now" is a common one. And write a fallback message for carts that don't qualify for any rule, so customers aren't left staring at a blank state.
+Under **Payment screen**, rename the main button to whatever fits your tone—"Pay Deposit Now" is a common one. And write a fallback message (**No option fits this cart**) for carts that don't qualify for any rule, so customers aren't left staring at a blank state.
 
 **7 c. Promotional Banners**
 
-If you want to run a promo inside the pop-up itself, toggle the banner on, write your message ("Get 50% OFF on Your 2nd Order," say), and set the background and text colors to match your brand.
+If you want to run a promo inside the pop-up itself, go back to **Logo and colours**, turn on **Show Promo Banner**, write your message ("Get 50% OFF on Your 2nd Order," say), and set the background and text colors to match your brand.
 
 <Frame>
-  ![Screenshot 08 10, 08 19 01 PM](/images/screenshot-08_10,-08_19_01-PM.jpg "Screenshot 08 10, 08 19 01 PM")
+  ![Logo and colours in the Customization panel](/images/pp-18-ui-customization.png "Logo and colours in the Customization panel")
 </Frame>
 
-### Step 8: Check Your Work
+### Step 8: Turn It On
+
+Go back to **Settings → Partial payments & COD**, scroll to the top of the page and check the **Activate Partial Payments** box.
+
+<Frame>
+  ![Activate Partial Payments checkbox](/images/pp-19-activate.png "Activate Partial Payments checkbox")
+</Frame>
+
+### Step 9: Check Your Work
 
 Head to checkout and confirm the partial payment option actually shows up the way you configured it.
 
