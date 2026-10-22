@@ -94,6 +94,15 @@
                   "local-sms-gateway/connect-bulksms-bd-service",
                   "local-sms-gateway/connect-prowebsems"
                 ]
+              },
+              {
+                "group": "Branded WhatsApp",
+                "icon": {
+                  "style": "brands",
+                  "name": "whatsapp",
+                  "library": "fontawesome"
+                },
+                "pages": []
               }
             ]
           },
