@@ -74,7 +74,14 @@
               "name": "whatsapp",
               "library": "fontawesome"
             },
-            "pages": []
+            "pages": [
+              "branded-whatsapp/introduction",
+              "branded-whatsapp/templates-and-events",
+              "branded-whatsapp/abandoned-cart",
+              "branded-whatsapp/cod-to-prepaid",
+              "branded-whatsapp/activity-logs-and-replies",
+              "branded-whatsapp/campaign-management"
+            ]
           }
         ]
       },
