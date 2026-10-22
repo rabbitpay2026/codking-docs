@@ -44,37 +44,22 @@
   },
 
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "Integrations",
-        "icon": "puzzle-piece",
-        "pages": [
-          "integrations/overview",
-          "integrations/shopify"
-        ]
+        "tab": "Documentation",
+        "href": "#"
       },
       {
-        "group": "Orders & Analytics",
-        "icon": "chart-line",
-        "pages": []
+        "tab": "Dashboard Handbook",
+        "href": "partial-payment/overview"
       },
       {
-        "group": "Help & Support",
-        "icon": "life-ring",
-        "pages": [
-          "guides/troubleshooting",
-          "support/faq"
-        ]
+        "tab": "API Reference",
+        "href": "integrations/overview"
       },
       {
-        "group": "COD Fees",
-        "icon": "receipt",
-        "pages": []
-      },
-      {
-        "group": "Partial COD",
-        "icon": "credit-card",
-        "pages": []
+        "tab": "Changelog",
+        "href": "support/faq"
       }
     ]
   },
