@@ -1,0 +1,87 @@
+---
+title: "Branded WhatsApp – Campaign Management with COD King"
+sidebarTitle: "Campaign Management"
+description: "Set up, send and monitor WhatsApp campaigns from COD King, with the audiences and campaigns available today."
+icon: "bullhorn"
+---
+
+# Campaign Management with COD King
+
+WhatsApp campaigns let you send an offer or announcement to a group of customers. Each campaign has an audience, an approved message, and a send time.
+
+## How campaigns work
+
+The campaigns page describes the flow as: pick an audience, choose an approved template, and send now or schedule it. Every message is tracked from sent to read and reply.
+
+<Frame>
+  ![WhatsApp campaigns page with Create campaign disabled and Setup needed status](/images/bw-03-campaigns-setup-needed.png "WhatsApp campaigns page: Create campaign (1) and Setup needed status (2)")
+</Frame>
+
+1. **Create campaign** is disabled until setup is complete.
+2. **Setup needed** shows that the number and message are not ready yet.
+
+## Prerequisites: set up campaigns
+
+The **Set up WhatsApp campaigns** checklist has three steps:
+
+1. **Connect your WhatsApp Business number.** Messages are sent from your own number. Click **Connect number**.
+2. **Get a message approved.** WhatsApp only allows pre-approved messages for campaigns. Click **Choose a message** to start from a ready-made one.
+3. **Bring in your customers.** Click **Import from store** to copy your Shopify customers and abandoned checkouts, or **Upload a list**.
+
+## Ready-made campaigns
+
+Each ready-made campaign comes with an audience and a message. You can change anything before you send.
+
+<Frame>
+  ![Ready-made WhatsApp campaigns with audiences and approval status](/images/bw-05-ready-made-campaigns.png "Ready-made campaigns: Win back lapsed customers (1) and Recover abandoned checkouts (2)")
+</Frame>
+
+| Campaign | Audience | Status on the dev store |
+| --- | --- | --- |
+| Win back lapsed customers | Customers who have not ordered in 60 days | Message needs approval |
+| Festive sale | Everyone subscribed | Message needs approval |
+| Turn COD buyers into online payers | COD buyers who never paid online, with no returns or RTO | Message needs approval |
+| Recover abandoned checkouts | Shoppers who left a checkout 1 to 7 days ago and didn't finish | Message needs approval |
+
+## Audiences
+
+The campaigns page has two tabs, **Campaigns** and **Audiences**. Use the **Open audiences** button to manage audiences.
+
+<Warning>
+  **Needs verification:** The filters for building a custom audience, the list of segments, and the eligibility rules were not visible in the dev store. Only the four audiences above are confirmed.
+</Warning>
+
+## Scheduling and campaign actions
+
+The campaigns page says you can **send now or schedule** a campaign. The scheduling fields, start time, delays, recurring options, and actions such as pause or stop were not verified because no number was connected.
+
+<Warning>
+  **Needs verification:** Scheduling details, recurring options, pausing and stopping, and performance metrics. Do not publish these steps until they are checked in the app.
+</Warning>
+
+## Practical example: a win-back campaign
+
+A store wants to bring back customers who have not ordered in 60 days.
+
+1. Open **Settings → WhatsApp campaigns**, and finish the three setup steps.
+2. Under **Start from a ready-made campaign**, open **Win back lapsed customers**.
+3. Wait until the message is approved. The **Use this** button is enabled after approval.
+4. Review the audience (customers who have not ordered in 60 days) and the message, then send or schedule.
+5. Check the results in the activity logs (see [Checking Activity Logs and Understanding Replies](/branded-whatsapp/activity-logs-and-replies)).
+
+## Verification
+
+- Confirm the campaign audience matches the ready-made description before sending.
+- Send a test to your own number first, if your setup allows it.
+
+## Troubleshooting
+
+- **Create campaign is disabled.** Finish the setup checklist. The number and an approved message are required.
+- **Use this is disabled.** The message is waiting for approval.
+- **No customers are in the audience.** Import customers from your store or upload a list.
+
+## Important notes and limitations
+
+- Campaigns can only use approved messages.
+- Campaign messages are charged at the WhatsApp marketing rate. On the dev store this is $0.0116 per message. See [Introduction and How It Works](/branded-whatsapp/introduction).
+- Do not assume features exist because other WhatsApp marketing tools offer them. Check the app first.

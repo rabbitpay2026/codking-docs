@@ -1,0 +1,118 @@
+---
+title: "Branded WhatsApp – Introduction and How It Works"
+sidebarTitle: "Introduction"
+description: "Learn what Branded WhatsApp is, how it differs from standard notifications, and what it costs."
+icon: "whatsapp"
+---
+
+# Branded WhatsApp: Introduction and How It Works
+
+Branded WhatsApp lets your store send order updates and marketing messages from **your own verified WhatsApp Business number**. Customers see your store name on every message, instead of a shared sender.
+
+In COD King, the feature lives under **Settings → Notifications → Business Brand WhatsApp**.
+
+<Frame>
+  ![COD King Settings showing the Notifications section](/images/bw-01-notifications-menu.png "Notifications section in COD King Settings")
+</Frame>
+
+## What is Branded WhatsApp?
+
+The Business Brand WhatsApp page describes the feature like this: order updates arrive from your own verified number, with your store name on the message, instead of a shared sender. Customers can also reply, so it is a two-way chat rather than one-way alerts.
+
+## How it differs from standard notifications
+
+COD King already sends WhatsApp and SMS notifications from its own shared sender. Branded WhatsApp changes the sender to your number.
+
+| | Customer notifications | Business Brand WhatsApp |
+| --- | --- | --- |
+| **Sender** | COD King's WhatsApp and SMS numbers | Your own verified WhatsApp Business number |
+| **Setup** | No setup needed | Connect a WhatsApp Business Account through Meta's Embedded Signup |
+| **Replies** | One-way notifications | Two-way chat, with replies in the WhatsApp inbox |
+| **Pricing** | COD King WhatsApp and SMS rates | Branded WhatsApp fee per message, plus WhatsApp message rates |
+
+## How it works
+
+1. You connect your WhatsApp Business Account from the Business Brand WhatsApp page.
+2. You use approved message templates. WhatsApp only allows pre-approved messages for campaigns.
+3. Messages for orders, campaigns and automations are sent from your number, and customer replies appear in the WhatsApp inbox.
+
+## Prerequisites
+
+Before you start, make sure you have:
+
+- COD King installed on your Shopify store.
+- A WhatsApp Business Account that you can connect through Meta.
+- A phone number to register for WhatsApp Business.
+- Message templates approved by WhatsApp. Messages marked **Message needs approval** cannot be sent until approved.
+
+<Warning>
+  **Needs verification:** Meta account and phone number requirements, the approval time for templates, and how long Meta takes to verify your business were not verified in the COD King dev store. Confirm these with Meta's current WhatsApp Business documentation before you start.
+</Warning>
+
+## Step-by-step setup
+
+### Step 1: Open Business Brand WhatsApp
+
+1. Go to **COD King → Settings**.
+2. In the left menu, under **Notifications**, click **Business Brand WhatsApp**.
+
+<Frame>
+  ![Business Brand WhatsApp page showing Not connected status](/images/bw-02-business-brand-not-connected.png "Business Brand WhatsApp page, showing Not connected")
+</Frame>
+
+### Step 2: Check the connection status
+
+The **Connection** card shows **Not connected** until a number is linked. Under **Get started**, click **Connect WhatsApp Account** to start Meta's Embedded Signup.
+
+<Warning>
+  **Needs verification:** The Embedded Signup screens and the final connected state were not captured in the dev store. Add screenshots of these steps after a test connection.
+</Warning>
+
+## Pricing and billing
+
+COD King bills Branded WhatsApp and other messaging usage through your Shopify billing. The rates below are from the **Billing** page of the dev store on the Enterprise Plus plan.
+
+<Frame>
+  ![Billing page showing current SMS, WhatsApp and Branded WhatsApp rates](/images/bw-10-billing-usage-rates.png "Current rates on the Billing page")
+</Frame>
+
+| Rate | Amount on the dev store | Used for |
+| --- | --- | --- |
+| Current SMS rate | \$0.0032 per SMS | Per message verification cost |
+| Current WhatsApp rate | \$0.0026 per conversation | Conversation confirmation cost |
+| Current WhatsApp marketing rate | \$0.0116 per message | COD verification, COD to prepaid, first purchase and abandoned cart |
+| Branded WhatsApp fee | \$0.0010 per message | Each message sent from your own number |
+
+Rates depend on your plan and may change. Check your own **Billing** page for current rates.
+
+- **Capped amount** is set or updated inside Shopify billing. The **Used capped amount** resets automatically every billing cycle.
+- To check usage, open **COD King → Billing**, choose a date range under **Select date range**, and review the SMS, WhatsApp and transaction fee data.
+- The **View usage rates** button on the Billing page shows rates for each country.
+
+<Frame>
+  ![Billing page with Manage subscription and View usage rates buttons](/images/bw-09-billing-overview.png "Billing page: Manage subscription (1) and View usage rates (2)")
+</Frame>
+
+1. **Manage subscription** opens your Shopify plan and billing settings.
+2. **View usage rates** shows the rates for each SMS and WhatsApp destination country.
+
+<Warning>
+  **Needs verification:** The COD King page does not show a Meta or WhatsApp fee line. Confirm with Meta's pricing for your country whether any Meta charges apply on top of the COD King rates.
+</Warning>
+
+## Practical use cases
+
+- Send order confirmations and shipping updates from your own brand number.
+- Recover abandoned carts with a reminder from your number (see [Abandoned Cart](/branded-whatsapp/abandoned-cart)).
+- Convert COD orders to prepaid (see [COD to Prepaid](/branded-whatsapp/cod-to-prepaid)).
+- Run campaigns such as win-back and festive sales (see [Campaign Management](/branded-whatsapp/campaign-management)).
+
+## Limitations and things to know
+
+- Campaign messages must use approved templates.
+- Branded WhatsApp messages cost money per message, so check the rates before you enable a new message type.
+- Connection, templates and campaigns depend on your WhatsApp Business Account being approved.
+
+<Tip>
+  Start with one or two messages, such as order placed and fulfilment, and check the results before you add campaigns.
+</Tip>
