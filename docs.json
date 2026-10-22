@@ -46,26 +46,17 @@
   "navigation": {
     "groups": [
       {
-        "group": "Getting Started",
+        "group": "Documentation",
         "pages": [
           "index",
           "quickstart"
-        ]
-      },
-      {
-        "group": "OTP Verification",
-        "icon": "shield-check",
-        "pages": [
-          "untitled-page",
-          "new-dummy-page",
-          "partial-payment/overview"
-        ]
+        ],
+        "icon": "book-open"
       },
       {
         "group": "Core Features",
         "icon": "sparkles",
         "pages": [
-          "cod-fees/overview",
           "partial-cod/overview",
           "cod-to-prepaid/overview",
           {
@@ -125,10 +116,7 @@
   "contextual": {
     "options": [
       "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "assistant"
+      "view"
     ]
   },
   "search": {
