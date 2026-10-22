@@ -66,6 +66,15 @@
               "untitled-page-4",
               "untitled-page-3"
             ]
+          },
+          {
+            "group": "Branded WhatsApp",
+            "icon": {
+              "style": "brands",
+              "name": "whatsapp",
+              "library": "fontawesome"
+            },
+            "pages": []
           }
         ]
       },
