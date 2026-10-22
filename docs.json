@@ -46,54 +46,6 @@
   "navigation": {
     "groups": [
       {
-        "group": "Documentation",
-        "pages": [
-          "index",
-          "quickstart"
-        ],
-        "icon": "book-open"
-      },
-      {
-        "group": "Core Features",
-        "icon": "sparkles",
-        "pages": [
-          "partial-cod/overview",
-          "cod-to-prepaid/overview",
-          {
-            "group": "COD Rules",
-            "pages": [
-              "untitled-page-2",
-              "untitled-page-4",
-              "untitled-page-3"
-            ]
-          },
-          {
-            "group": "Branded WhatsApp",
-            "icon": {
-              "style": "brands",
-              "name": "whatsapp",
-              "library": "fontawesome"
-            },
-            "pages": [
-              "branded-whatsapp/introduction",
-              "branded-whatsapp/templates-and-events",
-              "branded-whatsapp/abandoned-cart",
-              "branded-whatsapp/cod-to-prepaid",
-              "branded-whatsapp/activity-logs-and-replies",
-              "branded-whatsapp/campaign-management"
-            ]
-          }
-        ]
-      },
-      {
-        "group": "Engagement",
-        "icon": "messages",
-        "pages": [
-          "notifications/overview",
-          "abandoned-cart/overview"
-        ]
-      },
-      {
         "group": "Integrations",
         "icon": "puzzle-piece",
         "pages": [
