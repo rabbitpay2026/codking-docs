@@ -34,6 +34,10 @@ Each offer editor starts with an **Offer** card and ends with a **Products** car
 | **Starts / Ends** (optional) | A date and time window. Leave both empty for an offer that always runs. |
 | **Products** | **All products**, or **Selected products and collections** to limit the offer to the ones you pick. |
 
+<Frame>
+  ![The Offer card shared by every offer](/images/cf-39-offer-quantity-card.png "The Offer card shared by every offer")
+</Frame>
+
 <Note>
   Every offer is created and edited the same way: open the card, click **Add** (or **Edit** on an existing offer), fill in the fields, and save. Use **Pause** to switch an offer off without deleting it.
 </Note>
@@ -58,6 +62,10 @@ Add up to 5 tiers. Each tier has:
 
 **Apply a tier to higher quantities too.** When on, a buyer who orders 4 units gets the 3-unit tier price. When off, a tier only applies to its exact quantity.
 
+<Frame>
+  ![Quantity offer tiers](/images/cf-40-offer-quantity-tiers.png "Quantity offer tiers")
+</Frame>
+
 ### How it looks
 
 | Field | What it does |
@@ -65,6 +73,10 @@ Add up to 5 tiers. Each tier has:
 | **Title** | Heading above the tiers. Default "Buy more, save more" (up to 80 characters, translatable). |
 | **Layout** | How the tiers are drawn. **Cards** is the default. |
 | **Show the tiers on the product page** | Shows the widget on the product page. If off, the tiers show only inside the form. |
+
+<Frame>
+  ![Quantity offer layout and products](/images/cf-41-offer-quantity-look.png "Quantity offer layout and products")
+</Frame>
 
 ### Example
 
@@ -92,6 +104,14 @@ A bundle sells 2 to 6 products as a set. The buyer chooses the variant of each p
 | **Text** (optional) | A line under the title. |
 | **Product page button** (optional) | Up to 60 characters. Empty means the COD button label plus the set price. |
 
+<Frame>
+  ![Bundle products and discount](/images/cf-42-offer-bundle-products.png "Bundle products and discount")
+</Frame>
+
+<Frame>
+  ![Where the bundle shows](/images/cf-43-offer-bundle-where.png "Where the bundle shows")
+</Frame>
+
 A live preview on the right shows how the bundle will look, for example "Buy the set with COD" and "100.00 off".
 
 ## Order bumps
@@ -110,6 +130,10 @@ An order bump is a small add-on shown inside the form with a tick box. Up to 3 m
 | **Requires shipping** | Counts the line when shipping is worked out. |
 | **Charge tax** | Taxes the line. On by default. |
 | **Position in the form** | For example **Before the totals**. |
+
+<Frame>
+  ![Order bump settings](/images/cf-44-offer-bump.png "Order bump settings")
+</Frame>
 
 <Info>
   The **Order bumps** block must be on in the [Form designer](/cod-form/form-designer#2-blocks).
@@ -135,12 +159,20 @@ A pre-purchase upsell suggests products before the order is placed.
 | **Discount type** and **Discount** | For example **Percentage off**, 10. |
 | **Let the buyer choose a quantity** | Adds a quantity selector. |
 
+<Frame>
+  ![Pre-purchase upsell rules](/images/cf-45-offer-prepurchase-rules.png "Pre-purchase upsell rules")
+</Frame>
+
 **Where to show it**
 
 | Option | What the buyer sees |
 | :-- | :-- |
 | **Pop-up after Complete order** | Shown once, before the order is placed. |
 | **Inside the form** | A section with an **Add** button on each product, and the total updates at once. Choose its **Position in the form**, for example **Before the totals**. |
+
+<Frame>
+  ![Where the pre-purchase upsell shows](/images/cf-46-offer-prepurchase-where.png "Where the pre-purchase upsell shows")
+</Frame>
 
 Also set the **Title** (default "Wait! Add this to your order", up to 120 characters) and optional **Text** (for example "Special price, only with this order.").
 
@@ -158,6 +190,10 @@ A one-click upsell is shown once, right after the order is placed. One upsell is
 | **Accept button** / **Decline button** | Up to 40 characters each. |
 | **On-screen timer** | Seconds the offer stays on screen. 0 means no timer. |
 
+<Frame>
+  ![One-click upsell settings](/images/cf-47-offer-upsell.png "One-click upsell settings")
+</Frame>
+
 The buyer can still accept for a few minutes after ordering. That window is set by **One-click upsell window (minutes)** in [Advanced settings](/cod-form/advanced-settings) (5 by default). The COD fee is not recalculated and no extra message is sent when an upsell is accepted.
 
 ## Downsell on close
@@ -173,6 +209,10 @@ A downsell is a discount shown once when the buyer tries to close the form.
 | **Accept button** / **Decline button** | Up to 40 characters each. |
 | **On-screen timer** | Seconds, 0 for none. |
 
+<Frame>
+  ![Downsell on close settings](/images/cf-48-offer-downsell.png "Downsell on close settings")
+</Frame>
+
 ## Free shipping and gift thresholds
 
 A threshold rewards buyers whose order reaches an amount. It shows as a progress bar, so turn on the progress bar block in the [Form designer](/cod-form/form-designer#2-blocks).
@@ -185,6 +225,10 @@ A threshold rewards buyers whose order reaches an amount. It shows as a progress
 | **Text while below the amount** | Type <code>\{remaining}</code> where the amount still missing should appear, for example "Add \{remaining\} more to get a free gift". Up to 120 characters. |
 | **Text once reached** | Shown after the goal, for example "You unlocked free gift". Up to 120 characters. |
 
+<Frame>
+  ![Free shipping and gift threshold](/images/cf-49-offer-threshold.png "Free shipping and gift threshold")
+</Frame>
+
 ## A/B tests
 
 An A/B test splits buyers between versions of one kind of offer, and each buyer sees one version for the whole visit. Compare up to four versions.
@@ -195,6 +239,10 @@ An A/B test splits buyers between versions of one kind of offer, and each buyer 
 4. In **Variants**, choose which offer each variant shows. **Show nothing (control)** is a version with no offer.
 5. Set each **Traffic share**. Shares must add up to 100 %. **Split evenly** divides them equally, and **Add variant** adds another (up to four).
 6. Save the test.
+
+<Frame>
+  ![New A/B test form](/images/cf-50-offer-abtest-new.png "New A/B test form")
+</Frame>
 
 Results are in [Analytics](/cod-form/analytics).
 
