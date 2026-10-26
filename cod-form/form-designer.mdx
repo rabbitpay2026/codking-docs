@@ -1,0 +1,168 @@
+---
+title: "COD Form Designer"
+sidebarTitle: "Form designer"
+description: "Choose the fields shoppers fill in, arrange the form blocks, style the form, edit every text and set what happens after the order is placed."
+icon: "pen-ruler"
+---
+
+The **Form designer** is where you build the COD Form itself. Open it from **COD King → Settings → COD FORM → Form designer**.
+
+It has six tabs: **Fields**, **Blocks**, **Design**, **Texts**, **Thank-you** and **Form**. A **Preview** of your draft sits at the bottom of each tab, with a **Mobile / Desktop** switch.
+
+<Info>
+  The preview uses sample products and prices and shows your draft, not what is live.
+</Info>
+
+## 1. Fields
+
+The **Fields** tab lists every field the form can ask for. For each field you can:
+
+- drag the handle, or use the up and down arrows, to change the order,
+- tick **Show** to show or hide it,
+- click the pencil icon to edit it.
+
+Fields marked **Required** must be filled in by the shopper. The phone and country fields are always part of the form.
+
+### Contact fields
+
+**Full name**, **Last name**, **Phone number**, **Email** and **Send me news and offers by SMS and email** (a marketing consent tick box).
+
+By default shoppers enter their name in one **Full name** field. Turn on **Last name** to ask for first and last name separately.
+
+<Frame>
+  ![Contact fields in the Form designer](/images/cf-17-designer-fields-contact.png "Contact fields")
+</Frame>
+
+### Address fields
+
+**Country**, **Address**, **Apartment, suite, etc.**, **Postal code**, **State / Province**, **City**, **GST number** and **Order note**.
+
+The country field is shown only when more than one country is enabled in [Setup](/cod-form/setup). City, state and postal code follow each country's address format.
+
+<Frame>
+  ![Address fields in the Form designer](/images/cf-18-designer-fields-address.png "Address fields")
+</Frame>
+
+### Custom fields
+
+Click **Add custom field** to ask for anything else you need, such as a delivery time or a size. Answers are saved on the order.
+
+Tick **Ask for the phone number first** to change the order of the form: phone, then OTP, then a saved address is filled in. When it is off, the address form comes first.
+
+<Frame>
+  ![Custom fields and phone-first option](/images/cf-19-designer-custom-fields.png "Custom fields")
+</Frame>
+
+## 2. Blocks
+
+The **Blocks** tab lists the sections of the form from top to bottom. Drag them or use the arrows to reorder, and tick **Show** to turn a block on or off. **Add block** adds another block.
+
+| Block | What it does |
+| :-- | :-- |
+| **Order summary** | Items in the order. Choose whether to show **Product image**, **Compare-at price** and the **Quantity selector**. |
+| **Discount code** | A box for a discount code. Discount codes must also be turned on in [Advanced settings](/cod-form/advanced-settings). |
+| **Quantity offer** | Shown only for products that have an active quantity offer. |
+| **Contact fields** and **Address fields** | The fields from the Fields tab. These are always on. |
+| **Shipping options** | The delivery rates the shopper can choose from. |
+| **Order bumps** | Shown only when an order bump matches the cart. Up to 3 bumps are shown. |
+| **Totals** | The order total. Tick **Show the tax line** to add a tax line. |
+| **Submit button** | Always last. Tick **Show the total in the button** to put the amount on the button. |
+
+<Frame>
+  ![Form blocks](/images/cf-20-designer-blocks.png "Form blocks")
+</Frame>
+
+## 3. Design
+
+### Theme
+
+Pick a **Theme**:
+
+- **Classic** — large labels beside the fields and a big order button.
+- **Express** — the look of the COD King checkout: white cards, small labels above the fields and a compact button.
+
+Choosing a theme sets its colours and corner radius. You can change them afterwards.
+
+<Frame>
+  ![Theme choice](/images/cf-21-designer-design-theme.png "Theme")
+</Frame>
+
+### Colours
+
+Set the **Primary (button)**, **Text on the button**, **Text**, **Secondary text**, **Background**, **Panels**, **Borders** and **Errors** colours, or click **Templates** to start from a ready-made set.
+
+<Frame>
+  ![Colour settings](/images/cf-22-designer-design-colours.png "Colours")
+</Frame>
+
+### Shape and spacing
+
+Use the **Form corner radius** and **Field corner radius** sliders, and choose the **Spacing** (for example **Comfortable**). The Express theme uses its own font.
+
+<Frame>
+  ![Shape and spacing](/images/cf-23-designer-design-shape.png "Shape and spacing")
+</Frame>
+
+### Header and behaviour
+
+- **Show the title** — shows the form title at the top.
+- **Logo URL (optional)** — shown at the top of the form. Upload your logo in **Shopify admin → Content → Files**, copy its link and paste it here. A wide logo about 260×60 px looks best.
+- **Keep the submit button visible while scrolling**
+- **Hide the shipping selector when only one rate applies**
+- **Offer "Pay online instead" to blocked buyers**
+
+<Frame>
+  ![Header and behaviour settings](/images/cf-24-designer-design-header.png "Header and behaviour")
+</Frame>
+
+## 4. Texts
+
+Every word in the form can be changed in the **Texts** tab.
+
+1. Pick the **Language** you want to edit, or use **Add a language** to add a new one.
+2. Use **Show the form in** to make every shopper see the form in one language, whatever language your storefront is in.
+3. Choose a **Section** (for example **General**), or type in **Search all texts** to find a text quickly.
+4. Edit the text in any field. The grey text is the default; leave a field as it is to keep the default.
+
+**Reset this language to defaults** puts every text for that language back to how it was.
+
+<Frame>
+  ![Texts tab](/images/cf-25-designer-texts.png "Texts")
+</Frame>
+
+## 5. Thank-you
+
+Under **After the order is placed**, choose what the shopper sees next:
+
+- **Shopify order status page** — the default. If the order has no status page, the message below is shown instead.
+- **Redirect to a custom URL**
+- **Stay on the page and show the order details in the form (no redirect)** — the shopper sees your message, the items, the total and the delivery address in the pop-up.
+- **Open WhatsApp with a prefilled message**
+
+Write your **Message** (up to 300 characters). You can use these variables: `{order_name}`, `{order_number}`, `{order_id}`, `{total}`, `{first_name}`, `{last_name}`, `{phone}` and `{email}`.
+
+<Frame>
+  ![Thank-you settings](/images/cf-26-designer-thank-you.png "Thank-you")
+</Frame>
+
+## 6. Form
+
+The **Form** tab names your form. The **Form name** is only for you; shoppers do not see it. **Products that use this form** lists where it applies — the default form is used for every product that has no other form.
+
+The preview below shows the form as a shopper sees it: logo and title, order summary, discount code, address fields and the order button, with **Pay online instead** underneath.
+
+<Frame>
+  ![Form name and preview](/images/cf-27-designer-form-and-preview.png "Form name and preview")
+</Frame>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Next: Fraud protection" icon="shield-halved" href="/cod-form/fraud-protection">
+    Limit repeat orders and block unwanted buyers.
+  </Card>
+
+  <Card title="Offers" icon="tags" href="/cod-form/offers">
+    Add quantity offers, bundles and upsells to the form.
+  </Card>
+</CardGroup>

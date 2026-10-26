@@ -1,0 +1,74 @@
+---
+title: "COD Form Fraud Protection"
+sidebarTitle: "Fraud protection"
+description: "Block unwanted buyers, limit repeat orders, filter bots and remove full COD for risky buyers."
+icon: "shield-halved"
+---
+
+COD orders are easy to place and easy to refuse. The **Fraud protection** page helps you stop fake and repeat orders before they reach your warehouse. Open it from **COD King → Settings → COD FORM → Fraud protection**.
+
+## 1. Block lists
+
+Buyers on a block list cannot place a COD order through the form. They see your message and can still pay online.
+
+1. Choose a tab: **Phone numbers**, **Emails** or **IP addresses**.
+2. Type the value in the box and click **Add to block list**.
+3. Optionally, write your own **Message for blocked buyers**. Leave it empty to use the default text of the form.
+
+Each list holds up to 5,000 entries.
+
+<Frame>
+  ![Block lists](/images/cf-28-fraud-block-lists.png "Block lists")
+</Frame>
+
+## 2. Order limits
+
+Stop repeat fake orders by allowing at most a set number of orders in a set number of hours. You can limit by:
+
+- **Phone number**
+- **Email**
+- **IP address**
+
+For each one, tick the box and set **Maximum orders** and **Within (hours)**. For example, "3 orders within 24 hours" per phone number.
+
+Use **Message when a limit is reached** to tell shoppers why their order was stopped. Leave it empty to use the default text.
+
+<Frame>
+  ![Order limits](/images/cf-29-fraud-order-limits.png "Order limits")
+</Frame>
+
+## 3. Quantity and bot protection
+
+- **Maximum total quantity per order** — caps how many items one order can contain. Leave it as **No limit** if you do not want a cap.
+- **Minimum seconds before submit** — a form sent faster than this is treated as a bot.
+- **Use a hidden field that only bots fill in** — a trap field that real shoppers never see.
+
+<Frame>
+  ![Quantity and bot protection](/images/cf-30-fraud-quantity-bot.png "Quantity and bot protection")
+</Frame>
+
+## 4. Return-risk gating and blocked attempts
+
+**Return-risk gating** removes full COD for buyers who are likely to refuse the parcel. They are offered partial payment (when a payment rule allows it) or **Pay online**. Tick **Remove full COD for risky buyers** to turn it on.
+
+**Blocked attempts** is a log of every time the form refused a COD order, and why. Use the **Reason** list to filter it.
+
+<Frame>
+  ![Return-risk gating and blocked attempts](/images/cf-31-fraud-return-risk-blocked.png "Return-risk gating and blocked attempts")
+</Frame>
+
+<Tip>
+  Combine a low order limit per phone number with phone verification (OTP) in [Setup](/cod-form/setup#3-set-up-phone-verification-otp) for the strongest protection against fake orders.
+</Tip>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Next: Offers" icon="tags" href="/cod-form/offers">
+    Increase order value with offers inside the form.
+  </Card>
+
+  <Card title="Analytics" icon="chart-line" href="/cod-form/analytics">
+    See how many orders the form is bringing in.
+  </Card>
+</CardGroup>

@@ -110,6 +110,20 @@
                   "branded-whatsapp/activity-logs-and-replies",
                   "branded-whatsapp/campaign-management"
                 ]
+              },
+              {
+                "group": "COD Form",
+                "icon": "rectangle-list",
+                "pages": [
+                  "cod-form/overview",
+                  "cod-form/setup",
+                  "cod-form/buttons",
+                  "cod-form/form-designer",
+                  "cod-form/fraud-protection",
+                  "cod-form/offers",
+                  "cod-form/analytics",
+                  "cod-form/advanced-settings"
+                ]
               }
             ]
           },
