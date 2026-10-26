@@ -1,0 +1,128 @@
+---
+title: "COD Form Setup"
+sidebarTitle: "Setup"
+description: "Turn the COD Form on, choose where the COD button shows, set the countries, phone verification and address suggestions."
+icon: "gear"
+---
+
+The **Setup** page is where the COD Form is switched on and where you decide who sees it. To open it, go to **COD King → Settings → COD FORM → Setup**.
+
+<Frame>
+  ![Open COD Form Setup from the COD FORM menu](/images/cf-02-open-cod-form-setup.png "COD FORM → Setup")
+</Frame>
+
+## 1. Check the app embed
+
+At the top of the page, the **App embed** card tells you whether the COD Form app embed is active in your theme. When everything is right, it shows **On in your theme**.
+
+- **Check again** re-checks your theme after you change something.
+- **Open theme editor** opens your Shopify theme editor, where you can switch the **COD Form** app embed on.
+
+The **COD Form** card below it shows whether the form itself is **On**. Use **Turn off** to stop the form from opening, or **Turn on** to start it again.
+
+<Frame>
+  ![App embed and COD Form status on the Setup page](/images/cf-03-setup-app-embed.png "App embed and COD Form status")
+</Frame>
+
+<Tip>
+  If you change a setting and the storefront does not update, use **Resync settings to storefront** at the top right of the page.
+</Tip>
+
+## 2. Choose the form language
+
+Under **Form language**, pick the language of the COD button, quantity offers, bundles, upsells and the whole order form.
+
+By default it uses **Storefront language (default)**, so shoppers see the form in the language they browse your store in. You can also pick a fixed language, and you can edit every text in the [Form designer → Texts](/cod-form/form-designer#4-texts) tab.
+
+<Frame>
+  ![Form language setting](/images/cf-04-setup-form-language.png "Form language")
+</Frame>
+
+## 3. Set up phone verification (OTP)
+
+Verify the shopper's phone number with a one-time code before the order is placed.
+
+- **Ask buyers to verify their phone number with a code** — turns verification on for the COD Form. It applies to the COD Form only; your other COD King checkout settings are not changed.
+- **Let buyers get the code on WhatsApp** — SMS is always offered. With this on, the shopper can choose WhatsApp instead.
+- **Codes a buyer can request** — how many codes one shopper can ask for.
+- **Wait before resending** — how many seconds a shopper must wait before asking for a new code.
+
+Then choose **When to ask for the code**:
+
+- **Before the order is created** *(recommended)* — no order exists until the phone number is verified.
+- **Create the order first, then verify** — the order is created straight away and tagged once the shopper verifies.
+- **Only for medium-risk buyers** — uses COD King's return-risk score. Low-risk buyers skip the code.
+
+<Frame>
+  ![OTP verification settings](/images/cf-05-setup-otp-verification.png "OTP verification")
+</Frame>
+
+## 4. Choose where the COD button shows
+
+Under **Where the COD button shows**, tick the places that should get the COD button:
+
+- **Product page**
+- **Cart page**
+- **Cart drawer**
+- **Quick buy on home and collection pages**
+
+Then choose **Products**:
+
+- **All products** — every product gets the COD button.
+- **Selected products and collections** — only the ones you pick.
+
+Under **Never show on**, use **Select products** and **Select collections** to exclude items that should never get the COD button.
+
+Keep **Hide the COD button for out-of-stock variants** ticked to avoid offering COD on something shoppers cannot buy. Products that fail a **Limit COD** rule never get the COD button either; those rules are set once, in **Limit COD**.
+
+<Frame>
+  ![Where the COD button shows](/images/cf-06-setup-button-placement.png "Where the COD button shows")
+</Frame>
+
+## 5. Choose the countries
+
+Under **Countries**, search and add the countries where the COD button should appear. Shoppers in other countries get your normal checkout.
+
+If no country is selected, the form is available in every country.
+
+<Frame>
+  ![Countries setting](/images/cf-07-setup-countries.png "Countries")
+</Frame>
+
+## 6. Turn on address suggestions
+
+**Address autocomplete** suggests full addresses while the shopper types, so fewer orders come back with a wrong address.
+
+1. Tick **Suggest addresses while the buyer types**.
+2. Choose an **Address provider**.
+3. Enter your provider's API key. Use your own key with the Places APIs enabled and restricted to your store domain. The provider bills you directly for its use.
+
+<Frame>
+  ![Address autocomplete settings](/images/cf-08-setup-address-autocomplete.png "Address autocomplete")
+</Frame>
+
+<Warning>
+  Treat your address provider API key like a password. Never paste it into screenshots, support chats or public pages.
+</Warning>
+
+## 7. Read the Health check
+
+The **Health check** card lists anything that stops the COD Form from working properly, with an **Open** button that takes you straight to the page where you can fix it.
+
+Below it, **Form orders this month** shows how many orders the COD Form created in the current calendar month. Test orders and prepaid redirects are not counted.
+
+<Frame>
+  ![Health check and form orders this month](/images/cf-09-setup-health-check.png "Health check")
+</Frame>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Next: Buttons" icon="computer-mouse" href="/cod-form/buttons">
+    Change the text, colours and placement of the COD button.
+  </Card>
+
+  <Card title="Fraud protection" icon="shield-halved" href="/cod-form/fraud-protection">
+    Add order limits and block lists before you go live.
+  </Card>
+</CardGroup>

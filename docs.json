@@ -114,7 +114,10 @@
               {
                 "group": "COD Form",
                 "icon": "rectangle-list",
-                "pages": []
+                "pages": [
+                  "cod-form/overview",
+                  "cod-form/setup"
+                ]
               }
             ]
           },
