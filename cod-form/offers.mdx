@@ -1,30 +1,204 @@
 ---
 title: "COD Form Offers"
 sidebarTitle: "Offers"
-description: "Raise your average order value with quantity offers, bundles, order bumps, upsells, downsells, free-shipping bars and A/B tests inside the COD Form."
 icon: "tags"
+description: "Raise your average order value with quantity offers, bundles, order bumps, upsells, downsells, free-shipping and gift bars, and A/B tests inside the COD Form."
 ---
 
-**Offers** is the home for everything that helps shoppers add more to their order. Open it from **COD King → Settings → COD FORM → Offers**. Each card opens its own page, and a green badge shows how many offers of that type are active.
+**Offers** is the home for everything that helps shoppers add more to their order. Open it from **COD King → Settings → COD FORM → Offers**. Each card opens a list page for that offer type, and a green badge on the card shows how many offers of that type are active.
 
 <Frame>
   ![The Offers page](/images/cf-32-offers-hub.png "Offers")
 </Frame>
 
-## 1. The offer types
+| Offer | What it does | Where the buyer sees it |
+| :-- | :-- | :-- |
+| [Quantity offers](#quantity-offers) | Buy more, save more with up to 5 tiers. | Product page and form |
+| [Bundles](#bundles) | Sell 2 to 6 products as a set with a discount. | Product page and form |
+| [Order bumps](#order-bumps) | A small add-on the buyer ticks inside the form. | Form |
+| [Pre-purchase upsells](#pre-purchase-upsells) | Suggest products before the order is placed. | Pop-up or form section |
+| [One-click upsells](#one-click-upsells) | Offer one more product right after the order. | Thank-you step |
+| [Downsell on close](#downsell-on-close) | A discount when the buyer tries to leave the form. | Pop-up |
+| [Free shipping and gift thresholds](#free-shipping-and-gift-thresholds) | A progress bar toward a reward. | Form |
+| [A/B tests](#ab-tests) | Compare versions of an offer. | Split by buyer |
 
-| Offer | What it does |
+## Fields every offer shares
+
+Each offer editor starts with an **Offer** card and ends with a **Products** card. These behave the same everywhere.
+
+| Field | What it does |
 | :-- | :-- |
-| **Quantity offers** | Buy more, save more: tiers with a percentage, a fixed discount or a fixed unit price. |
-| **Bundles** | Sell 2 to 6 products together with a discount on the set, on the product page and in the form. |
-| **Order bumps** | A small add-on the buyer can tick inside the form. Up to 3 bumps are shown. |
-| **Pre-purchase upsells** | A pop-up after **Complete order**: when the cart has certain products, offer others, with or without a discount. |
-| **One-click upsells** | Offer one more product right after the order. Accepting adds it to the same order. |
-| **Downsell on close** | A discount shown once when the buyer tries to close the form. |
-| **Free shipping and gift thresholds** | A progress bar towards free shipping or a free gift. |
-| **A/B tests** | Compare up to four versions of an offer and see which one earns more. |
+| **Name** | A label for you. Buyers never see it. |
+| **Status** | **Active** or paused. The **Pause** button on the list page does the same. |
+| **Priority** | A number, lowest wins. If several offers of the same type match the same product, the one with the lowest number is used. Default is 0. |
+| **Starts / Ends** (optional) | A date and time window. Leave both empty for an offer that always runs. |
+| **Products** | **All products**, or **Selected products and collections** to limit the offer to the ones you pick. |
 
-## 2. How discounts combine
+<Note>
+  Every offer is created and edited the same way: open the card, click **Add** (or **Edit** on an existing offer), fill in the fields, and save. Use **Pause** to switch an offer off without deleting it.
+</Note>
+
+## Quantity offers
+
+A quantity offer shows tiers such as "Buy 2, get 10% off, buy 3, get 15% off". The buyer picks a tier on the product page, and the choice carries into the form with the same price.
+
+### Tiers
+
+Add up to 5 tiers. Each tier has:
+
+| Field | What it does |
+| :-- | :-- |
+| **Quantity** | How many units this tier is for. |
+| **Discount type** | **No discount**, **Percentage**, **Fixed amount off**, or **Fixed unit price**. |
+| **Discount value** | The percentage, the amount off, or the price per unit, depending on the type. |
+| **Label** | The text on the tier card (up to 60 characters), such as "Buy 2". |
+| **Badge** (optional) | A small tag such as "Most popular" (up to 30 characters). |
+| **Image URL** (optional) | A small picture for the tier. |
+| **Preselected** | The tier chosen when the page loads. Choose **No preselected tier** if you want the buyer to pick. |
+
+**Apply a tier to higher quantities too.** When on, a buyer who orders 4 units gets the 3-unit tier price. When off, a tier only applies to its exact quantity.
+
+### How it looks
+
+| Field | What it does |
+| :-- | :-- |
+| **Title** | Heading above the tiers. Default "Buy more, save more" (up to 80 characters, translatable). |
+| **Layout** | How the tiers are drawn. **Cards** is the default. |
+| **Show the tiers on the product page** | Shows the widget on the product page. If off, the tiers show only inside the form. |
+
+### Example
+
+| Tier | Quantity | Discount |
+| :-- | :-- | :-- |
+| 1 | 1 | No discount |
+| 2 | 2 | 10 % (preselected) |
+| 3 | 3 | 15 % |
+
+<Info>
+  The quantity widget on the product page also needs to be on in [Buttons](/cod-form/buttons#4-quantity-offer-widget).
+</Info>
+
+## Bundles
+
+A bundle sells 2 to 6 products as a set. The buyer chooses the variant of each product, and the discount applies to every complete set.
+
+| Field | What it does |
+| :-- | :-- |
+| **Products** | 2 to 6 products, shown in the order you pick. |
+| **Discount type** and **Amount off the set** | Percentage or fixed amount taken off the set. Buyers can leave products out and pay the regular price for those. |
+| **Where to show** | **On the product page**: below the COD button, with its own button that opens the form with the whole set. **Inside the COD form**: one tap adds the missing products. You can use both. |
+| **Position** | Product page: **Above the COD button**. Form: **After the order summary**. |
+| **Title** | Default "Frequently bought together" (up to 120 characters). |
+| **Text** (optional) | A line under the title. |
+| **Product page button** (optional) | Up to 60 characters. Empty means the COD button label plus the set price. |
+
+A live preview on the right shows how the bundle will look, for example "Buy the set with COD" and "100.00 off".
+
+## Order bumps
+
+An order bump is a small add-on shown inside the form with a tick box. Up to 3 matching bumps are shown, in priority order.
+
+| Field | What it does |
+| :-- | :-- |
+| **Title** | Up to 80 characters. |
+| **Description** (optional) | Up to 160 characters. |
+| **Image URL** (optional) | A picture next to the bump. |
+| **What is added** | A **custom line** (no product needed, good for gift wrap or express handling) or a **product from my store** (uses inventory and SKU). |
+| **Price** and **Compare-at price** (optional) | The price the buyer pays and a crossed-out price. |
+| **Ticked by default** | The box starts ticked. |
+| **Let the buyer choose a quantity** | Shows a quantity selector. |
+| **Requires shipping** | Counts the line when shipping is worked out. |
+| **Charge tax** | Taxes the line. On by default. |
+| **Position in the form** | For example **Before the totals**. |
+
+<Info>
+  The **Order bumps** block must be on in the [Form designer](/cod-form/form-designer#2-blocks).
+</Info>
+
+## Pre-purchase upsells
+
+A pre-purchase upsell suggests products before the order is placed.
+
+**If the cart has**
+
+| Field | What it does |
+| :-- | :-- |
+| **Any product** or **Specific products or collections** | The rule that triggers the offer. Products already in the cart are never offered again. |
+| **Minimum / Maximum cart value** (optional) | Only trigger inside this range. |
+
+**Then offer**
+
+| Field | What it does |
+| :-- | :-- |
+| **Specific products** or **Products from a collection** | What to suggest. Out-of-stock products and products already in the cart are skipped. A collection uses its first products, in the collection's own order. |
+| **Products shown at most** | 1 shows one large card. 2 to 6 show a list with an **Add** button on each product. |
+| **Discount type** and **Discount** | For example **Percentage off**, 10. |
+| **Let the buyer choose a quantity** | Adds a quantity selector. |
+
+**Where to show it**
+
+| Option | What the buyer sees |
+| :-- | :-- |
+| **Pop-up after Complete order** | Shown once, before the order is placed. |
+| **Inside the form** | A section with an **Add** button on each product, and the total updates at once. Choose its **Position in the form**, for example **Before the totals**. |
+
+Also set the **Title** (default "Wait! Add this to your order", up to 120 characters) and optional **Text** (for example "Special price, only with this order.").
+
+## One-click upsells
+
+A one-click upsell is shown once, right after the order is placed. One upsell is shown per order: the matching offer with the best priority.
+
+| Field | What it does |
+| :-- | :-- |
+| **Product to offer** | Pick with **Change product**. |
+| **Quantity** | How many units are offered. |
+| **Discount type** and **Discount** | For example **Percentage**, 20. |
+| **Title** | Up to 80 characters. |
+| **Text** (optional) | Up to 200 characters. |
+| **Accept button** / **Decline button** | Up to 40 characters each. |
+| **On-screen timer** | Seconds the offer stays on screen. 0 means no timer. |
+
+The buyer can still accept for a few minutes after ordering. That window is set by **One-click upsell window (minutes)** in [Advanced settings](/cod-form/advanced-settings) (5 by default). The COD fee is not recalculated and no extra message is sent when an upsell is accepted.
+
+## Downsell on close
+
+A downsell is a discount shown once when the buyer tries to close the form.
+
+| Field | What it does |
+| :-- | :-- |
+| **Show after this many close attempts** | 1 shows the offer the first time the buyer tries to close. |
+| **Discount type** and **Discount** | For example **Percentage**, 10. |
+| **Title** | Default "Wait! Here is 10% off" (up to 80 characters). |
+| **Text** (optional) | Up to 200 characters, for example "Complete your order now and save." |
+| **Accept button** / **Decline button** | Up to 40 characters each. |
+| **On-screen timer** | Seconds, 0 for none. |
+
+## Free shipping and gift thresholds
+
+A threshold rewards buyers whose order reaches an amount. It shows as a progress bar, so turn on the progress bar block in the [Form designer](/cod-form/form-designer#2-blocks).
+
+| Field | What it does |
+| :-- | :-- |
+| **Reward** | **Free shipping** or **A free gift**. |
+| **Order amount to reach** | For example INR 1000. |
+| **Gift product** | For a gift: pick it with **Change product**. One unit is added at no charge. |
+| **Text while below the amount** | Type <code>\{remaining}</code> where the amount still missing should appear, for example "Add \{remaining\} more to get a free gift". Up to 120 characters. |
+| **Text once reached** | Shown after the goal, for example "You unlocked free gift". Up to 120 characters. |
+
+## A/B tests
+
+An A/B test splits buyers between versions of one kind of offer, and each buyer sees one version for the whole visit. Compare up to four versions.
+
+1. Create two or more offers of the same kind.
+2. Click **New A/B test**.
+3. Enter a **Name** and choose the **Kind of offer** (for example **Quantity offers**).
+4. In **Variants**, choose which offer each variant shows. **Show nothing (control)** is a version with no offer.
+5. Set each **Traffic share**. Shares must add up to 100 %. **Split evenly** divides them equally, and **Add variant** adds another (up to four).
+6. Save the test.
+
+Results are in [Analytics](/cod-form/analytics).
+
+## How discounts combine
 
 When several discounts could apply to one order, they apply in this order:
 
@@ -32,11 +206,7 @@ When several discounts could apply to one order, they apply in this order:
 2. then downsell,
 3. then discount code.
 
-Whether a discount code can be combined with offers is set in [Advanced settings](/cod-form/advanced-settings#3-form-behaviour-and-discount-codes). The **Open Setup** button on this page takes you to the related settings.
-
-<Info>
-  Quantity offers also show on the product page when the **Quantity offer widget** is turned on in [Buttons](/cod-form/buttons#4-quantity-offer-widget). Order bumps appear in the form when the **Order bumps** block is on in the [Form designer](/cod-form/form-designer#2-blocks).
-</Info>
+Whether a discount code can be combined with offers is set in [Advanced settings](/cod-form/advanced-settings#3-form-behaviour-and-discount-codes). The **Open Setup** button on the Offers page takes you to the related settings.
 
 ---
 

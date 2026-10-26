@@ -91,19 +91,62 @@ If no country is selected, the form is available in every country.
 
 ## 6. Turn on address suggestions
 
-**Address autocomplete** suggests full addresses while the shopper types, so fewer orders come back with a wrong address.
+**Address autocomplete** suggests full addresses while the shopper types, so fewer orders come back with a wrong address. You bring your own key from an address provider, and the provider bills you directly for its use.
 
 1. Tick **Suggest addresses while the buyer types**.
-2. Choose an **Address provider**.
-3. Enter your provider's API key. Use your own key with the Places APIs enabled and restricted to your store domain. The provider bills you directly for its use.
+2. Choose an **Address provider**: **Ola Maps Places (India)** or **Google Places**.
+3. Paste your provider's API key into the key field below it.
+4. Save, then test the form on your store and type a few letters of an address.
 
 <Frame>
   ![Address autocomplete settings](/images/cf-08-setup-address-autocomplete.png "Address autocomplete")
 </Frame>
 
+### Get an Ola Maps API key
+
+Best for stores shipping inside India.
+
+1. Register for [Krutrim Cloud](https://cloud.olakrutrim.com/signUp) and sign in.
+2. Open the **Developer Portal** and go to **Credentials**.
+3. Click **New Credentials** at the top right.
+4. Enter a **name** (for example "COD King address suggestions") and a description.
+5. Check that the new credential appears in the credentials table, then click its name.
+6. Copy the **API Key** from the details page. Ignore the OAuth2 values.
+7. In the same details page, add your store domains (comma separated, for example `yourstore.com, yourstore.myshopify.com`) and click the add button to whitelist them.
+8. Wait a few minutes: Ola activates the credential with its default plan shortly after you create it.
+9. Back in COD King, choose **Ola Maps Places (India)**, paste the key into **Ola Maps API key**, and save.
+
+### Get a Google Places API key
+
+Best for stores shipping in many countries.
+
+1. Sign in to the [Google Cloud console](https://console.cloud.google.com) and create or pick a **project**.
+2. Open **Billing** and link a billing account to the project. Places APIs need billing on.
+3. Go to **APIs & Services → Library**, search for **Places API (New)**, and click **Enable**.
+4. Go to **APIs & Services → Credentials**, click **Create credentials**, and choose **API key**.
+5. Click the new key to edit it. Under **Application restrictions** choose **Websites** and add your store domains, for example `https://yourstore.com/*` and `https://yourstore.myshopify.com/*`.
+6. Under **API restrictions** choose **Restrict key** and pick **Places API (New)** only.
+7. Save and copy the key.
+8. Back in COD King, choose **Google Places**, paste the key, and save.
+
+<Tip>
+  Create a separate key for COD King. If it is ever leaked, you can delete it without affecting anything else.
+</Tip>
+
+### If suggestions do not appear
+
+- The key is wrong or has extra spaces. Paste it again.
+- The domain is not whitelisted or restricted correctly. Add both your custom domain and your `myshopify.com` domain.
+- The provider API is not enabled or billing is off (Google), or the credential is not active yet (Ola).
+- The buyer's country is not in **Enabled countries** (step 5).
+
 <Warning>
   Treat your address provider API key like a password. Never paste it into screenshots, support chats or public pages.
 </Warning>
+
+<Note>
+  Steps follow the provider docs: [Ola Maps authentication](https://maps.olakrutrim.com/docs/auth) and [Google Places API keys](https://developers.google.com/maps/documentation/places/web-service/get-api-key). Provider consoles change, so labels may differ slightly.
+</Note>
 
 ## 7. Read the Health check
 
