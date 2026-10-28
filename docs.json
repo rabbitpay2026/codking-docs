@@ -82,7 +82,8 @@
                   "otp-verification/shopify-plus-checkout",
                   "otp-verification/analytics",
                   "setting-otp-verification-on-shopify"
-                ]
+                ],
+                "icon": "shield"
               },
               {
                 "group": "Partial Payment",
