@@ -155,9 +155,20 @@
                 "icon": "message",
                 "pages": [
                   "business-whatsapp/overview",
+                  "business-whatsapp/meta-approval",
                   "business-whatsapp/connect-number",
                   "business-whatsapp/notifications",
                   "business-whatsapp/templates"
+                ]
+              },
+              {
+                "group": "WhatsApp Inbox & AI Agent",
+                "icon": "inbox",
+                "pages": [
+                  "whatsapp-inbox/overview",
+                  "whatsapp-inbox/settings",
+                  "whatsapp-inbox/ai-agent-setup",
+                  "whatsapp-inbox/ai-agent-knowledge-credits"
                 ]
               }
             ]

@@ -1,0 +1,105 @@
+---
+title: "Set Up the WhatsApp AI Agent"
+sidebarTitle: "AI agent setup"
+icon: "wand-magic-sparkles"
+description: "Switch the AI agent on, choose what it answers, set its name and tone, add a discount limit and decide when it hands a chat to your team."
+---
+
+The AI agent answers customers inside your WhatsApp inbox, day and night. It can tell a customer where their order is, confirm a COD order, answer product questions, take a COD order in chat, send a payment link and give a discount. Anything it is not sure about goes to your team.
+
+Open it from **AI agent** at the top of the [WhatsApp inbox](/whatsapp-inbox/overview). The page has five tabs: **Setup**, **Knowledge**, **Test**, **Credits** and **Activity**. This page covers **Setup**. The others are in [Knowledge, test, credits and activity](/whatsapp-inbox/ai-agent-knowledge-credits).
+
+<Warning>
+  The AI agent sends real WhatsApp messages and can confirm or cancel real orders. Set it up and try it in the **Test** tab before you switch it to **Live**.
+</Warning>
+
+## The header: Off, Test and Live
+
+<Frame>
+  ![AI agent page header showing a Live badge, 71 credits, an Off, Test and Live switch and the five tabs, followed by the How the AI replies and Name and tone settings](/images/wi-12-ai-header-how.png "The arrows point to the credits, the Off Test Live switch, the Setup tab, the two reply modes, the assistant name, the tone and the daily reply limit")
+</Frame>
+
+| Part | What it does |
+| --- | --- |
+| **Status badge** | Shows **Live** while the agent is answering customers. The line below says it answers every customer inside WhatsApp's 24-hour window. |
+| **Credits** | Your remaining AI credits. Each message the AI writes uses one. See [Credits](/whatsapp-inbox/ai-agent-knowledge-credits#credits). |
+| **Off, Test and Live** | **Live** answers customers. **Off** stops the AI from replying. **Test** is for trying the agent while you set it up. |
+
+## How the AI replies
+
+| Option | What happens |
+| --- | --- |
+| **Send replies automatically** | Customers get an answer in seconds, day and night. |
+| **Draft only** | The AI writes a draft in the inbox and your team sends it. Orders are not changed in this mode. |
+
+<Tip>
+  Start with **Draft only** for a week. Read the drafts, fix the [Knowledge](/whatsapp-inbox/ai-agent-knowledge-credits#store-knowledge) text, then switch to **Send replies automatically**.
+</Tip>
+
+## Name and tone
+
+- **Assistant name.** The name the AI uses for itself, for example "NotifikTech Assistant". It shows as **AI assistant** in the conversation.
+- **Tone.** Choose how the AI sounds. The test store uses **Friendly**.
+- **Most AI replies per customer per day.** The test store uses 100. This protects your credits from spam and endless chats. After the limit, that customer's messages wait for your team until the next day.
+
+The AI replies in the customer's own language, including Hinglish.
+
+## What the AI handles
+
+Each item is a tick box. Turn off anything you would rather answer yourself. Those chats go to your team.
+
+<Frame>
+  ![The What the AI handles list with Order status, COD confirmation with an Also cancel orders option, Product questions and carts, and Take COD orders in chat](/images/wi-13-ai-handles-1.png "The arrows point to the tick boxes for Order status, COD confirmation, Also cancel orders, Product questions and carts, and Take COD orders in chat")
+</Frame>
+
+| Item | What the AI does |
+| --- | --- |
+| **Order status** | Answers "where is my order" with the real status and tracking link. |
+| **COD confirmation** | When a customer types "yes", "haan" or "confirm" instead of tapping the button, the AI confirms their pending COD order. |
+| **Also cancel orders when the customer clearly asks** | A choice under COD confirmation. If you turn it off, cancellation requests go to your team with a **Cancel request** label. |
+| **Product questions and carts** | Explains products from your Shopify catalogue and the customer's abandoned cart, and shares the checkout link. |
+| **Take COD orders in chat** | When a customer says "order kar do", the AI collects the product, size, quantity, name and address, confirms the summary and places a COD order in Shopify. |
+
+<Frame>
+  ![The rest of the What the AI handles list with Store questions, Pay online and Discount codes, and the discount, minimum cart value and code validity fields](/images/wi-14-ai-handles-2.png "The arrows point to the tick boxes for Store questions, Pay online and Discount codes, and to the three discount fields")
+</Frame>
+
+| Item | What the AI does |
+| --- | --- |
+| **Store questions** | Answers shipping, COD charges, returns and contact questions only from your [Knowledge](/whatsapp-inbox/ai-agent-knowledge-credits#store-knowledge) tab. |
+| **Pay online** | Sends the prepaid payment link when a customer wants to pay online for a COD order. |
+| **Discount codes** | Gives one discount code when a customer asks for a discount or hesitates on price, including abandoned carts. It never goes above your limit and gives a customer a code once. |
+
+When **Discount codes** is ticked, set the limit:
+
+| Field | What it means |
+| --- | --- |
+| **Discount** | The percentage the AI may offer. The page allows up to 50%. The test store uses 10%. |
+| **Minimum cart value** | The smallest cart that can get a code. 0 means any cart. |
+| **Code valid for** | How long the code works. The test store uses 24 hours. |
+
+<Warning>
+  Set a discount you are happy to give to anyone who asks. The AI offers it to customers who ask or hesitate, so a high number can cost you margin on every COD order.
+</Warning>
+
+## Handing over to your team
+
+The AI always passes these to your team: returns, refunds, exchanges, address changes, complaints, photos and voice notes, requests to speak to a person, and anything the AI is not sure about.
+
+<Frame>
+  ![The Handing over to your team section with the handover message and the 30 minutes setting for when the AI steps back in](/images/wi-15-ai-handover.png "The arrows point to the handover message and the time after which the AI steps back in")
+</Frame>
+
+- **Message the customer gets when the AI hands over.** The text the customer sees, up to 500 characters. The test store uses "Thanks! I've passed this to our team. They'll reply here shortly."
+- **If your team doesn't reply, the AI steps back in after.** The test store uses **30 minutes**. The time counts from the customer's message. It applies after a handover or after a team reply. Chats you pause yourself stay with your team.
+
+Handed-over chats are labelled in the inbox so your team can find them.
+
+<CardGroup cols={2}>
+  <Card title="Knowledge, test, credits and activity" icon="book-open" href="/whatsapp-inbox/ai-agent-knowledge-credits">
+    Teach the AI about your store, try it, buy credits and review what it did.
+  </Card>
+  <Card title="WhatsApp inbox" icon="inbox" href="/whatsapp-inbox/overview">
+    Where the AI's replies appear.
+  </Card>
+</CardGroup>
