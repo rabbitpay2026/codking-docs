@@ -124,6 +124,11 @@
                   "cod-form/analytics",
                   "cod-form/advanced-settings"
                 ]
+              },
+              {
+                "group": "Partial Payment",
+                "icon": "split",
+                "pages": []
               }
             ]
           },
