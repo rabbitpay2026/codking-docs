@@ -71,6 +71,20 @@
           {
             "group": "Core Features",
             "pages": [
+              {
+                "group": "Partial Payment",
+                "icon": "split",
+                "pages": [
+                  "partial-payment/overview",
+                  "partial-payment/setup",
+                  "partial-payment/payment-rules",
+                  "partial-payment/rule-conditions",
+                  "partial-payment/rule-pricing-and-display",
+                  "partial-payment/advanced-settings",
+                  "partial-payment/customer-experience",
+                  "partial-payment/analytics"
+                ]
+              },
               "setting-cod-fees-in-shopify",
               "setting-sms-and-whatsapp-in-shopify",
               "setting-prepaid-discount-in-shopify",
@@ -121,20 +135,6 @@
                   "cod-form/offers",
                   "cod-form/analytics",
                   "cod-form/advanced-settings"
-                ]
-              },
-              {
-                "group": "Partial Payment",
-                "icon": "split",
-                "pages": [
-                  "partial-payment/overview",
-                  "partial-payment/setup",
-                  "partial-payment/payment-rules",
-                  "partial-payment/rule-conditions",
-                  "partial-payment/rule-pricing-and-display",
-                  "partial-payment/advanced-settings",
-                  "partial-payment/customer-experience",
-                  "partial-payment/analytics"
                 ]
               },
               {
