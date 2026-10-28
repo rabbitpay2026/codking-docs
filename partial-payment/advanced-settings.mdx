@@ -1,0 +1,63 @@
+---
+title: "Partial Payment Advanced Settings"
+sidebarTitle: "Advanced settings"
+icon: "sliders"
+description: "Store-wide settings for Partial Payment: tax handling, the shipping rate keyword, Same Order vs New Order, plus Meta Pixel and Google Ads tracking."
+---
+
+Rules decide what each option does. **Advanced Settings** decide how Partial Payment behaves across the whole store. Open **Settings → Partial payments & COD** and click the **Advanced Settings** tab next to **Payment Rules**.
+
+<Frame>
+  ![Advanced Settings tab](/images/pp-03-adv-tax.png "The Advanced Settings tab has three sections")
+</Frame>
+
+If you change something, the **Save** bar appears at the top. Click **Save** to keep it.
+
+## Tax and calculations
+
+| Setting | What it does |
+| :-- | :-- |
+| **Include tax in product calculations** | Ticked by default. Taxes are included when the upfront and later amounts are worked out. |
+| **Partial Tax Text** | Text shown to explain tax when it is left for later. Default: *Taxes computed later*. |
+
+<Tip>
+  If your deposit does not include tax, change the Partial Tax Text to something clear for your customers, such as "Taxes due on delivery".
+</Tip>
+
+## Shipping configuration
+
+<Frame>
+  ![Shipping Rate Keyword field](/images/pp-04-adv-shipping.png "Shipping Configuration: Shipping Rate Keyword")
+</Frame>
+
+**Shipping Rate Keyword** is a word that identifies partial-payment shipping rates, for example `partial` or `installment`. When a customer picks a shipping rate that contains this word at checkout, COD King triggers the deposit flow.
+
+## Payment flow
+
+This decides what happens to the order when only part of it is paid online.
+
+<Frame>
+  ![Payment Flow with Same Order selected](/images/pp-05-adv-flow.png "Payment Flow: Same Order (Recommended) or New Order")
+</Frame>
+
+| Option | What happens | Best for |
+| :-- | :-- | :-- |
+| **Same Order (Recommended)** | The remaining COD amount is added to the **same order** shortly after it is placed (usually within 1–2 minutes). Example: a ₹1000 order with ₹100 paid upfront is updated to ₹900 as the COD amount. | Stores that fulfil orders manually. |
+| **New Order** | The original order is **cancelled** and a **new order** is created for the COD remainder. Example: a ₹1000 order with ₹100 upfront is cancelled and replaced by a ₹900 COD order. | Stores with automatic fulfilment or a 3PL, where the order is picked up the instant it is created. |
+
+<Warning>
+  Choose carefully if you use automatic fulfilment. With **Same Order** there is a short moment before the balance is added. If your 3PL picks orders up immediately, use **New Order**.
+</Warning>
+
+## Meta Pixel and Google Ads
+
+Both are configured outside this page, under **Settings → Integrations**, so that deposits and purchases feed your ad reporting.
+
+- **Meta (Facebook) Pixel**: open **Meta Pixel** and enter your Pixel ID and Conversions API access token.
+  <Frame>
+    ![Meta Pixel card under Integrations](/images/pp-16-meta-pixel.png "Meta Pixel under Settings → Integrations")
+  </Frame>
+- **Google Ads**: open **Google Ads** and enter your Conversion ID and Conversion Label.
+  <Frame>
+    ![Google Ads card under Integrations](/images/pp-17-google-ads.png "Google Ads under Settings → Integrations")
+  </Frame>

@@ -1,0 +1,120 @@
+---
+title: "What a Payment Rule Shows and Charges"
+sidebarTitle: "Pricing and display"
+icon: "receipt"
+description: "Add shipping charges, discounts and a returning-customer discount to a rule, and control the text shoppers see with display settings and placeholders."
+---
+
+These sections of the rule form decide **what the shopper pays and reads** for each option. They sit in the same Add Payment Rule or edit form as the [conditions](/partial-payment/rule-conditions).
+
+## Shipping charges on payment options
+
+Normally Shopify adds shipping at its own checkout. With this feature the shipping charge is shown **inside the popup, per option**, so a prepaid option can carry different shipping from COD.
+
+<Frame>
+  ![Show shipping charges on payment options checkbox](/images/pp-12-ship-charge-top.png "Show shipping charges on payment options")
+</Frame>
+
+Tick **Show shipping charges on payment options**. This toggle is store-wide, but the amounts are set **per rule**.
+
+<Frame>
+  ![Shipping charge fields once the toggle is on](/images/pp-32-ship-on.png "Shipping charge for this option and Shipping charge text")
+</Frame>
+
+| Field | What it does |
+| :-- | :-- |
+| **Shipping charge for this option** | The charge added to this option, shown as a badge. Leave it blank for no shipping charge. |
+| **Shipping charge text** | The badge text. Use `{{amount}}` for the charge, for example `+{{amount}} Shipping`. Leave blank to use the default. |
+| **Offer free delivery on this option** | Shows a green **Free Delivery** badge instead of a charge. |
+
+<Frame>
+  ![Offer free delivery on this option checkbox](/images/pp-13-ship-charge-fields.png "Offer free delivery on this option")
+</Frame>
+
+<Warning>
+  The amount you enter here is not a Shopify shipping rate. Make sure it matches what you actually charge at checkout so the shopper sees one consistent figure. This feature needs the customer's address to be collected in the popup.
+</Warning>
+
+## Discount settings
+
+Reward shoppers for choosing this option, for example 10% off for paying in full.
+
+<Frame>
+  ![Discount code, type and value](/images/pp-17-discount-product.png "Discount Settings (Advanced): code, type and value")
+</Frame>
+
+| Field | What it does |
+| :-- | :-- |
+| **Discount code** | A name for the discount, such as `prepaid100`. It appears in the rules list badge. |
+| **Discount type** | **Fixed amount** or **Percentage**. |
+| **Discount value** | The amount or percent. |
+
+<Info>
+  You do **not** need to create a discount in Shopify. The app applies the discount automatically when the shopper chooses this option. Leave the section blank if the rule has no discount. Always place a test order to confirm the discount applies correctly.
+</Info>
+
+<Frame>
+  ![A filled discount: prepaid100, Percentage, 10](/images/pp-16-discount.png "Discount Settings and its Important Notes box")
+</Frame>
+
+## Extra discount for returning customers
+
+Available on Full Payment rules. A customer who has ordered before gets an extra discount **on top of** the rule's own discount, applied to the whole order. Tick **Give returning customers an extra discount**, then choose **Discount type** (Percentage or Fixed amount) and a **Discount value**.
+
+<Frame>
+  ![Give returning customers an extra discount with type and value](/images/pp-46-returning-discount.png "Extra discount for returning customers")
+</Frame>
+
+Shoppers see a **Returning customer offer** badge. You can change that wording in [Customer experience](/partial-payment/customer-experience#badges).
+
+## Display settings
+
+These control the text on the option. All are optional.
+
+<Frame>
+  ![Display settings fields](/images/pp-25-display.png "Display Settings (Advanced)")
+</Frame>
+
+| Field | What it does |
+| :-- | :-- |
+| **Amount to show** | Overrides the amount the app calculates. Leave it blank to let the app work it out. Use it when you add extra charges (for example ₹50 for shipping) without changing the product price. |
+| **Sub heading** | Extra descriptive text under the main amount. |
+| **Savings text** | Text beside the savings icon, for example *Save 10% on this order*. Leave blank to use the automatic savings line, which only shows when the rule has a discount. |
+| **Description Template** | The sentence shown under the option. Uses placeholders (see below). |
+
+### Description template and placeholders
+
+The default template is `Pay {{pay_now}} now and {{pay_later}} on delivery`.
+
+<Frame>
+  ![Description Template field and list of placeholders](/images/pp-26-desc-template.png "Description Template with the Available Placeholders box")
+</Frame>
+
+| Group | Placeholder | Fills in |
+| :-- | :-- | :-- |
+| Pay now | `{{pay_now}}` | Amount to pay now, with tax |
+| | `{{pay_now_base}}` | Amount to pay now, without tax |
+| | `{{pay_now_tax}}` | Tax on the amount paid now |
+| Pay later (on delivery) | `{{pay_later}}` | Amount on delivery, with tax |
+| | `{{pay_later_base}}` | Amount on delivery, without tax |
+| | `{{pay_later_tax}}` | Tax on the amount paid on delivery |
+| Totals | `{{total}}` | Total with tax |
+| | `{{total_base}}` | Total without tax |
+| | `{{total_tax}}` | Total tax |
+| Other | `{{discount}}` | Discount amount |
+| | `{{cod_fee}}` | COD fee |
+
+<Frame>
+  ![Example templates and the Reset to default template button](/images/pp-27-placeholders.png "Example templates. The arrow points to Reset to default template")
+</Frame>
+
+Examples from the form:
+
+| Style | Template |
+| :-- | :-- |
+| Simple (tax included) | `Pay {{pay_now}} now and {{pay_later}} on delivery` |
+| Show tax separately | `Pay {{pay_now_base}} + {{pay_now_tax}} tax now, {{pay_later_base}} + {{pay_later_tax}} tax on delivery` |
+| Tax summary at end | `Pay {{pay_now}} now and {{pay_later}} on delivery (includes {{total_tax}} tax)` |
+| COD with fee | `Pay {{total}} on delivery ({{cod_fee}} COD charges)` |
+
+Click **Reset to default template** to go back to the default.
