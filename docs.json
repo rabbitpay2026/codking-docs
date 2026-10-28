@@ -149,6 +149,16 @@
                   "otp-verification/analytics",
                   "setting-otp-verification-on-shopify"
                 ]
+              },
+              {
+                "group": "Business WhatsApp",
+                "icon": "message",
+                "pages": [
+                  "business-whatsapp/overview",
+                  "business-whatsapp/connect-number",
+                  "business-whatsapp/notifications",
+                  "business-whatsapp/templates"
+                ]
               }
             ]
           },

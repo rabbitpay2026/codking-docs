@@ -1,0 +1,70 @@
+---
+title: "Set Up WhatsApp Notifications"
+sidebarTitle: "Notifications"
+icon: "bell"
+description: "Choose which order events send a WhatsApp message, pick the template for each, set a delay, map the variables and test it."
+---
+
+A **notification** connects one order event to one approved WhatsApp template. Only one template is active per event, and you can switch it at any time.
+
+## Open the notification list
+
+<Steps>
+  <Step title="Open Business Brand WhatsApp">
+    Click **Manage all** next to **Customer notifications**.
+  </Step>
+  <Step title="Open the Notifications view">
+    On the Templates page, click **Notifications** in the tab bar. If you do not see it, open **More views** and choose **Notifications**.
+  </Step>
+</Steps>
+
+<Frame>
+  ![Notifications view with the New notification button and the Order placed card](/images/wa-09-notification-triggers.png "The arrows point to the Notifications tab, the New notification button and the Active status with the Pause button")
+</Frame>
+
+The page explains it in one line: set up a notification for each customer moment, such as when an order is placed or when it ships, then pick one of your approved templates for each.
+
+## The notification card
+
+<Frame>
+  ![Notification card with Send this template drop-down, Turn on button, Set delay, Change variables, Test and Turn off](/images/wa-10-notification-card.png "The arrows point to Set delay, Change template, Change variables and Test, and to the Send this template drop-down on a notification that is not set up")
+</Frame>
+
+| Control | What it does |
+| --- | --- |
+| **Status** | Shows **Active · sends "template_name"** when the notification is on, or **Not set up** when it has no template. |
+| **Pause** | Pauses the notification. |
+| **Send this template** | Choose an approved template. Any approved template of a matching category can be used, and picking one assigns it to this event. |
+| **Turn on** | Switches a newly assigned template on. It stays grey until you choose a template. |
+| **Set delay** | Sends the message after a delay. See below. |
+| **Change template** | Swap the active template for a different approved one. |
+| **Change variables** | Choose which order field fills each placeholder. See below. |
+| **Test** | Sends the template as a test so you can see the result. |
+| **Turn off** | Switches this notification off. |
+| **Browse pre-made templates** and **write your own** | Shortcuts to the [template library](/business-whatsapp/templates) when none of your templates fits. |
+
+<Tip>
+  If you have no template for an event, WhatsApp usually approves a new one within a few hours.
+</Tip>
+
+## Set a delay
+
+<Frame>
+  ![Set delay popup with the Send after minutes field](/images/wa-11-set-delay.png "The arrows point to the Send after (minutes) field and the Save button")
+</Frame>
+
+**Send after (minutes)** controls when the message goes out. `0` sends it immediately when the event fires. Any other number sends it that many minutes later. Click **Save** to apply it.
+
+## Change variables
+
+<Frame>
+  ![Change variables popup mapping each placeholder to an order field, with a live preview](/images/wa-12-change-variables.png "The arrows point to the two placeholder drop-downs and the preview")
+</Frame>
+
+Templates contain numbered placeholders such as `{{1}}` and `{{2}}`. **Change variables** lets you pick which field from the order fills each one, and also the header image and the button link when the template has them. For the **Order confirmation** template, `{{1}}` is **Customer first name** and `{{2}}` is **Order total**.
+
+The **Preview** below shows the message with sample values, so you can check the wording before you click **Save**.
+
+<Warning>
+  Changing variables affects every message sent from that notification from then on. Use **Test** first.
+</Warning>

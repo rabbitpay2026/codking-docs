@@ -1,0 +1,93 @@
+---
+title: "WhatsApp Templates"
+sidebarTitle: "Templates"
+icon: "file-lines"
+description: "Browse your approved WhatsApp templates, add a pre-made one with one click, or write your own and submit it to Meta for approval."
+---
+
+WhatsApp only lets a business start a conversation with an approved **template**. The Templates page lists the messages you send, the ones WhatsApp has approved, and which order event each one answers to. Open it from **Manage templates** on [Business Brand WhatsApp](/business-whatsapp/overview).
+
+## Views
+
+<Frame>
+  ![Templates page with the My templates, Pre-made templates and More views tabs](/images/wa-08-more-views.png "The arrows point to More views, which holds Create new template and Notifications")
+</Frame>
+
+| View | What it is |
+| --- | --- |
+| **My templates** | Every template on your WhatsApp account. |
+| **Pre-made templates** | Ready-made templates for common e-commerce flows. |
+| **Create new template** | A form to write your own. Found under **More views**. |
+| **Notifications** | Which template each event sends. See [Notifications](/business-whatsapp/notifications). |
+
+## My templates
+
+<Frame>
+  ![My templates list with In use and Other templates tabs, template names, status badges and Test, Change variables and Edit template links](/images/wa-06-my-templates.png "The arrows point to the In use and Other templates tabs, the Refresh button and the links under each template")
+</Frame>
+
+**Refresh** pulls the latest approval status from WhatsApp. The list is split into **In use**, templates currently sent by a notification, and **Other templates**, everything else on the account.
+
+Each template shows:
+- Its **name** and a status badge, for example **Approved**.
+- Its **category**, such as **utility** or **marketing**.
+- **In use** when a notification sends it.
+- **Sends on**, the event it answers, followed by the language (for example `en_US`) and the **Meta ID**.
+
+The links under each template are **Test**, **Change variables** and **Edit template**.
+
+## Pre-made templates
+
+<Frame>
+  ![Pre-made templates view with a plain order confirmation template preview](/images/wa-07-premade.png "The arrows point to the Pre-made templates tab and the Edit and use this template button")
+</Frame>
+
+Pre-made templates are curated for common e-commerce flows. They are grouped by event, such as **Order placed**. Each one shows its category (for example **UTILITY**), a short description, a preview of the message and which order field fills each placeholder.
+
+<Steps>
+  <Step title="Pick a template">
+    Choose the one that fits the event, for example **Order confirmation — simple text**.
+  </Step>
+  <Step title="Edit and use it">
+    Click **Edit & use this template**. You can rename it before submitting.
+  </Step>
+  <Step title="Wait for Meta">
+    Meta reviews the template. After approval, assign it to an event from the [Notifications](/business-whatsapp/notifications) list.
+  </Step>
+</Steps>
+
+## Create a new template
+
+Open **More views → Create new template**.
+
+<Frame>
+  ![Create new template form with Event type, Name, Category and Languages](/images/wa-13-new-template-top.png "The arrows point to Event type, Name, Category and Languages")
+</Frame>
+
+| Field | What it does |
+| --- | --- |
+| **Event type** (required) | The Shopify event the template is sent for. The variables you can use depend on the event. |
+| **Name** (required) | Lowercase letters and underscores, for example `order_confirmation`. COD King converts it on submit. |
+| **Category** | **Utility** by default. Use **marketing** for promotional messages. |
+| **Languages** | Meta creates one template per language. The first language is used for this submission. Click **+** to add more. |
+
+<Frame>
+  ![Header and Body sections with the formatting toolbar and the variable picker](/images/wa-14-new-template-body.png "The arrows point to the Header type, the variable picker, the formatting toolbar and the Body text box")
+</Frame>
+
+| Field | What it does |
+| --- | --- |
+| **Header** (optional) | A title or a media type for the top of the message. Defaults to **None**. |
+| **Body** | The message text, up to 1024 characters. The toolbar has emoji, bold, italic, strikethrough and code. The variable picker is disabled until you choose an event. |
+| **Footer** (optional) | A short line at the bottom, up to 60 characters. |
+| **Button** (optional) | Click **Add Button** to let customers reply or take an action. |
+
+<Frame>
+  ![Add Button, Reset and Submit to WhatsApp buttons and the message preview](/images/wa-15-new-template-submit.png "The arrows point to Add Button, Submit to WhatsApp and the Preview")
+</Frame>
+
+The **Preview** shows your message as the customer will see it. Click **Reset** to clear the form. **Submit to WhatsApp** stays grey until the required fields are filled. After you submit, Meta reviews the template, and it appears in **My templates** with its status.
+
+<Note>
+  Meta can reject a template that is vague or promotional but marked **utility**. Pick the category that matches the message.
+</Note>
