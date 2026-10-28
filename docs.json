@@ -72,6 +72,19 @@
             "group": "Core Features",
             "pages": [
               {
+                "group": "OTP Verification",
+                "pages": [
+                  "otp-verification/overview",
+                  "otp-verification/pre-order-otp",
+                  "otp-verification/customize-otp-popup",
+                  "otp-verification/post-order-otp",
+                  "otp-verification/whatsapp-cod-verification",
+                  "otp-verification/shopify-plus-checkout",
+                  "otp-verification/analytics",
+                  "setting-otp-verification-on-shopify"
+                ]
+              },
+              {
                 "group": "Partial Payment",
                 "icon": "split",
                 "pages": [
@@ -135,19 +148,6 @@
                   "cod-form/offers",
                   "cod-form/analytics",
                   "cod-form/advanced-settings"
-                ]
-              },
-              {
-                "group": "OTP Verification",
-                "pages": [
-                  "otp-verification/overview",
-                  "otp-verification/pre-order-otp",
-                  "otp-verification/customize-otp-popup",
-                  "otp-verification/post-order-otp",
-                  "otp-verification/whatsapp-cod-verification",
-                  "otp-verification/shopify-plus-checkout",
-                  "otp-verification/analytics",
-                  "setting-otp-verification-on-shopify"
                 ]
               },
               {
