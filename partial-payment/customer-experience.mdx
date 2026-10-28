@@ -1,0 +1,109 @@
+---
+title: "Customer Experience and Branding"
+sidebarTitle: "Customer experience"
+icon: "smartphone"
+description: "Control the Pay via screen your shoppers see: show or hide partial payments, rename the headings, edit fee and discount badges, set the no-option message, and test it as a shopper."
+---
+
+The Partial Payment options appear on the **Payment screen** of the COD King popup. The words, badges and branding of that screen are edited in **UI customization**, with a live preview next to the form.
+
+## Open UI customization
+
+<Steps>
+  <Step title="Go to Settings → UI customization">
+    <Frame>
+      ![UI customization landing page](/images/pp-60-uicust-landing.png "Settings → UI customization. The arrow points to Customize")
+    </Frame>
+  </Step>
+  <Step title="Click Customize">
+    A full-screen editor opens with tabs: **Logo and colours**, **Order summary**, **Delivery address**, **Coupons**, **Pop-up messages**, **Phone number screen**, **Verify code screen**, **Payment screen**, **Where it runs** and **Advanced**.
+  </Step>
+  <Step title="Open the Payment screen tab">
+    Partial Payment text lives here.
+  </Step>
+</Steps>
+
+<Note>
+  The text boxes in the editor become editable once OTP verification is switched on for your store. While it is off, they show the default text greyed out. Blank boxes keep the default wording, and `{{curly braces}}` fill in automatically.
+</Note>
+
+## The live preview
+
+The right-hand **Live preview** shows exactly what a shopper sees. It is a safe sandbox: nothing is sent to customers, and no discounts or orders are created. The test OTP is `1234`.
+
+<Frame>
+  ![Payment screen editor and the live preview of the Pay via list](/images/pp-64-uicust-payment-wide.png "Payment screen: settings on the left and the shopper's Pay via list on the right")
+</Frame>
+
+In this example the shopper sees three rules from top to bottom: **Full Payment** (pay ₹1,079.1 now with a green *Save 10%* badge), **pay 100 now, rest on delivery** (₹100 now, ₹1,099 on delivery) and **Cash on Delivery** (₹1,199 on delivery).
+
+## Show partial payments
+
+At the top of the Payment screen tab is a switch called **Show partial payments**. It adds the payment options card to the popup. *The options themselves come from your partial payment rules.* A **Go to Partial payments** link takes you back to the rules.
+
+<Warning>
+  If you switch **Show partial payments** off, shoppers do not see the payment options card at all, even though your rules are still saved.
+</Warning>
+
+## Payment list text
+
+<Frame>
+  ![Payment list heading and messages](/images/pp-61-uicust-payment-list.png "Payment list: Heading, Line under the heading, No options available and No option fits this cart")
+</Frame>
+
+| Field | Default | When the shopper sees it |
+| :-- | :-- | :-- |
+| **Heading** | Pay via | Above the list of ways to pay. |
+| **Line under the heading** | Enjoy fast delivery on all prepaid orders | A selling line under the heading. Change it to push your deposit option. |
+| **No options available** | No payment options available at the moment | No payment options exist at all. |
+| **No option fits this cart** | No payment option applies to your cart. You can close this window and try again. | The cart matches none of your payment rules (see [Who sees a rule](/partial-payment/rule-conditions)). |
+
+## Badges
+
+Small labels on each payment option.
+
+<Frame>
+  ![Fee badges section](/images/pp-62-uicust-fee-badges.png "Fee badges: COD fee, Free delivery, Returning customer offer")
+</Frame>
+
+<Frame>
+  ![Shipping charge and tax badges](/images/pp-63-uicust-badges2.png "Shipping charge and Tax badges")
+</Frame>
+
+| Badge | Default text | Shown when |
+| :-- | :-- | :-- |
+| **Cash on delivery fee** | `+{{amount}} COD fee` | A COD rule has a COD charge. `{{amount}}` is the fee. |
+| **Free delivery** | Free Delivery | A rule has **Offer free delivery** ticked. |
+| **Returning customer offer** | Returning customer offer | A returning customer gets the [extra discount](/partial-payment/rule-pricing-and-display#extra-discount-for-returning-customers). |
+| **Shipping charge** | `+{{amount}} Shipping` | A rule has a shipping charge. |
+| **Tax** | `+ tax {{amount}}` | Tax is shown separately. |
+
+There are also **Discount badges** (for example _Flat_ {{percent}}_% Off_ for a percentage discount) below these.
+
+## Branding
+
+Under **Logo and colours** you can add your logo and store name so the popup looks like your store. You can also add a promotional banner (for example *Get 50% OFF on Your 2nd Order*) and match its colours to your brand.
+
+## Test as a shopper
+
+<Steps>
+  <Step title="Open your store">
+    If your store is password-protected, enter the password first.
+  </Step>
+  <Step title="Use a product that fits your rules">
+    Choose a product that is in stock and passes the product and cart-value conditions of the rule you are testing.
+  </Step>
+  <Step title="Press the buy button and fill the popup">
+    Enter a delivery address (and a phone number and OTP if verification is on).
+  </Step>
+  <Step title="Check the Pay via screen">
+    You should see one line per qualifying rule, in the same order as your rules list, with the amounts and badges you set.
+  </Step>
+  <Step title="Place a small test order if you need to">
+    Choose the deposit option and pay the upfront amount. Then open the order in Shopify and the COD King analytics to confirm it was recorded (see [Analytics](/partial-payment/analytics)).
+  </Step>
+</Steps>
+
+<Tip>
+  Test **each** rule at least once, and test a cart that matches no rule so you see your *No option fits this cart* message.
+</Tip>

@@ -1,0 +1,74 @@
+---
+title: "Set Up and Activate Partial Payment"
+sidebarTitle: "Set up and activate"
+icon: "power"
+description: "Install COD King, check your payment gateway, open Partial payments & COD, add the app embed and switch Partial Payment on."
+---
+
+Setup takes about ten minutes. You can come back and change anything later, so do not wait for a perfect configuration before switching it on.
+
+## Before you start
+
+<Warning>
+  Your Shopify store must be connected to a payment gateway that is set to **Auto-capture**. If it is not, upfront payments are only authorised, not collected, at checkout.
+</Warning>
+
+You also need the COD King app installed. If you have not done that yet, open the Shopify App Store, search for **COD King** and click **Install**. Approve the permissions so the app can read your catalog.
+
+## 1. Open Partial payments & COD
+
+<Steps>
+  <Step title="Open COD King">
+    In the Shopify admin, click **COD King** under **Apps** in the left sidebar.
+    <Frame>
+      ![COD King in the Shopify admin sidebar](/images/pp-01-open-cod-king.png "COD King in the Shopify admin sidebar")
+    </Frame>
+  </Step>
+  <Step title="Go to Settings → Partial payments & COD">
+    Under COD King, click **Settings**, then choose **Partial payments & COD**.
+    <Frame>
+      ![Partial payments & COD in COD King Settings](/images/pp-02-open-partial-payments.png "Partial payments & COD in COD King Settings")
+    </Frame>
+  </Step>
+</Steps>
+
+The page opens with a banner called **Activate Partial Payments** and links to **Customize**, **Learn more**, **Watch Setup Video**, **Partial Payment Demo** and **Chat with us**.
+
+<Frame>
+  ![Top of the Partial payments & COD page with the activate checkbox](/images/pp-01-top.png "Top of Partial payments & COD. The arrow points to the Activate Partial Payments checkbox")
+</Frame>
+
+## 2. Turn on the COD King app embed
+
+COD King shows its popup through a theme app embed. In the COD King dashboard, find the **Theme App Embed** row and click **Open Theme**. In the theme editor, switch on the **COD Kings OTP block** and save.
+
+<Frame>
+  ![Open Theme button on the COD King dashboard](/images/pp-03-open-theme.png "Open Theme on the COD King dashboard")
+</Frame>
+
+## 3. Create your payment rules
+
+Partial Payment does nothing until at least one payment rule exists. Read [Payment rules](/partial-payment/payment-rules) and create the options you want to offer. Your rules are saved even while the feature is switched off, so you can build them first and activate later.
+
+## 4. Activate
+
+Tick **Activate Partial Payments**. The helper text under it says: *Turn this on to offer part payment now and the rest on delivery. Your rules are saved either way.*
+
+A black **Save** bar ("Unsaved changes") appears at the top of the page. Click **Save**. The banner badge then shows **Active**.
+
+<Note>
+  Nothing on this page is stored until you click **Save** in that bar. If you leave the page without saving, your changes are lost. Click **Discard** to throw changes away on purpose.
+</Note>
+
+## 5. Check it as a shopper
+
+Open your storefront, add a product and press the buy button. Complete the details step and look at the **Pay via** screen. You should see one line per rule that applies to your cart. [Customer experience](/partial-payment/customer-experience#test-as-a-shopper) explains what to check.
+
+## If you do not see your options
+
+| What you see | Likely reason |
+| :-- | :-- |
+| No payment screen at all | **Activate Partial Payments** is off, or the app embed is off in the theme editor. |
+| "No payment option applies to your cart" | The cart matches no rule. Check cart range, product filters and zipcode rules in [Who sees a rule](/partial-payment/rule-conditions). |
+| One option is missing | A condition on that rule hides it. See [Who sees a rule](/partial-payment/rule-conditions). |
+| Upfront payment not collected | Your payment gateway is not on Auto-capture. |

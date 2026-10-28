@@ -71,7 +71,6 @@
           {
             "group": "Core Features",
             "pages": [
-              "partial-payment/overview",
               "setting-otp-verification-on-shopify",
               "setting-cod-fees-in-shopify",
               "setting-sms-and-whatsapp-in-shopify",
@@ -128,7 +127,16 @@
               {
                 "group": "Partial Payment",
                 "icon": "split",
-                "pages": []
+                "pages": [
+                  "partial-payment/overview",
+                  "partial-payment/setup",
+                  "partial-payment/payment-rules",
+                  "partial-payment/rule-conditions",
+                  "partial-payment/rule-pricing-and-display",
+                  "partial-payment/advanced-settings",
+                  "partial-payment/customer-experience",
+                  "partial-payment/analytics"
+                ]
               }
             ]
           },

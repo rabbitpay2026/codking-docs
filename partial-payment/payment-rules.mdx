@@ -1,0 +1,134 @@
+---
+title: "Payment Rules and Rule Types"
+sidebarTitle: "Payment rules"
+icon: "list-checks"
+description: "How the payment rules list works, how to add, edit, reorder and delete a rule, and what each of the four rule types (Percentage, Fixed, Full Payment and Cash on Delivery) does."
+---
+
+A **payment rule** is one choice in the shopper's **Pay via** list. You decide how much is paid now, and (in the other pages of this section) who sees the rule and how it looks.
+
+## The rules list
+
+Open **Settings → Partial payments & COD**. The **Payment Rules** tab lists your rules.
+
+<Frame>
+  ![Payment Rules tab with three rules](/images/pp-02-rules-list.png "Payment Rules tab. One arrow points to Add Payment Rule, the other to the Advanced Settings tab")
+</Frame>
+
+| Column | What it shows |
+| :-- | :-- |
+| **Order** | Up and down arrows. The top rule is shown first to the shopper. |
+| **Rule name** | The name you gave it. Click it to edit. |
+| **Payment Amount** | The amount and type, for example *100% Percentage* or *100 Fixed*. A green badge shows the discount (*10% off · prepaid100*); an orange badge shows a COD fee (*COD fee · 0*). |
+| **Actions** | A pencil to edit and a bin to delete. |
+
+Use the **Search payment rules...** box to find a rule by name when you have many.
+
+<Frame>
+  ![Order arrows and the edit and delete buttons](/images/pp-02b-rules-list-controls.png "Reorder with the arrows, edit with the pencil, delete with the bin")
+</Frame>
+
+<Info>
+  The first rule has a greyed-out up arrow and the last rule a greyed-out down arrow, because they cannot move further. Put the option you want most shoppers to pick at the top, usually your prepaid or deposit option.
+</Info>
+
+Deleting a rule shows the message **Rule deleted**. It only stops that choice being offered; existing orders are not changed.
+
+## Add a payment rule
+
+Click **Add Payment Rule**. The form opens with a **Rule Configuration** card at the top, followed by optional sections marked **(Advanced)**. You only need the first card to create a working rule.
+
+<Frame>
+  ![Rule Configuration card on the Add Payment Rule page](/images/pp-10-rule-config.png "Rule Configuration: name, amount type and amount")
+</Frame>
+
+1. **Rule name**. Shown internally in the list. Choose something clear, like *10% deposit*.
+2. **Amount type**. One of four types described below.
+3. **Amount**. The value for that type.
+
+Changes appear in a **Save** bar at the top. Click **Save** to store the rule.
+
+<Warning>
+  The **Amount type** is locked after the rule is created (the field is greyed out when you edit). To change the type, create a new rule and delete the old one.
+</Warning>
+
+## The four rule types
+
+### Percentage
+
+The shopper pays a percentage of the order total now and the rest on delivery. For example, at **30%** the shopper pays 30% upfront and 70% on delivery. It suits higher-value orders, since the deposit grows with the cart.
+
+<Frame>
+  ![Percentage amount type with the Amount field](/images/pp-11-amount-rto.png "Percentage: the Amount field has a % suffix")
+</Frame>
+
+### Fixed
+
+The shopper pays a fixed amount whatever the order total, for example ₹500 now and the balance later. It suits stores with many similar-priced orders and gives a predictable commitment.
+
+<Frame>
+  ![Fixed rule called "pay 100 now, rest on delivery" with Amount 100](/images/pp-43-fixed-rule.png "Fixed: ₹100 collected upfront. The arrows point to the locked type and the amount")
+</Frame>
+
+In the example above the rule collects **₹100** now. On a ₹1,199 cart the shopper sees *Pay ₹100 now and ₹1,099 on delivery*.
+
+### Full Payment
+
+The shopper pays 100% of the order upfront. The form says *Full payment will always collect 100% of the order amount.* Use it to reward prepaid orders with a discount.
+
+<Frame>
+  ![Full Payment rule with the amount type locked](/images/pp-44-full-rule-top.png "Full Payment has no amount field because it always collects 100%")
+</Frame>
+
+Full Payment rules can offer two kinds of discount, set further down the form:
+
+- A **discount** for everyone who picks the rule ([Discount settings](/partial-payment/rule-pricing-and-display#discount-settings)).
+- An **extra discount for returning customers** ([see below](/partial-payment/rule-pricing-and-display#extra-discount-for-returning-customers)).
+
+<Frame>
+  ![Discount code prepaid100 at 10 percent on a Full Payment rule](/images/pp-45-full-discount.png "Full Payment with a 10% discount, which creates the green badge in the rules list")
+</Frame>
+
+### Cash on Delivery (COD)
+
+Nothing is paid upfront; the shopper pays the full amount (plus any delivery charge) when the parcel arrives. Leave the charge blank or 0 for standard COD, or enter a value to add a COD fee. In the form the field is called **COD Charge**.
+
+<Frame>
+  ![Cash on Delivery rule with the COD Charge field](/images/pp-40-cod-rule-top.png "Cash on Delivery: no amount upfront, only an optional COD Charge")
+</Frame>
+
+A COD rule has an extra card of its own:
+
+<Frame>
+  ![Express order form and Restrict checkout options on a COD rule](/images/pp-41-cod-express.png "COD-only options: Express order form, Restrict checkout, Cooling period")
+</Frame>
+
+| Option | What it does |
+| :-- | :-- |
+| **Express order form: complete the COD order in the popup** | The shopper finishes the COD order inside the popup, without being sent to Shopify's checkout page. Fewer steps, better conversion. Available on paid plans. |
+| **Restrict checkout to Cash on Delivery only** | After the shopper picks this option, Shopify checkout shows only the COD shipping method and the Cash on Delivery payment method. All prepaid options are hidden. This needs the COD shipping keyword to be set under **COD Fees** settings. |
+| **Cooling period for returning customers** | Hides Cash on Delivery from a returning customer until the chosen number of days have passed since their last order. It is checked after OTP verification. |
+
+<Frame>
+  ![Cooling period set to 7 days](/images/pp-42-cod-cooling.png "Cooling period: choose a preset or Custom days")
+</Frame>
+
+<Tip>
+  A cooling period stops the same customer using COD again and again in quick succession. During the cooling period they still see your Full Payment and deposit options.
+</Tip>
+
+## Putting the types together
+
+A common setup is three rules in this order:
+
+| Order | Rule | Type | Why |
+| :-- | :-- | :-- | :-- |
+| 1 | Pay in full and save 10% | Full Payment with a 10% discount | Rewards prepaid orders. |
+| 2 | Pay ₹100 now, rest on delivery | Fixed | A small commitment that cuts refusals. |
+| 3 | Cash on Delivery | COD | The fallback for shoppers who will not pay anything now. |
+
+This is exactly the setup shown in the shopper preview in [Customer experience](/partial-payment/customer-experience).
+
+## Next
+
+Control **who sees each rule** in [Who sees a rule](/partial-payment/rule-conditions), and **what it charges and says** in [What a rule shows and charges](/partial-payment/rule-pricing-and-display).

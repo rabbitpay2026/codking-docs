@@ -1,0 +1,168 @@
+---
+title: "Who Sees a Payment Rule"
+sidebarTitle: "Who sees a rule"
+icon: "filter"
+description: "Hide or show a payment rule by customer risk, cart value, number of items, product, variant, collection, zipcode, phone number or email."
+---
+
+Every rule can be limited so it only appears to the right shoppers. All conditions below are in the **(Advanced)** sections of the **Add Payment Rule** (or edit) form. A rule appears only when **all** the conditions you set are satisfied. Leave a section on its default and it does nothing.
+
+<Info>
+  If no rule qualifies for a cart, the shopper sees your **No option fits this cart** message. You can edit that text in [Customer experience](/partial-payment/customer-experience#payment-list-text).
+</Info>
+
+## RTO Engine (risk check)
+
+RTO means return to origin: a parcel refused at the door. The **RTO Engine** hides a rule from shoppers who look risky, so you can keep Cash on Delivery for trusted buyers and offer risky ones only prepaid or deposit options.
+
+<Frame>
+  ![RTO Engine section with the risk check ticked](/images/pp-30-rto-on.png "RTO Engine (Advanced). The arrows point to the Enable RTO risk check box and the risk band")
+</Frame>
+
+Tick **Enable RTO risk check** (paid plans). Two settings appear:
+
+<Frame>
+  ![Risk band and risk score fields](/images/pp-31-rto-fields.png "Hide this rule at risk band and the optional score")
+</Frame>
+
+| Field | What it does |
+| :-- | :-- |
+| **Hide this rule at risk band** | **High risk only** hides the rule from shoppers scoring 60 or more. **Medium risk and above** also hides it from scores of 30 or more. |
+| **Or hide above risk score (optional)** | A number from 0 to 100 (default 60). Used in addition to the band: the rule hides when either one triggers. Leave it blank to use the band alone. |
+
+**How the score is worked out.** The score combines the shopper's own COD and RTO history with the history of their delivery pincode. A new customer in a clean pincode scores low. The score is calculated after OTP verification, just before the payment options appear. If scoring is slow or unavailable, the rule stays visible and no order is lost.
+
+<Tip>
+  Put the risk check on your **Cash on Delivery** rule first. That way risky shoppers still have prepaid and deposit options, and you do not lose the sale.
+</Tip>
+
+## Cart Range
+
+Show the rule only when the cart value is inside a range. Set **Min cart range** and **Max cart range**, for example 500 and 5,000. Leave both empty to apply at every cart value.
+
+<Frame>
+  ![Min and Max cart range fields](/images/pp-14-cart-range.png "Cart Range (Advanced)")
+</Frame>
+
+## Cart Items
+
+Show the rule only when the **number of items** in the cart is within a range (**Min cart items**, **Max cart items**). Leave both blank for any number.
+
+<Frame>
+  ![Min and Max cart items fields](/images/pp-15-cart-items.png "Cart Items (Advanced)")
+</Frame>
+
+<Note>
+  The item count is read from the store's cart, so when a range is set the payment options show a loading state until the cart has loaded, including on Buy Now.
+</Note>
+
+## Product filter
+
+Choose which products the rule applies to.
+
+<Frame>
+  ![Product filter radio buttons](/images/pp-18-product-filter.png "Product filter: All products, Selected products only, Exclude selected products")
+</Frame>
+
+| Choice | Behaviour | Example |
+| :-- | :-- | :-- |
+| **All products** | The rule always applies. | Any cart. |
+| **Selected products only** | The rule applies only when **every** item in the cart is in your list. | List = A and C. Cart A+B: hidden. Cart A: shown. |
+| **Exclude selected products** | The rule applies when the cart contains **none** of the excluded products. | Exclude A. Cart B+C: shown. Cart A+B: hidden. |
+
+When you choose **Selected products only** or **Exclude selected products**, a **Select products** button appears.
+
+<Frame>
+  ![Select products button and the chosen product ID with Remove](/images/pp-34-selected-ids.png "After picking, the product IDs are listed with a Remove button")
+</Frame>
+
+Click it to open the Shopify product picker, search by name, tick the products and click **Select**.
+
+<Frame>
+  ![Shopify product picker](/images/pp-33-picker.png "The product picker. Tick products and click Select")
+</Frame>
+
+## Variant filter
+
+Works like the product filter, but on **variants** such as size, colour or material. It works alongside the product filter and **both must be satisfied**. For example, allow the deposit option only on Large t-shirts.
+
+<Frame>
+  ![Variant filter options](/images/pp-19-variant-filter.png "Variant Filter: All variants, Selected variants only, Exclude selected variants")
+</Frame>
+
+## Collection filter
+
+Same idea, scoped to Shopify collections such as "Winter collection" or "Clearance". The rule applies only when the cart's products belong to the collections you choose (or, with exclude, none of them do).
+
+<Frame>
+  ![Collection filter options](/images/pp-20-collection-filter.png "Collection Filter: All collections, Selected collections only, Exclude selected collections")
+</Frame>
+
+<Info>
+  Product, variant and collection filters are combined with **AND**. A rule shows only when every filter you set is satisfied.
+</Info>
+
+## Match any product in cart
+
+By default every product in the cart has to meet your include conditions. Tick **Show this rule if any product in the cart matches** to relax that: one qualifying product is enough to show the rule for the whole cart.
+
+<Frame>
+  ![Match any product in cart checkbox](/images/pp-21-match-zip.png "Match any product in cart. The arrows point to this checkbox and to Zipcode Restrictions")
+</Frame>
+
+This applies to product, variant and collection **include** conditions only. Exclude conditions are not affected: an excluded product still hides the rule.
+
+## Zipcode restrictions (hide)
+
+Hide the rule for deliveries to certain postcodes, for example areas with a history of returns. Tick **Enable zipcode restrictions**, then enter zipcodes in **Zipcodes to hide this rule**.
+
+<Frame>
+  ![Zipcode restrictions enabled with the textarea](/images/pp-36-zip-on.png "Enter zipcodes separated by commas. Ranges are supported")
+</Frame>
+
+Accepted formats:
+
+| Example | Meaning |
+| :-- | :-- |
+| `110001, 110002, 110003` | Individual zipcodes. |
+| `400001-400099` | A range, every zipcode from 400001 to 400099. |
+| `110001, 400001-400010, 560001` | A mix of individual zipcodes and ranges. |
+
+<Warning>
+  Zipcode rules only work when **address collection** is enabled in the COD King popup, because the app needs the address to read the zipcode.
+</Warning>
+
+## Phone and email restrictions
+
+Hide the rule for specific people. The phone and email used are the ones the shopper enters for OTP or in their address.
+
+<Frame>
+  ![Phone numbers and Emails to hide this rule](/images/pp-23-email-zipinc.png "Phone & Email Restrictions")
+</Frame>
+
+- **Phone numbers to hide this rule**: separate with commas or new lines. Spaces, dashes, + and the country code are ignored, so `+91 98765 43210` matches `9876543210`.
+- **Emails to hide this rule**: separate with commas or new lines. Matching ignores upper and lower case.
+
+<Tip>
+  Use this to remove COD for a customer who has repeatedly refused parcels, while everyone else keeps it.
+</Tip>
+
+## Zipcode includes (show only)
+
+The opposite of zipcode restrictions: tick **Enable zipcode includes** and the rule appears **only** for the zipcodes you list in **Zipcodes to include for this rule**. Use it to offer COD only in cities you deliver to reliably. The same formats and the same address-collection requirement apply.
+
+<Frame>
+  ![Zipcode includes enabled with the textarea](/images/pp-37-zipinc-on.png "Zipcode Includes (Advanced)")
+</Frame>
+
+## Quick reference
+
+| Goal | Use |
+| :-- | :-- |
+| Keep COD away from risky shoppers | RTO Engine on the COD rule |
+| Deposit only on mid-value orders | Cart Range |
+| Offer a rule on one product line | Product filter, **Selected products only** |
+| Never offer COD on a fragile product | Product filter, **Exclude selected products** on the COD rule |
+| Stop COD in returns-heavy areas | Zipcode restrictions |
+| COD only in cities you serve | Zipcode includes |
+| Block one known customer | Phone and email restrictions |
