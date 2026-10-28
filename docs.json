@@ -164,7 +164,12 @@
               {
                 "group": "WhatsApp Inbox & AI Agent",
                 "icon": "inbox",
-                "pages": []
+                "pages": [
+                  "whatsapp-inbox/overview",
+                  "whatsapp-inbox/settings",
+                  "whatsapp-inbox/ai-agent-setup",
+                  "whatsapp-inbox/ai-agent-knowledge-credits"
+                ]
               }
             ]
           },
