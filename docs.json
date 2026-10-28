@@ -146,7 +146,8 @@
                   "otp-verification/post-order-otp",
                   "otp-verification/whatsapp-cod-verification",
                   "otp-verification/shopify-plus-checkout",
-                  "otp-verification/analytics"
+                  "otp-verification/analytics",
+                  "setting-otp-verification-on-shopify"
                 ]
               }
             ]
