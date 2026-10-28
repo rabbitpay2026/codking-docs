@@ -1,0 +1,69 @@
+---
+title: "Shopify Plus Checkout OTP"
+sidebarTitle: "Shopify Plus checkout"
+icon: "cart-shopping"
+description: "Add an OTP block inside Shopify's own checkout so customers verify COD on the Payment step. Available for Shopify Plus stores."
+---
+
+On Shopify Plus, COD King adds an OTP block directly in the native checkout. When a customer picks Cash on Delivery, they must tap **Get OTP**, receive a code and verify before they can complete the order.
+
+<iframe src="https://www.youtube.com/embed/hebUv0sciBA" title="Shopify Plus checkout OTP demo" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+<Info>
+  This is for the Shopify Plus native checkout. Sending OTP from checkout also needs an eligible billing plan (Enterprise or Enterprise Plus) or legacy shop access.
+</Info>
+
+## Open the page
+
+In **COD King → Settings**, click **Shopify Plus widget** under **COD workflow**. The page is titled **Checkout extension OTP (Shopify Plus)**.
+
+<Frame>
+  ![Checkout extension OTP page with the I have enabled the checkout extension OTP block checkbox](/images/otp-30-plus-top.png "Checkout extension OTP. The arrow points to the checkbox you tick after adding the block")
+</Frame>
+
+Tick **I have enabled the checkout extension OTP block** once the block is added. It only tracks your setup progress in the admin.
+
+## Add the block in the Checkout Editor
+
+<Frame>
+  ![Add the block in Checkout Editor steps with the Open checkout editor button](/images/otp-31-plus-add.png "Add the block in Checkout Editor. The arrow points to Open checkout editor")
+</Frame>
+
+<Steps>
+  <Step title="Open your checkout profile">
+    Click **Open checkout editor** to open it in the Shopify admin.
+  </Step>
+  <Step title="Open the Payment section">
+    Go to the Checkout step and open the Payment section.
+  </Step>
+  <Step title="Add the COD King block">
+    Click **Add block** and choose the COD King checkout OTP extension (`codk-checkout-otp`).
+  </Step>
+  <Step title="Place it under payment methods">
+    Put the block under the payment methods, save and publish checkout.
+  </Step>
+</Steps>
+
+## How it looks in checkout
+
+The page shows a **How it looks in checkout** preview. The buttons work there, and the test code is `1234`. Nothing is sent.
+
+<Frame>
+  ![Checkout preview with the Get OTP and Verify OTP buttons under Cash on Delivery](/images/otp-32-plus-preview.png "Checkout preview. The arrows point to the Get OTP and Verify OTP buttons under Cash on Delivery")
+</Frame>
+
+When the shopper selects **Cash on Delivery (COD)**, the block shows *To verify your COD order click on Get OTP*, a field with their number and the **Get OTP** and **Verify OTP** buttons. **Verify OTP** stays disabled until a code is requested.
+
+## Test it
+
+<Steps>
+  <Step title="Place a test order on your Plus checkout">
+    Add a product to the cart and go to checkout.
+  </Step>
+  <Step title="Choose Cash on Delivery">
+    The OTP block appears under the payment methods.
+  </Step>
+  <Step title="Click Get OTP and enter the code">
+    The order can be completed only after verification.
+  </Step>
+</Steps>

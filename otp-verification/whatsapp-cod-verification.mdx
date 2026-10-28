@@ -1,0 +1,46 @@
+---
+title: "WhatsApp COD Verification"
+sidebarTitle: "WhatsApp COD verification"
+icon: "message"
+description: "Send a WhatsApp message with a confirm link after a COD order is placed. Covers the switch, the test message, the verification tag, auto verify and the cancel button."
+---
+
+WhatsApp COD verification sends the customer a WhatsApp message with a link after they place a COD order. They tap the link and confirm. Verified orders are tagged so you can tell them apart in Shopify.
+
+WhatsApp messages usually get opened faster than SMS, which makes this useful in markets where WhatsApp is the main channel.
+
+## Open the page
+
+In **COD King → Settings**, click **WhatsApp COD verification** under **COD workflow**. The page is titled **COD Verification WhatsApp** and shows **Enabled** or **Inactive** at the top.
+
+<Frame>
+  ![COD Verification WhatsApp page with the Enabled status, the verification link checkbox and the Test Whatsapp button](/images/otp-20-wa-top.png "COD Verification WhatsApp. The arrows point to the status, the Send the verification link on WhatsApp checkbox and Test Whatsapp")
+</Frame>
+
+## Turn it on
+
+Tick **Send the verification link on WhatsApp**. COD orders then get a WhatsApp message with a link the customer opens to confirm. Click **Test Whatsapp** to send yourself a sample before you go live.
+
+## Verification settings
+
+<Frame>
+  ![Verification settings with the tag, Auto verify and Show cancel button](/images/otp-21-wa-settings.png "Verification settings. The arrows point to Verification tag, Auto verify and Show cancel button")
+</Frame>
+
+| Setting | What it does |
+| --- | --- |
+| **Verification tag** | The tag added to the Shopify order after verification. Leave it blank to use the default emoji tag (`✅ COD-Verified`). |
+| **Auto verify** | If the verification WhatsApp is sent through auto retry, the order is verified as soon as someone clicks the verification link. |
+| **Show cancel button** | Shows Confirm and Cancel buttons on the verification page so the customer can choose. It works only during the link verification flow. |
+
+## What the customer sees
+
+A **What the customer opens** preview at the bottom of the page shows the message: *Confirm your COD order*, the shopper's name, the order ID and total, and a **Confirm your order** button. Tapping it opens the verification page, where **Confirm** and **Cancel** work. Nothing is sent and no order changes in the preview.
+
+<Frame>
+  ![WhatsApp message preview with the Confirm your order button](/images/otp-22-wa-message.png "The customer's WhatsApp message. The arrow points to the Confirm your order button")
+</Frame>
+
+<Info>
+  This feature needs WhatsApp messaging to be set up for your store. See [Branded WhatsApp](/branded-whatsapp/introduction).
+</Info>

@@ -71,7 +71,6 @@
           {
             "group": "Core Features",
             "pages": [
-              "setting-otp-verification-on-shopify",
               "setting-cod-fees-in-shopify",
               "setting-sms-and-whatsapp-in-shopify",
               "setting-prepaid-discount-in-shopify",
@@ -136,6 +135,19 @@
                   "partial-payment/advanced-settings",
                   "partial-payment/customer-experience",
                   "partial-payment/analytics"
+                ]
+              },
+              {
+                "group": "OTP Verification",
+                "pages": [
+                  "otp-verification/overview",
+                  "otp-verification/pre-order-otp",
+                  "otp-verification/customize-otp-popup",
+                  "otp-verification/post-order-otp",
+                  "otp-verification/whatsapp-cod-verification",
+                  "otp-verification/shopify-plus-checkout",
+                  "otp-verification/analytics",
+                  "setting-otp-verification-on-shopify"
                 ]
               }
             ]
