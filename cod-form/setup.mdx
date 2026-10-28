@@ -57,6 +57,22 @@ Then choose **When to ask for the code**:
   ![OTP verification settings](/images/cf-05-setup-otp-verification.png "OTP verification")
 </Frame>
 
+### What your buyer sees
+
+With verification on and **Before the order is created** selected, the buyer enters a phone number and taps **Continue**. A **Verify your phone number** screen then asks for the 4-digit code that was sent to that number. The buyer can wait for the **Resend code** timer, ask for the code on WhatsApp, or tap **Change number**. **Verify and continue** moves on to the address form.
+
+<Frame>
+  ![The verify-your-phone-number screen on the storefront](/images/cf-60-store-otp.png "The OTP screen your buyer sees")
+</Frame>
+
+<Warning>
+  If a COD Form shows the OTP screen even though **Ask buyers to verify their phone number with a code** is off, check the [Form designer](/cod-form/form-designer#custom-fields). The option **Ask for the phone number first** works together with OTP, and the form asks for a code whenever it is on.
+</Warning>
+
+<Note>
+  Changes you save here reach your storefront after a short delay. If the storefront still shows the old behaviour, click **Resync settings to storefront** at the top of this page, then reload the product page.
+</Note>
+
 ## 4. Choose where the COD button shows
 
 Under **Where the COD button shows**, tick the places that should get the COD button:
@@ -132,6 +148,14 @@ Best for stores shipping in many countries.
 <Tip>
   Create a separate key for COD King. If it is ever leaked, you can delete it without affecting anything else.
 </Tip>
+
+### What your buyer sees
+
+When address suggestions are working, the buyer starts typing in the **Address** box and a list of matching addresses drops down. Tapping one fills in the street, PIN code and state at once, so the buyer types less and makes fewer mistakes.
+
+<Frame>
+  ![Address suggestions dropping down under the Address box](/images/cf-57-store-address-suggest.png "Address suggestions on the storefront")
+</Frame>
 
 ### If suggestions do not appear
 
