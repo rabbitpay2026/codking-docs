@@ -1,0 +1,83 @@
+---
+title: "Business Brand WhatsApp"
+sidebarTitle: "Overview"
+icon: "message"
+description: "Send order updates, COD confirmations and reminders from your own verified WhatsApp Business number. See where the settings live, what the dashboard shows and what each of the 14 customer notifications does."
+---
+
+Business Brand WhatsApp sends your customer messages from **your own verified WhatsApp Business number**, so shoppers see your brand name instead of a generic sender. COD King connects the number, then sends a WhatsApp template message each time an order event happens: order placed, COD verification, shipped, delivered and more.
+
+## Open the page
+
+<Steps>
+  <Step title="Open COD King → Settings">
+    In your Shopify admin, open the COD King app and click **Settings**.
+  </Step>
+  <Step title="Click Business Brand WhatsApp">
+    It is under **Notifications** in the left menu. The page is headed "Send order updates from your own verified WhatsApp number."
+  </Step>
+</Steps>
+
+## The dashboard
+
+<Frame>
+  ![Business Brand WhatsApp page showing the connected number, the Manage account link and the last 7 days message counts](/images/wa-01-main-top.png "The arrows point to the connected number and its badges, the Manage account link and the last 7 days message counts")
+</Frame>
+
+| Area | What it shows |
+| --- | --- |
+| **Number card** | Your WhatsApp number and verified business name, with a **Verified** badge and a **Quality** rating from WhatsApp (for example **Quality: high**). **Manage account** opens the [account page](/business-whatsapp/connect-number). |
+| **Last 7 days** | **Messages sent**, **Delivered**, **Read** and **Failed** counts. Click **View** next to **Failed** to see which messages failed. The links **Inbox**, **AI agent** and **View activity** sit above the counts. |
+| **Customer notifications** | One row per event, with a counter such as "3 of 14 turned on". **Manage all** opens the [notification list](/business-whatsapp/notifications). |
+| **Campaigns** and **My templates** | Shortcuts to create a campaign or a template. See [Templates](/business-whatsapp/templates). |
+
+<Info>
+  The **Quality** rating comes from WhatsApp, not from COD King. It reflects how customers react to your messages. Keep it high by sending only messages customers expect.
+</Info>
+
+## Customer notifications
+
+<Frame>
+  ![List of customer notifications with Live badges, Pause and Edit links and Set up buttons](/images/wa-02-notifications.png "Each row is one event. Live rows show Pause and Edit. Rows that are not set up show Set up")
+</Frame>
+
+Each row shows the event, what triggers it and, once it is on, a **Live** badge, the template it sends, how many messages went out this week, and the **Read** and **Replied** rates for the last 30 days. The **COD to prepaid** row also shows a **Clicked** rate.
+
+| Notification | When it fires |
+| --- | --- |
+| **Order placed** | Every time a new order is placed. |
+| **Order placed — partial payment** | When an order is placed as a partial payment (advance paid online, balance on delivery). If it has no template, the normal **Order placed** template is used. |
+| **COD order verification** | After a cash on delivery order is placed. The customer taps **Confirm** to proceed or **Cancel** to cancel the order. |
+| **COD verification reminder** | Reminds the customer to confirm a COD order they have not answered yet. |
+| **COD to prepaid** | Invites a COD customer to pay online instead. |
+| **Order fulfilled** | When an order is fulfilled and has tracking info. |
+| **Out for delivery** | When the courier marks the shipment out for delivery. Needs your shipping integration. |
+| **Order delivered** | When the courier marks the shipment delivered. Needs your shipping integration. |
+| **Feedback request** | Asks for feedback or a review, sent 1 day after delivery. |
+| **Reorder reminder** | Reminds the customer to buy again, sent 30 days after delivery. |
+| **Order cancelled** | When an order is cancelled in Shopify (by you, by auto-cancel or by the customer). |
+| **First-time purchase** | Once per customer, on their first ever order with your shop. |
+| **Abandoned cart** | When a customer enters checkout but does not complete the order. |
+| **OTP message** | Sends the one-time verification code before checkout. |
+
+## Campaigns and templates
+
+<Frame>
+  ![Campaigns card with New campaign, All campaigns and Audiences, and My templates card with the approved count](/images/wa-03-templates-campaigns.png "The arrows point to New campaign, the approved templates count and Manage templates")
+</Frame>
+
+The two cards at the bottom of the page are shortcuts. **My templates** shows how many templates WhatsApp has approved, with **New template** and **Manage templates**. The **Campaigns** card links to **New campaign**, **All campaigns** and **Audiences**, which belong to WhatsApp campaigns and are not covered on this page.
+
+## Next steps
+
+<CardGroup cols={3}>
+  <Card title="Connect your number" icon="phone" href="/business-whatsapp/connect-number">
+    Check the connection and send a test message.
+  </Card>
+  <Card title="Notifications" icon="bell" href="/business-whatsapp/notifications">
+    Turn events on, set a delay and map variables.
+  </Card>
+  <Card title="Templates" icon="file-lines" href="/business-whatsapp/templates">
+    Use a pre-made template or write your own.
+  </Card>
+</CardGroup>
