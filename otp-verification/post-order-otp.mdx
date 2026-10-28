@@ -1,0 +1,126 @@
+---
+title: "Post-order OTP"
+sidebarTitle: "Post-order OTP"
+icon: "clock"
+description: "Verify a COD order after it is placed, on the Thank You and Order Status pages. Covers the theme blocks, OTP box text, retries, auto-cancel, SMS template and the custom script."
+---
+
+Post-order OTP lets the order be placed first and then asks the shopper to verify on the **Thank You** page and the **Order Status** page. Orders that are not verified in time can be cancelled automatically. It is a final checkpoint that confirms the buyer really wants the parcel.
+
+<iframe src="https://www.youtube.com/embed/kmPI6KACLRc" title="Post-order OTP demo" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+## Open the page and activate
+
+<Steps>
+  <Step title="Open COD King → Settings">
+    Under **COD workflow**, click **Post-order OTP verification**. The **After Order OTP verification** page opens, headed "Set up OTP verification for completed orders in 3 simple steps".
+  </Step>
+  <Step title="Tick Activate OTP verification">
+    The status changes to **Active**. Your other settings are saved either way.
+  </Step>
+</Steps>
+
+<Frame>
+  ![After Order OTP verification page showing the Active status and the Activate OTP verification checkbox](/images/otp-10-post-top.png "After Order OTP verification. The arrows point to the Active status and the Activate OTP verification checkbox")
+</Frame>
+
+## Add the blocks in your theme
+
+Under **Activate in theme** (marked *Required*), the **Setup Guide** says **Enable OTP Extensions in your theme**. There are two required steps.
+
+<Frame>
+  ![Activate in theme with the Open Thank You Settings and Open Order Status Settings buttons](/images/otp-11-activate-theme.png "Activate in theme. The arrows point to Open Thank You Settings and Open Order Status Settings")
+</Frame>
+
+<Steps>
+  <Step title="Thank You page">
+    Click **Open Thank You Settings** (use **Show instructions** for a reminder). In the editor choose **Add block**, select the COD King thank-you OTP block, and click **Save**.
+  </Step>
+  <Step title="Order Status page">
+    Click **Open Order Status Settings**. Choose **Add block**, select the COD King order-status OTP block, and click **Save**.
+  </Step>
+</Steps>
+
+A **Sample Preview** below shows the box shoppers see: a heading *Verify OTP for faster delivery*, the number the code was sent to with a **change** link, an **Enter OTP** field, **Resend OTP in**, **Get code on WhatsApp** and a **submit** button.
+
+## Configure form text in the OTP box
+
+<Frame>
+  ![Configure form Text in OTP box fields](/images/otp-12-form-text.png "Configure form Text in OTP box. The arrows point to the heading, sent-on and sending text boxes")
+</Frame>
+
+The words shown to customers on the Thank You and Order Status pages.
+
+| Setting | Default |
+| --- | --- |
+| **OTP Box Heading Text** | Verify OTP for faster delivery |
+| **OTP is sent on Text** | Please enter the OTP sent on |
+| **Sending OTP to your Mobile Text** | Sending OTP to your mobile number... |
+| **Resend OTP in Text** | Resend OTP in |
+| **Whatsapp button text** | Get code on WhatsApp |
+
+## Buttons and confirmation
+
+<Frame>
+  ![Buttons and confirmation fields](/images/otp-13-buttons.png "Buttons and confirmation. The arrows point to the four button and message fields")
+</Frame>
+
+| Setting | Default |
+| --- | --- |
+| **Verify Button Text** | Verify OTP |
+| **OTP Successful Text** | OTP Verification Successful! |
+| **Phone number change button text** | change |
+| **Submit button text** | submit |
+
+## OTP settings
+
+<Frame>
+  ![OTP settings fields](/images/otp-14-otp-settings.png "OTP settings. The arrows point to Max SMS retries per order, Wait time between 2 retries, OTP support or fallback text and Include product IDs")
+</Frame>
+
+| Setting | What it does |
+| --- | --- |
+| **Max SMS retries per order** | The most times a customer can ask for the code again. Range 1 to 5, default 5. |
+| **Wait time between 2 retries** | Seconds the **Resend** button stays disabled between two codes. |
+| **OTP support or fallback text** | Optional help text shown with the OTP box. HTML is supported. |
+| **Include product IDs for verification** | Product IDs, separated by commas, that must be verified whatever the payment method. |
+
+## More settings (required)
+
+<Frame>
+  ![More Settings with Auto cancel orders and Auto Retry Verification](/images/otp-15-more-settings.png "More Settings. The arrows point to Auto cancel orders if not verified, the two cancellation checkboxes, Auto Retry Verification After and Message template")
+</Frame>
+
+| Setting | What it does |
+| --- | --- |
+| **Auto cancel orders if not verified** | Cancels unverified COD orders after the time you choose. **Don't Send** (the default) leaves them alone. |
+| **Notify customer on cancelation** | Sends an SMS to the customer when the order is cancelled. Available once auto cancel is on. |
+| **Delete the Order itself** | Deletes the order from Shopify with no trace left. Available once auto cancel is on. |
+| **Auto Retry Verification After** | Sends a verification reminder after the chosen time if the order is still not verified. |
+| **Message template** | The SMS text. The code is filled in by `{{otp}}`. Changing the template may need approval, so chat with us before editing it. |
+
+<Warning>
+  **Delete the Order itself** is permanent. Use auto cancel without it if you want to keep a record of cancelled orders.
+</Warning>
+
+## Custom script
+
+<Frame>
+  ![Custom Javascript box](/images/otp-16-custom-script.png "Custom Script. The arrow points to the Custom Javascript box")
+</Frame>
+
+**Custom Javascript - Executes post Verification** runs once when the phone number is verified through OTP. It is mostly used to fire analytics events.
+
+## Test it
+
+<Steps>
+  <Step title="Place a test COD order on your store">
+    Use Cash on Delivery.
+  </Step>
+  <Step title="Look at the Thank You page">
+    The OTP box appears. Enter the code you receive.
+  </Step>
+  <Step title="Check the order in Shopify">
+    A verified order carries your verification tag.
+  </Step>
+</Steps>

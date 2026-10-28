@@ -1,0 +1,105 @@
+---
+title: "Pre-order OTP"
+sidebarTitle: "Pre-order OTP"
+icon: "mobile"
+description: "Verify the shopper's mobile number with a code before a COD order is placed. Covers activation, OnePass, payment method and tag, shipping rules, countries and the phone blacklist."
+---
+
+Pre-order OTP asks the shopper to verify their mobile number in the COD King popup **before** the order is created. Only verified shoppers continue to checkout, so unverified orders never reach your store.
+
+<iframe src="https://www.youtube.com/embed/yCPBjrO2tFA" title="Pre-order OTP demo" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+## Open the page
+
+<Steps>
+  <Step title="Open COD King → Settings">
+    In your Shopify admin, open the COD King app and click **Settings**.
+  </Step>
+  <Step title="Click OTP verification">
+    It is under **Checkout widget** in the left menu. The **Pre-Order OTP Setup** page opens, headed "Set up OTP verification for pre-orders in 2 simple steps".
+  </Step>
+</Steps>
+
+<Frame>
+  ![Pre-Order OTP Setup page with the Inactive status, the Customize button and the Activate OTP Verification checkbox](/images/otp-01-pre-order-top.png "Pre-Order OTP Setup. The arrows point to the status, the Customize button and the Activate OTP Verification checkbox")
+</Frame>
+
+At the top, a card shows the feature status (**Inactive** or **Active**) and a **Customize** button. **Customize** opens the editor for the popup's logo and wording. See [Customize the OTP popup](/otp-verification/customize-otp-popup).
+
+<Note>
+  If you see a **Finish setup** banner, the COD King app embed is not switched on in your theme. Open the theme editor, turn on the COD King embed and click **Save**.
+</Note>
+
+## Activate OTP verification
+
+Tick **Activate OTP Verification** to start verifying customers at checkout. Your other settings on this page are saved whether the box is ticked or not, so you can set everything up first and switch it on last. The status at the top changes from **Inactive** to **Active**.
+
+## OnePass verification
+
+**Enable OnePass Verification** lets a shopper who has already verified on any partner store skip the code. It reduces repeated SMS and gets returning shoppers through faster.
+
+<Frame>
+  ![OnePass checkbox and the Select Payment Method drop-down](/images/otp-02-onepass-payment.png "OnePass Verification and Payment method and order tagging. The arrows point to the OnePass checkbox and the payment method drop-down")
+</Frame>
+
+<Info>
+  Once a shopper verifies, COD King remembers it in their browser, so opening the same store in another tab does not ask again. With OnePass on, the same applies on other stores that also use COD King OTP with OnePass.
+</Info>
+
+## Payment method and order tagging
+
+| Setting | What it does |
+| --- | --- |
+| **Select Payment Method** | The checkout payment method that counts as cash on delivery, for example **Cash on Delivery (COD)**. This method is hidden at checkout if the shopper skips OTP. |
+| **Verification tag** | The tag added to the Shopify order after the number is verified. Leave it blank to use the default emoji tag. The default shown is `✅ COD-Verified`. |
+
+<Frame>
+  ![Verification tag field and the Hide COD Shipping Method checkbox](/images/otp-03-tag-shipping.png "The arrows point to the Verification tag field and the Hide COD Shipping Method checkbox")
+</Frame>
+
+Use the tag to filter verified and unverified COD orders in Shopify.
+
+## Shipping method
+
+These settings stop an unverified shopper from picking the cash on delivery rate.
+
+| Setting | What it does |
+| --- | --- |
+| **Hide COD Shipping Method** | Hides shipping rates that match the keyword if OTP is skipped. |
+| **Shipping Rate Keyword** | The word that identifies your COD shipping rate, for example `cash`. Any rate whose name contains it is hidden. |
+| **Hide payment & shipping until OTP verified** | When on, payment and shipping methods stay hidden at checkout until the shopper verifies. When off, they stay visible even before verification. |
+
+<Frame>
+  ![Shipping Rate Keyword field and the Hide payment and shipping until OTP verified checkbox](/images/otp-04-shipping-hide.png "Shipping method. The arrows point to the Hide COD Shipping Method checkbox, the Shipping Rate Keyword and Hide payment & shipping until OTP verified")
+</Frame>
+
+<Warning>
+  The keyword must match your COD shipping rate name. If it does not, the COD rate stays visible to unverified shoppers.
+</Warning>
+
+## Where verification applies
+
+<Frame>
+  ![Where verification applies with the country selector and the Blacklisted Phone Numbers box](/images/otp-05-where-applies.png "Where verification applies. The arrows point to the Select Countries button and the Blacklisted Phone Numbers box")
+</Frame>
+
+- **Select Countries.** OTP is shown only in the countries you pick, based on the shopper's IP address. If no country is selected, it shows everywhere (the label reads **All Countries**).
+- **Blacklisted Phone Numbers.** Enter numbers you never want to send a code to, one per line. Blocked numbers cannot verify.
+
+## Test it as a shopper
+
+<Steps>
+  <Step title="Tick Activate OTP Verification and save">
+    Use the save bar that appears at the top of the page.
+  </Step>
+  <Step title="Open your store and click Buy it now">
+    The popup asks for a mobile number before checkout continues.
+  </Step>
+  <Step title="Enter your number and click Send Code">
+    Type the code you receive. Only after the code is accepted does the shopper move on.
+  </Step>
+</Steps>
+
+<Tip>
+  You can see exactly what shoppers see, and click through every screen without sending an SMS, in the **Live preview** inside [Customize the OTP popup](/otp-verification/customize-otp-popup). The preview accepts the test code `1234`.
+</Tip>

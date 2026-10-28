@@ -1,0 +1,147 @@
+---
+title: "Customize the OTP Popup"
+sidebarTitle: "Customize the popup"
+icon: "paintbrush"
+description: "Change the logo, button labels, wording and error messages of the OTP popup, decide which store pages it runs on, and use the live preview to test every screen."
+---
+
+Everything a shopper reads in the OTP popup is edited in **UI customization**, with a live preview beside the form.
+
+## Open the editor
+
+<Steps>
+  <Step title="Go to Settings → UI customization">
+    It is under **Checkout widget** in the COD King left menu.
+  </Step>
+  <Step title="Click Customize">
+    A full-screen editor opens. The tabs across the top are **Logo and colours**, **Order summary**, **Delivery address**, **Coupons**, **Pop-up messages**, **Phone number screen**, **Verify code screen**, **Payment screen**, **Where it runs** and **Advanced**.
+  </Step>
+</Steps>
+
+<Note>
+  Text boxes become editable once OTP verification is on. While it is off, the editor shows a **Turn on OTP verification to customize the checkout copy** box with a checkbox, and the defaults are greyed out. A blank box keeps the default wording, and `{{curly braces}}` fill in automatically.
+</Note>
+
+## The live preview
+
+The right-hand **Live preview** shows what a shopper sees and updates as you type. It is a sandbox: nothing is sent to customers and no orders or discounts are created. Click through it like a customer and use the test code `1234`.
+
+## Logo and colours
+
+<Frame>
+  ![Logo and colours tab with the Turn on OTP verification checkbox and the Brand Logo URL field](/images/otp-40-uicust-logo.png "Logo and colours. The arrows point to the Turn on OTP verification checkbox and the Brand Logo URL field")
+</Frame>
+
+| Setting | What it does |
+| --- | --- |
+| **Store Name** | Shown beside your logo at the top of the popup. |
+| **Brand Logo URL** | A direct link to a `.png` or `.jpg` logo. It appears at the top of the popup. |
+| **Brand color** | Used for the buttons on the exit confirmation sheet. Leave the default to keep the standard blue. |
+
+## Phone number screen
+
+The first screen, where the shopper types their number.
+
+<Frame>
+  ![Buttons and fields on the Phone number screen tab](/images/otp-41-phone-buttons.png "Buttons and fields. The arrows point to the Send Code button label and the phone number placeholder")
+</Frame>
+
+| Setting | What it does |
+| --- | --- |
+| **Send Code Button label** | The main button that sends the code by SMS. |
+| **Phone number placeholder** | The grey hint inside the empty phone field. |
+
+<Frame>
+  ![WhatsApp and Skip verification settings](/images/otp-42-whatsapp-skip.png "WhatsApp and Skip verification. The arrows point to Enable Whatsapp button, Show WhatsApp as the main button and Show Skip Button")
+</Frame>
+
+| Setting | What it does |
+| --- | --- |
+| **Enable Whatsapp button** | Adds a WhatsApp button beside **Send Code** as another way to receive the code. |
+| **Show WhatsApp as the main button** | Makes WhatsApp the highlighted button and moves **Send Code** below it. Applies when both are on. |
+| **Show Skip Button** | Lets customers skip OTP verification and place a non-COD order directly. |
+
+<Frame>
+  ![Phone number screen text boxes](/images/otp-43-phone-text.png "Phone number screen wording. The arrows point to Heading, Line under the heading, Heading over a saved number, Label over SMS and WhatsApp and Close button")
+</Frame>
+
+The **Phone number screen** card holds the words on this screen:
+
+- **Heading** (default *Enter mobile number*) and **Line under the heading** (default *Provide your mobile number to continue*).
+- **Heading over a saved number** (default *Continue with*), shown when the shopper has a saved number.
+- **Label over SMS and WhatsApp** (default *Send OTP via*).
+- **Close button** (default *Close*).
+
+## Verify code screen
+
+Where the shopper types the code you sent.
+
+<Frame>
+  ![Messages on this screen on the Verify code screen tab](/images/otp-44-verify-top.png "Messages on this screen. The arrows point to the heading, the sent-to text, the retry text and the verifying button text")
+</Frame>
+
+| Setting | Default | Where it appears |
+| --- | --- | --- |
+| **Verify Phone Number Heading** | Verify Mobile Number | Heading of the screen |
+| **Enter the code sent to text** | Enter the code sent to | Before the shopper's number |
+| **Retry in text** | Didnt receive the Code? Retry in | Beside the countdown before the code can be sent again |
+| **Verifying button text** | Verifying | On the button while the code is being checked |
+
+<Frame>
+  ![Error messages on the Verify code screen tab](/images/otp-45-errors.png "Error messages. The arrows point to Invalid OTP message and the invalid phone number message")
+</Frame>
+
+**Error messages**
+
+- **Invalid OTP message** (default *Invalid OTP*) is shown when the code entered is wrong.
+- **Error message for invalid phone number** (default *Please enter a valid 10-digit phone number.*) is shown under the phone field when the number does not look valid.
+
+<Frame>
+  ![Verify code screen labels](/images/otp-46-verify-text2.png "Verify code screen labels. The arrows point to Label over the resend choices, Name for SMS, Start over with another number and Back to the phone number screen")
+</Frame>
+
+The **Verify code screen** card holds the labels around the code box:
+
+- **Label over the resend choices** (default *Resend OTP via*).
+- **Name for SMS** (default *SMS*).
+- **Start over with another number** (default *Not you?*).
+- **Back to the phone number screen** (default *Go to Phone Screen*).
+
+## Where it runs
+
+<Frame>
+  ![Where it runs with three options](/images/otp-47-where-runs.png "Where it runs. The arrows point to the three options")
+</Frame>
+
+The widget loads on every page of your store. Leave it out of pages where you do not want it, and checkout buttons behave normally there.
+
+- **All pages (recommended).**
+- **All pages except the ones I select.**
+- **Only the pages I select.**
+
+When you choose a list option, a **Run only on these pages** list appears.
+
+<Frame>
+  ![Page checklist for Where it runs](/images/otp-48-pages.png "Run only on these pages. Tick the page types you want, such as Product pages")
+</Frame>
+
+You can tick page types such as **Home page**, **Product pages**, **Collection pages**, **All collections page**, **Cart page**, **Search results**, **Static pages (About, FAQ...)**, **Blog listing**, **Blog posts**, **Policy pages**, **Customer account**, **Customer login**, **Customer register**, **Customer order status**, **Customer addresses**, **Password page**, **Gift card page** and **404 page**.
+
+<Frame>
+  ![Specific URLs box](/images/otp-49-urls.png "Specific URLs. One path per line")
+</Frame>
+
+**Specific URLs** takes one path per line, without your domain, for example `/pages/about`. Use `*` at the end to match everything below it, so `/pages/*` covers every static page. You can add up to 50 paths. If nothing is selected, the widget keeps loading on all pages.
+
+## Advanced
+
+<Frame>
+  ![Advanced tab with Open the popup instantly on Buy Now](/images/otp-50-advanced.png "Advanced. The arrows point to Open the popup instantly on Buy Now and the translation box")
+</Frame>
+
+- **Open the popup instantly on Buy Now.** The popup appears straight away and loads the cart and payment options behind it. Turn it off to open the popup only once everything has loaded.
+- **Translate everything at once.** Click **Load current text** to get every label as JSON, translate the values, then paste the result back and apply it. A value left at the English default is stored as a default rather than an override.
+
+<Warning>
+  Click **Save** in the bar at the top after you edit. Unsaved changes are lost when you leave the editor.
+</Warning>
