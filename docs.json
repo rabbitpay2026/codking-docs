@@ -160,6 +160,11 @@
                   "business-whatsapp/notifications",
                   "business-whatsapp/templates"
                 ]
+              },
+              {
+                "group": "WhatsApp Inbox & AI Agent",
+                "icon": "inbox",
+                "pages": []
               }
             ]
           },
