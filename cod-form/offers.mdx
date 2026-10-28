@@ -5,11 +5,13 @@ icon: "tags"
 description: "Raise your average order value with quantity offers, bundles, order bumps, upsells, downsells, free-shipping and gift bars, and A/B tests inside the COD Form."
 ---
 
-**Offers** is the home for everything that helps shoppers add more to their order. Open it from **COD King → Settings → COD FORM → Offers**. Each card opens a list page for that offer type, and a green badge on the card shows how many offers of that type are active.
+**Offers** is the home for everything that helps shoppers add more to their order, or buy at all. Think of each offer as a small shop-floor trick: "buy 3, save more", "add gift wrap for 49", "wait, here is 50 off before you go". You switch each one on from this page, and your buyers see them on the product page and inside the COD form. Open it from **COD King → Settings → COD FORM → Offers**. Each card opens a list page for that offer type, and a green badge on the card shows how many offers of that type are active.
 
 <Frame>
   ![The Offers page](/images/cf-32-offers-hub.png "Offers")
 </Frame>
+
+Each offer type below follows the same pattern: what it is in plain words, when it is worth using, how to set it up, what your buyer actually sees on your store, and the mistakes to avoid. The store screenshots on this page were taken on a test store, so your product names, prices and colours will differ.
 
 | Offer | What it does | Where the buyer sees it |
 | :-- | :-- | :-- |
@@ -44,7 +46,25 @@ Each offer editor starts with an **Offer** card and ends with a **Products** car
 
 ## Quantity offers
 
-A quantity offer shows tiers such as "Buy 2, get 10% off, buy 3, get 15% off". The buyer picks a tier on the product page, and the choice carries into the form with the same price.
+**In plain words:** the more a buyer takes, the cheaper each piece gets. A quantity offer shows tiers such as "Buy 2, get 10% off, buy 3, get 15% off". The buyer picks a tier on the product page, and the choice carries into the COD form with the same price.
+
+**Use it when** you want to lift the number of units per order, for example for consumables, accessories or anything buyers happily stock up on.
+
+### What your buyer sees
+
+On the product page, a "Buy more, save more" block appears between the quantity box and the buttons. Each tier is a card with its label, the discounted price, the original price crossed out, and an optional badge such as **Most Popular**.
+
+<Frame>
+  ![Quantity tiers on the product page, above the Buy with COD button](/images/cf-51-store-product-tiers.png "Quantity tiers on the product page")
+</Frame>
+
+When the buyer opens the COD form, the same tiers appear at the top. Picking **3 packs** updates the order summary, shows a green "You save" line, and the **Complete order** button shows the new total.
+
+<Frame>
+  ![The same tiers inside the COD form, with the saving shown](/images/cf-52-store-form-tiers.png "Quantity tiers inside the COD form")
+</Frame>
+
+### How to set it up
 
 ### Tiers
 
@@ -78,21 +98,36 @@ Add up to 5 tiers. Each tier has:
   ![Quantity offer layout and products](/images/cf-41-offer-quantity-look.png "Quantity offer layout and products")
 </Frame>
 
-### Example
+### Worked example
 
-| Tier | Quantity | Discount |
-| :-- | :-- | :-- |
-| 1 | 1 | No discount |
-| 2 | 2 | 10 % (preselected) |
-| 3 | 3 | 15 % |
+You sell a face serum for 500. You want buyers to take two or three.
+
+| Tier | Quantity | Discount type | Value | Label | Badge | What the buyer pays |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| 1 | 1 | No discount |  | Buy 1 |  | 500 |
+| 2 | 2 | Percentage | 10 | Buy 2 |  | 900 (450 each) |
+| 3 | 3 | Percentage | 15 | Buy 3 | Most popular | 1,275 (425 each) |
+
+Mark tier 2 as **Preselected** if you want most buyers to land on the two-pack.
 
 <Info>
-  The quantity widget on the product page also needs to be on in [Buttons](/cod-form/buttons#4-quantity-offer-widget).
+  The quantity widget on the product page also needs to be on in [Buttons](/cod-form/buttons#4-quantity-offer-widget). If your tiers show inside the form but not on the product page, check that switch and **Show the tiers on the product page**.
 </Info>
+
+### Common mistakes
+
+- **Tiers that make no sense together.** A bigger quantity should never cost more per unit than a smaller one.
+- **Forgetting "apply to higher quantities".** With it off, a buyer who raises the quantity to 4 gets no tier price, because only the exact quantities 1, 2 and 3 have one.
+- **A very long label.** Labels are limited to 60 characters and badges to 30, and long text wraps awkwardly on a phone.
+- **Two quantity offers on the same product.** The one with the lowest **Priority** number wins; the other is ignored.
 
 ## Bundles
 
-A bundle sells 2 to 6 products as a set. The buyer chooses the variant of each product, and the discount applies to every complete set.
+**In plain words:** "frequently bought together". You group 2 to 6 products as a set, and the buyer gets a discount for taking the whole set. The buyer chooses the variant of each product, and the discount applies to every complete set.
+
+**Use it when** products naturally go together (a phone and its case, a shampoo and conditioner) or when you want to clear slower products by attaching them to a bestseller.
+
+**Example:** Shampoo 300 + Conditioner 300 + Serum 400 = 1,000. Set **Amount off the set** to 100 and the buyer pays 900 for all three.
 
 | Field | What it does |
 | :-- | :-- |
@@ -114,9 +149,39 @@ A bundle sells 2 to 6 products as a set. The buyer chooses the variant of each p
 
 A live preview on the right shows how the bundle will look, for example "Buy the set with COD" and "100.00 off".
 
+### What your buyer sees
+
+On the product page, a "Frequently bought together" box appears under the COD button. The product the buyer is looking at is already ticked and cannot be unticked. The other products in the set are ticked too, and the buyer can untick any of them. The strike-through price is the normal total, the green badge is what the buyer saves, and the button shows the price they will pay.
+
+<Frame>
+  ![Bundle on the storefront product page](/images/cf-61-store-bundle.png "Bundle on the storefront product page")
+</Frame>
+
+If **Inside the COD form** is ticked, the same box also appears inside the order form, with an **Add to my order** button that adds the missing products in one tap.
+
+<Frame>
+  ![Bundle inside the storefront form](/images/cf-62-store-bundle-form.png "Bundle inside the storefront form")
+</Frame>
+
+<Note>
+  The discount applies to the complete set. Check how your store behaves when a buyer unticks a product by trying it on your own product page before you promote the offer.
+</Note>
+
 ## Order bumps
 
-An order bump is a small add-on shown inside the form with a tick box. Up to 3 matching bumps are shown, in priority order.
+**In plain words:** a tick-box add-on inside the form, like the "add gift wrap for 49" box at a shop counter. It needs one tap and no extra page. Up to 3 matching bumps are shown, in priority order.
+
+**Use it when** the add-on is cheap, easy to understand and does not need explaining: gift wrap, express handling, a small accessory, a free gift you want buyers to notice.
+
+### What your buyer sees
+
+A dashed box appears in the form, above the order totals. It shows the title, the price, and the original price crossed out. The buyer ticks the box to add it.
+
+<Frame>
+  ![An order bump (here a free gift) ticked inside the COD form](/images/cf-53-store-bump.png "An order bump inside the COD form")
+</Frame>
+
+### How to set it up
 
 | Field | What it does |
 | :-- | :-- |
@@ -139,9 +204,17 @@ An order bump is a small add-on shown inside the form with a tick box. Up to 3 m
   The **Order bumps** block must be on in the [Form designer](/cod-form/form-designer#2-blocks).
 </Info>
 
+### Common mistakes
+
+- **Pricing the bump higher than the product.** Buyers notice. Keep it small compared to the main order.
+- **Ticked by default.** It lifts the take rate, but some buyers feel tricked when they see an extra line. Use it only for things they would clearly want.
+- **Using a custom line for something you stock.** A custom line does not use inventory or SKU. Choose **a product from my store** when you need stock tracked.
+
 ## Pre-purchase upsells
 
-A pre-purchase upsell suggests products before the order is placed.
+**In plain words:** "before you order, want to add this?" It checks what is in the cart, and if it matches your rule it suggests other products, with or without a discount.
+
+**Use it when** you can say in one line why the second product fits the first, for example "cart has a snowboard, suggest bindings".
 
 **If the cart has**
 
@@ -176,9 +249,33 @@ A pre-purchase upsell suggests products before the order is placed.
 
 Also set the **Title** (default "Wait! Add this to your order", up to 120 characters) and optional **Text** (for example "Special price, only with this order.").
 
+### What your buyer sees
+
+The buyer fills in the form and taps **Complete order**. Before anything is placed, a pop-up appears with your suggestion. If they tap **Add to my order**, the product joins the order at the offer price. If they tap **No thanks, complete my order**, the order goes through as it was. The pop-up is shown once, so a buyer is never asked twice.
+
+<Frame>
+  ![Pre-purchase pop-up on the storefront](/images/cf-63-store-prepurchase.png "Pre-purchase pop-up on the storefront")
+</Frame>
+
+<Warning>
+  If the pop-up never appears, check the product you chose to offer. A product that is out of stock, or already in the cart, is skipped, and when nothing is left to offer the buyer's order goes straight through. Also use **Resync settings to storefront** on the COD Form setup page after you save a new offer.
+</Warning>
+
 ## One-click upsells
 
-A one-click upsell is shown once, right after the order is placed. One upsell is shown per order: the matching offer with the best priority.
+**In plain words:** right after the buyer places the order, you offer one more product at a special price. The buyer accepts with one tap, because the address and phone are already known. Only one upsell is shown per order: the matching offer with the best priority.
+
+**Use it when** you have a cheap, popular product that most buyers would be happy to add to a parcel that is already going out.
+
+### What your buyer sees
+
+The order is confirmed first (a green "Order confirmed"). Then the offer appears: a heading, the product picture and name, the new price with the old price crossed out, a countdown ("Offer ends in 118s") and two buttons. **Add to my order** adds the product to the same order. **No thanks** closes the offer and shows the order confirmation.
+
+<Frame>
+  ![The one-click upsell shown after the order is confirmed](/images/cf-56-store-upsell.png "One-click upsell after the order")
+</Frame>
+
+### How to set it up
 
 | Field | What it does |
 | :-- | :-- |
@@ -198,13 +295,37 @@ The buyer can still accept for a few minutes after ordering. That window is set 
 
 ## Downsell on close
 
-A downsell is a discount shown once when the buyer tries to close the form.
+**In plain words:** a last attempt to save the sale. When the buyer tries to close the form without ordering, a small pop-up offers a discount.
+
+**Use it when** you see many buyers open the form and leave. It works best with a small, clear discount you can afford on every order.
+
+### What your buyer sees
+
+When the buyer taps the close button (×), a pop-up appears instead of closing the form. **Claim discount** applies the discount and returns to the form. **No thanks** lets the buyer leave.
+
+<Frame>
+  ![The downsell pop-up shown when the buyer tries to close the form](/images/cf-54-store-downsell.png "Downsell on close")
+</Frame>
+
+After the buyer claims it, the discount shows as its own line in the order totals, named after your offer title, and the **You save** total grows.
+
+<Frame>
+  ![The downsell discount in the order totals](/images/cf-55-store-downsell-applied.png "The claimed discount in the totals")
+</Frame>
+
+If a buyer who has already seen the offer tries to close the form again, the form asks "Leave without ordering?" with **Continue my order** and **Leave**.
+
+<Frame>
+  ![The Leave without ordering confirmation](/images/cf-58-store-leave.png "Leave without ordering?")
+</Frame>
+
+### How to set it up
 
 | Field | What it does |
 | :-- | :-- |
 | **Show after this many close attempts** | 1 shows the offer the first time the buyer tries to close. |
 | **Discount type** and **Discount** | For example **Percentage**, 10. |
-| **Title** | Default "Wait! Here is 10% off" (up to 80 characters). |
+| **Title** | Default "Wait! Here is 10% off" (up to 80 characters). The title is also used as the name of the discount line in the totals, so keep it short and meaningful. |
 | **Text** (optional) | Up to 200 characters, for example "Complete your order now and save." |
 | **Accept button** / **Decline button** | Up to 40 characters each. |
 | **On-screen timer** | Seconds, 0 for none. |
@@ -215,7 +336,13 @@ A downsell is a discount shown once when the buyer tries to close the form.
 
 ## Free shipping and gift thresholds
 
-A threshold rewards buyers whose order reaches an amount. It shows as a progress bar, so turn on the progress bar block in the [Form designer](/cod-form/form-designer#2-blocks).
+**In plain words:** a progress bar that says "spend a little more and get free shipping (or a free gift)". Buyers who are close to the amount often add one more item to reach it, so your average order grows.
+
+**Use it when** you want to lift your average order value without cutting prices. Set the amount about 20 to 30 percent above what most buyers spend today.
+
+<Warning>
+  Creating the threshold is not enough. The bar only shows in the form after you add the **Free shipping / gift progress bar** block in the [Form designer](/cod-form/form-designer#2-blocks): open **Blocks**, click **Add block**, choose **Free shipping / gift progress bar**, pick your threshold offer, click **Done** and then **Save**. Then use **Resync settings to storefront** on the COD Form setup page.
+</Warning>
 
 | Field | What it does |
 | :-- | :-- |
@@ -229,9 +356,25 @@ A threshold rewards buyers whose order reaches an amount. It shows as a progress
   ![Free shipping and gift threshold](/images/cf-49-offer-threshold.png "Free shipping and gift threshold")
 </Frame>
 
+### What your buyer sees
+
+Near the bottom of the form, under the totals, the buyer sees a bar with a message such as "Add Rs. 1,214.05 more for free shipping". The bar fills as the order total grows, and the numbers under it show where the buyer is now and the amount to reach. When the goal is reached, the message changes to your "Text once reached".
+
+<Frame>
+  ![Progress bar on the storefront form](/images/cf-64-store-threshold.png "Progress bar on the storefront form")
+</Frame>
+
+<Note>
+  The bar counts the order total after discounts, so a buyer using a quantity offer or a bundle needs to reach the amount after that saving.
+</Note>
+
 ## A/B tests
 
-An A/B test splits buyers between versions of one kind of offer, and each buyer sees one version for the whole visit. Compare up to four versions.
+**In plain words:** you are not sure which offer works better, so you let your buyers decide. Half of them see offer A and half see offer B, and Analytics shows which one earned more. Each buyer sees one version for the whole visit, so nobody sees the offer change while they shop. Compare up to four versions.
+
+**Use it when** you want to settle a question with data, for example "does 10 percent off beat 100 rupees off?". Test one change at a time, and let the test run until you have a good number of orders, not just a few.
+
+On the storefront there is nothing extra for the buyer to see: each buyer simply gets the version they were assigned.
 
 1. Create two or more offers of the same kind.
 2. Click **New A/B test**.
