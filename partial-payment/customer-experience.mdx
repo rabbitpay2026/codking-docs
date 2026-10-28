@@ -7,6 +7,26 @@ description: "Control the Pay via screen your shoppers see: show or hide partial
 
 The Partial Payment options appear on the **Payment screen** of the COD King popup. The words, badges and branding of that screen are edited in **UI customization**, with a live preview next to the form.
 
+## What your shopper sees
+
+When a shopper taps **Buy it now** (or **Buy with COD**) on a product, the COD King popup opens on the **Pay via** screen. Every partial payment rule that applies to the cart is listed as one row, with the amount due now on the right.
+
+<Frame>
+  ![Storefront Pay via screen showing Full Payment, Pay 100 now rest on delivery and Cash on Delivery](/images/pp-70-storefront-pay-via.png "Storefront Pay via screen. Each arrow points to the amount due now for one payment rule")
+</Frame>
+
+In this example (a Rs. 885.95 product on the test store) the shopper sees three options:
+
+- **Full Payment**: pay Rs. 797.36 now and save 10%. The original price is struck through and a green **Save 10%** badge is shown.
+- **Pay 100 now, rest on delivery**: pay Rs. 100 now and the remaining Rs. 785.95 on delivery.
+- **Cash on Delivery**: pay Rs. 885.95 on delivery.
+
+The logo at the top is the **Brand Logo URL** from **Logo and colours** in UI customization, so changing it there changes it on this screen.
+
+<Tip>
+  A percentage or fixed partial rule needs a product with a price. On a Rs. 0 product, the rule has nothing to split and no partial option appears.
+</Tip>
+
 ## Open UI customization
 
 <Steps>
